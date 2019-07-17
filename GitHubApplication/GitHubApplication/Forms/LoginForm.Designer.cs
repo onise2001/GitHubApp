@@ -80,6 +80,7 @@
             this.signUpButton.Size = new System.Drawing.Size(45, 13);
             this.signUpButton.TabIndex = 2;
             this.signUpButton.Text = "Sign Up";
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // passwordLabel
             // 
