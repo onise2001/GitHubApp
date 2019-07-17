@@ -12,12 +12,26 @@ namespace GitHubApplication.Main_Page
 {
     public partial class MainPage : Form
     {
+        public EventHandler SuccseFullogin { get; set; }
+
         public MainPage()
         {
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void MenuBar_click(object sender, EventArgs e)
+        {
+            Size size = new Size(180,675);
+           
+            MenuBar.Size = size;
+        }
+
+        private void Label1_Click_1(object sender, EventArgs e)
         {
 
         }
