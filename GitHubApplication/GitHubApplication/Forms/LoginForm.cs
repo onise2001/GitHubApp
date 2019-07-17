@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Unity;
 
 
+
 namespace GitHubApplication.Forms
 {
     public partial class LoginForm : Form
@@ -46,7 +47,39 @@ namespace GitHubApplication.Forms
                 Login(loginTextBox.Text, passwordTextBox.Text);
             }
 
+        }
 
+
+
+
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+            var pair = TextBoxLabelPairs.FirstOrDefault(p => p.Key.Equals(sender));
+            validator.ValidatePair(pair);
+        }
+
+        private void RegistrationButton_Click(object sender, EventArgs e)
+        {
+            var registrationForm = ServiceManager.Instance.Container.Resolve<RegistrationForm>();
+            registrationForm.SuccessfulRegistration += OnSuccessfullRegistration;
+            registrationForm.ShowDialog();
+        }
+
+        private void OnSuccessfullRegistration(object sender, User user)
+        {
+            Login(user.Email, user.Password);
+
+            if (sender is RegistrationForm registrationForm)
+            {
+                registrationForm.SuccessfulRegistration -= OnSuccessfullRegistration;
+            }
+        }
+
+        private void signUpButton_Click(object sender, EventArgs e)
+        {
+            var regForm = ServiceManager.Instance.Container.Resolve<RegistrationForm>();
+            regForm.SuccessfulRegistration += OnSuccessfullRegistration;
+            regForm.ShowDialog();
 
         }
 
@@ -64,33 +97,6 @@ namespace GitHubApplication.Forms
                 loginErrorLabel.Visible = true;
             }
         }
-
-
-        private void TextBox_TextChanged(object sender, EventArgs e)
-        {
-            var pair = TextBoxLabelPairs.FirstOrDefault(p => p.Key.Equals(sender));
-            validator.ValidatePair(pair);
-        }
-
-        private void RegistrationButton_Click(object sender, EventArgs e)
-        {
-            var registrationForm = ServiceManager.Instance.Container.Resolve<RegistrationForm>();
-            registrationForm.Success += OnSuccessfullRegistration;
-            registrationForm.ShowDialog();
-        }
-
-        private void OnSuccessfullRegistration(object sender, User user)
-        {
-            Login(user.Email , user.Password);
-
-            if (sender is RegistrationForm registrationForm)
-            {
-                registrationForm.Success -= OnSuccessfullRegistration;
-            }
-        }
-
-
-
 
 
     }
