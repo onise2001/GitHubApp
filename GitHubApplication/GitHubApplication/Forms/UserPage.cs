@@ -17,12 +17,9 @@ namespace GitHubApplication.Forms
             InitializeComponent();
         }
 
-        private void BackButton_MouseHover(object sender, EventArgs e)
+        private void MenuButton_Click(object sender, EventArgs e)
         {
-            if (sender is Button button)
-            {
-                button.ForeColor = Color.Red;
-            }
+            MenuPanel.Width = MenuPanel.Width == 210 ? 45 : 210;
         }
     }
 }
