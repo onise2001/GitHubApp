@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GitHubApplication.Common
 {
-    class GitHubAppDbContext : DbContext
+    public class GitHubAppDbContext : DbContext
     {
         public GitHubAppDbContext()
         {

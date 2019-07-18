@@ -11,12 +11,18 @@ namespace GitHubApplication.Services
     public class UserServiceDb : IUserService
     {
 
-        GitHubAppDbContext dataBase = new GitHubAppDbContext();
+        GitHubAppDbContext dataBase;
 
+        public UserServiceDb(GitHubAppDbContext dataBase)
+        {
+            this.dataBase = dataBase;
+        }
 
         public User Login(string login , string password)
         {
-            return dataBase.Users.FirstOrDefault(u => u.UserName.Equals(login, StringComparison.CurrentCultureIgnoreCase) || u.Email == login && u.Password == password);
+           return dataBase.Users.FirstOrDefault(u => u.UserName.Equals(login, StringComparison.CurrentCultureIgnoreCase) || u.Email == login && u.Password == password);
+
+            throw new NotImplementedException();
         }
 
 
@@ -28,6 +34,7 @@ namespace GitHubApplication.Services
             dataBase.Users.Add(user);
             dataBase.SaveChanges();
             return user;
+
         }
     }
 }

@@ -22,9 +22,7 @@ namespace GitHubApplication.Common
 
         static ServiceManager()
         {
-
         }
-
 
         private ServiceManager()
         {
