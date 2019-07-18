@@ -26,7 +26,7 @@ namespace GitHubApplication.Services
             if (user == null)
                 return null;
 
-            if (password == hasher.GetPasswordWithoutSalt(user.Password))
+            if (password == hasher.GetHashedPasswordWithoutSalt(user.Password))
                 return user;
 
             return null;

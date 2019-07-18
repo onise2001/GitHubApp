@@ -276,6 +276,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "MainPage";
             this.Text = "MainPage";
+            this.Load += new System.EventHandler(this.MainPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.MenuBar.ResumeLayout(false);

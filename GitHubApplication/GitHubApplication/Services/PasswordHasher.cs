@@ -10,44 +10,65 @@ namespace GitHubApplication.Common
 {
     public class PasswordHasherSHA512 : IPasswordHasher
     {
-        private int saltLength = 24;
-        private HashAlgorithm hashAlgorithm = new SHA512Managed();
-        RNGCryptoServiceProvider RNGProvider = new RNGCryptoServiceProvider();
+        private int saltSize = 20;
 
+        RNGCryptoServiceProvider RNGProvider = new RNGCryptoServiceProvider();
+        SHA512 hasher = new SHA512Managed();
 
 
         
 
         public byte[] CreateSalt()
         {
-            byte[] salt = new byte[saltLength];
+            byte[] salt = new byte[saltSize];
             RNGProvider.GetBytes(salt);
             return salt;
         }
 
-        public string HashWithSalt(string password)
+        public string GetHashedPasswordWithoutSalt(string hashedPassword)
         {
-            byte[] passwordAsBytes = Encoding.ASCII.GetBytes(password);
-            byte[] salt = CreateSalt();
+            int hashedSaltLenght = hasher.ComputeHash(CreateSalt()).Length;
 
-            byte[] passwordAndSalt = new byte[passwordAsBytes.Length + salt.Length];
-            Array.Copy(salt, 0, passwordAndSalt, 0, salt.Length);
-            Array.Copy(passwordAsBytes, 0, passwordAndSalt, salt.Length, passwordAsBytes.Length);
+            byte[] passwordAsBytes = Encoding.ASCII.GetBytes(hashedPassword);
+            byte[] passwordWithoutSalt = new byte[passwordAsBytes.Length - hashedSaltLenght];
+            Array.Copy(passwordAsBytes, hashedSaltLenght, passwordWithoutSalt, 0, passwordAsBytes.Length - hashedSaltLenght);
 
-            return hashAlgorithm.ComputeHash(passwordAndSalt).ToString();
+            string password = Encoding.ASCII.GetString(passwordWithoutSalt);
+            return password;
+
 
         }
+
+     
 
         public string Hash(string password)
         {
-            return hashAlgorithm.ComputeHash(Encoding.ASCII.GetBytes(password)).ToString();
+            byte[] passwordAsBytes = Encoding.ASCII.GetBytes(password);
+            string hashedPassword = Encoding.ASCII.GetString(hasher.ComputeHash(passwordAsBytes));
+            return hashedPassword;
         }
 
-
-        public string GetPasswordWithoutSalt(string hashedPassword)
+        public string HashWithSalt(string password)
         {
-            return hashedPassword.Substring(saltLength);
+            byte[] salt = CreateSalt();
+            byte[] passwordAsBytes = Encoding.ASCII.GetBytes(password);
+
+            byte[] hashedSalt = hasher.ComputeHash(salt);
+            byte[] hashedPassword = hasher.ComputeHash(passwordAsBytes);
+            byte[] passwordWithSalt = new byte[hashedSalt.Length + hashedPassword.Length];
+
+            
+            Array.Copy(hashedSalt, 0, passwordWithSalt, 0, hashedSalt.Length);
+            Array.Copy(hashedPassword, 0, passwordWithSalt, hashedSalt.Length, hashedPassword.Length);
+
+            
+
+            return Encoding.ASCII.GetString(passwordWithSalt);
+
         }
+
+        
+
 
     }
 }

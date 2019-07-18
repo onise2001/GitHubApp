@@ -1,8 +1,11 @@
-﻿using System;
+﻿using GitHubApplication.Common;
+using GitHubApplication.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unity;
 
 namespace GitHubApplication
 {
@@ -14,9 +17,17 @@ namespace GitHubApplication
         [STAThread]
         static void Main()
         {
+
+            ServiceManager.Instance.Container.RegisterType<IUserService, UserServiceDb>();
+            ServiceManager.Instance.Container.RegisterType<IPasswordHasher, PasswordHasherSHA512>();
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainPage());
+
+            var mainForm = ServiceManager.Instance.Container.Resolve<MainPage>();
+
+            Application.Run(mainForm);
         }
     }
 }

@@ -63,7 +63,7 @@ namespace GitHubApplication.Forms
 
         private void OnSuccessfullRegistration(object sender, User user)
         {
-            Login(user.Email, user.Password);
+            Login(user.Email, hasher.GetHashedPasswordWithoutSalt(user.Password));
 
             if (sender is RegistrationForm registrationForm)
             {

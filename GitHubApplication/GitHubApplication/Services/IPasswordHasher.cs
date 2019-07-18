@@ -11,7 +11,7 @@ namespace GitHubApplication.Services
         byte[] CreateSalt();
         string HashWithSalt(string password);
         string Hash(string password);
-        string GetPasswordWithoutSalt(string password);
+        string GetHashedPasswordWithoutSalt(string password);
 
 
 
