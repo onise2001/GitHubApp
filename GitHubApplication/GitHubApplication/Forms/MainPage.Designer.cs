@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.News_label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.StartedRepos_label = new System.Windows.Forms.Label();
             this.MenuBar = new System.Windows.Forms.Panel();
+            this.Statistics_label = new System.Windows.Forms.Label();
+            this.StarsCompete_label = new System.Windows.Forms.Label();
+            this.Trading_label = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Search_label = new System.Windows.Forms.Label();
+            this.Settings_label = new System.Windows.Forms.Label();
+            this.Bookmarks_label = new System.Windows.Forms.Label();
+            this.MyRepos_label = new System.Windows.Forms.Label();
+            this.Notification_label = new System.Windows.Forms.Label();
+            this.Profile_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.Profile_label = new System.Windows.Forms.Label();
-            this.Notification_label = new System.Windows.Forms.Label();
-            this.MyRepos_label = new System.Windows.Forms.Label();
-            this.Bookmarks_label = new System.Windows.Forms.Label();
-            this.News_label = new System.Windows.Forms.Label();
-            this.Settings_label = new System.Windows.Forms.Label();
-            this.Search_label = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.Trading_label = new System.Windows.Forms.Label();
-            this.StarsCompete_label = new System.Windows.Forms.Label();
-            this.Statistics_label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.MenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +63,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1081, 98);
             this.panel1.TabIndex = 0;
+            // 
+            // News_label
+            // 
+            this.News_label.AutoSize = true;
+            this.News_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.News_label.Location = new System.Drawing.Point(153, 8);
+            this.News_label.Name = "News_label";
+            this.News_label.Size = new System.Drawing.Size(69, 25);
+            this.News_label.TabIndex = 3;
+            this.News_label.Text = "News";
             // 
             // label4
             // 
@@ -127,6 +137,106 @@
             this.MenuBar.Size = new System.Drawing.Size(215, 675);
             this.MenuBar.TabIndex = 1;
             // 
+            // Statistics_label
+            // 
+            this.Statistics_label.AutoSize = true;
+            this.Statistics_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Statistics_label.Location = new System.Drawing.Point(24, 382);
+            this.Statistics_label.Name = "Statistics_label";
+            this.Statistics_label.Size = new System.Drawing.Size(71, 16);
+            this.Statistics_label.TabIndex = 14;
+            this.Statistics_label.Text = "Statistics";
+            // 
+            // StarsCompete_label
+            // 
+            this.StarsCompete_label.AutoSize = true;
+            this.StarsCompete_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StarsCompete_label.Location = new System.Drawing.Point(23, 352);
+            this.StarsCompete_label.Name = "StarsCompete_label";
+            this.StarsCompete_label.Size = new System.Drawing.Size(106, 16);
+            this.StarsCompete_label.TabIndex = 13;
+            this.StarsCompete_label.Text = "StarsCompete";
+            this.StarsCompete_label.Click += new System.EventHandler(this.Label1_Click_1);
+            // 
+            // Trading_label
+            // 
+            this.Trading_label.AutoSize = true;
+            this.Trading_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Trading_label.Location = new System.Drawing.Point(23, 434);
+            this.Trading_label.Name = "Trading_label";
+            this.Trading_label.Size = new System.Drawing.Size(62, 16);
+            this.Trading_label.TabIndex = 12;
+            this.Trading_label.Text = "Trading";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 313);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(200, 33);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.Visible = false;
+            // 
+            // Search_label
+            // 
+            this.Search_label.AutoSize = true;
+            this.Search_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_label.Location = new System.Drawing.Point(22, 330);
+            this.Search_label.Name = "Search_label";
+            this.Search_label.Size = new System.Drawing.Size(57, 16);
+            this.Search_label.TabIndex = 11;
+            this.Search_label.Text = "Serach";
+            // 
+            // Settings_label
+            // 
+            this.Settings_label.AutoSize = true;
+            this.Settings_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Settings_label.Location = new System.Drawing.Point(23, 464);
+            this.Settings_label.Name = "Settings_label";
+            this.Settings_label.Size = new System.Drawing.Size(56, 16);
+            this.Settings_label.TabIndex = 10;
+            this.Settings_label.Text = "Setting";
+            // 
+            // Bookmarks_label
+            // 
+            this.Bookmarks_label.AutoSize = true;
+            this.Bookmarks_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bookmarks_label.Location = new System.Drawing.Point(22, 257);
+            this.Bookmarks_label.Name = "Bookmarks_label";
+            this.Bookmarks_label.Size = new System.Drawing.Size(86, 16);
+            this.Bookmarks_label.TabIndex = 9;
+            this.Bookmarks_label.Text = "Bookmarks";
+            // 
+            // MyRepos_label
+            // 
+            this.MyRepos_label.AutoSize = true;
+            this.MyRepos_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyRepos_label.Location = new System.Drawing.Point(22, 199);
+            this.MyRepos_label.Name = "MyRepos_label";
+            this.MyRepos_label.Size = new System.Drawing.Size(72, 16);
+            this.MyRepos_label.TabIndex = 8;
+            this.MyRepos_label.Text = "My repos";
+            // 
+            // Notification_label
+            // 
+            this.Notification_label.AutoSize = true;
+            this.Notification_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Notification_label.Location = new System.Drawing.Point(22, 132);
+            this.Notification_label.Name = "Notification_label";
+            this.Notification_label.Size = new System.Drawing.Size(86, 16);
+            this.Notification_label.TabIndex = 7;
+            this.Notification_label.Text = "Notification";
+            // 
+            // Profile_label
+            // 
+            this.Profile_label.AutoSize = true;
+            this.Profile_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile_label.Location = new System.Drawing.Point(22, 101);
+            this.Profile_label.Name = "Profile_label";
+            this.Profile_label.Size = new System.Drawing.Size(53, 16);
+            this.Profile_label.TabIndex = 6;
+            this.Profile_label.Text = "Profile";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -155,116 +265,6 @@
             this.label5.Size = new System.Drawing.Size(632, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Discover interesting projects and people to populate your personal news feed.";
-            // 
-            // Profile_label
-            // 
-            this.Profile_label.AutoSize = true;
-            this.Profile_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_label.Location = new System.Drawing.Point(22, 101);
-            this.Profile_label.Name = "Profile_label";
-            this.Profile_label.Size = new System.Drawing.Size(53, 16);
-            this.Profile_label.TabIndex = 6;
-            this.Profile_label.Text = "Profile";
-            // 
-            // Notification_label
-            // 
-            this.Notification_label.AutoSize = true;
-            this.Notification_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notification_label.Location = new System.Drawing.Point(22, 132);
-            this.Notification_label.Name = "Notification_label";
-            this.Notification_label.Size = new System.Drawing.Size(86, 16);
-            this.Notification_label.TabIndex = 7;
-            this.Notification_label.Text = "Notification";
-            // 
-            // MyRepos_label
-            // 
-            this.MyRepos_label.AutoSize = true;
-            this.MyRepos_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MyRepos_label.Location = new System.Drawing.Point(22, 199);
-            this.MyRepos_label.Name = "MyRepos_label";
-            this.MyRepos_label.Size = new System.Drawing.Size(72, 16);
-            this.MyRepos_label.TabIndex = 8;
-            this.MyRepos_label.Text = "My repos";
-            // 
-            // Bookmarks_label
-            // 
-            this.Bookmarks_label.AutoSize = true;
-            this.Bookmarks_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bookmarks_label.Location = new System.Drawing.Point(22, 257);
-            this.Bookmarks_label.Name = "Bookmarks_label";
-            this.Bookmarks_label.Size = new System.Drawing.Size(86, 16);
-            this.Bookmarks_label.TabIndex = 9;
-            this.Bookmarks_label.Text = "Bookmarks";
-            // 
-            // News_label
-            // 
-            this.News_label.AutoSize = true;
-            this.News_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.News_label.Location = new System.Drawing.Point(153, 8);
-            this.News_label.Name = "News_label";
-            this.News_label.Size = new System.Drawing.Size(69, 25);
-            this.News_label.TabIndex = 3;
-            this.News_label.Text = "News";
-            // 
-            // Settings_label
-            // 
-            this.Settings_label.AutoSize = true;
-            this.Settings_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Settings_label.Location = new System.Drawing.Point(23, 464);
-            this.Settings_label.Name = "Settings_label";
-            this.Settings_label.Size = new System.Drawing.Size(56, 16);
-            this.Settings_label.TabIndex = 10;
-            this.Settings_label.Text = "Setting";
-            // 
-            // Search_label
-            // 
-            this.Search_label.AutoSize = true;
-            this.Search_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_label.Location = new System.Drawing.Point(22, 330);
-            this.Search_label.Name = "Search_label";
-            this.Search_label.Size = new System.Drawing.Size(57, 16);
-            this.Search_label.TabIndex = 11;
-            this.Search_label.Text = "Serach";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 313);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(200, 33);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.Visible = false;
-            // 
-            // Trading_label
-            // 
-            this.Trading_label.AutoSize = true;
-            this.Trading_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Trading_label.Location = new System.Drawing.Point(23, 434);
-            this.Trading_label.Name = "Trading_label";
-            this.Trading_label.Size = new System.Drawing.Size(62, 16);
-            this.Trading_label.TabIndex = 12;
-            this.Trading_label.Text = "Trading";
-            // 
-            // StarsCompete_label
-            // 
-            this.StarsCompete_label.AutoSize = true;
-            this.StarsCompete_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StarsCompete_label.Location = new System.Drawing.Point(23, 352);
-            this.StarsCompete_label.Name = "StarsCompete_label";
-            this.StarsCompete_label.Size = new System.Drawing.Size(106, 16);
-            this.StarsCompete_label.TabIndex = 13;
-            this.StarsCompete_label.Text = "StarsCompete";
-            this.StarsCompete_label.Click += new System.EventHandler(this.Label1_Click_1);
-            // 
-            // Statistics_label
-            // 
-            this.Statistics_label.AutoSize = true;
-            this.Statistics_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Statistics_label.Location = new System.Drawing.Point(24, 382);
-            this.Statistics_label.Name = "Statistics_label";
-            this.Statistics_label.Size = new System.Drawing.Size(71, 16);
-            this.Statistics_label.TabIndex = 14;
-            this.Statistics_label.Text = "Statistics";
             // 
             // MainPage
             // 

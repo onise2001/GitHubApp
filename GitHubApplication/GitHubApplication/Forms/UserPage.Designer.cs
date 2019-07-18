@@ -116,7 +116,6 @@
             // 
             // MenuButton
             // 
-            this.MenuButton.Image = global::GitHubApplication.Properties.Resources.icons8_menu_rounded_100;
             this.MenuButton.Location = new System.Drawing.Point(162, 3);
             this.MenuButton.Name = "MenuButton";
             this.MenuButton.Size = new System.Drawing.Size(45, 45);
@@ -127,7 +126,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GitHubApplication.Properties.Resources.icons8_user_folder_100;
             this.pictureBox2.Location = new System.Drawing.Point(12, 303);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
@@ -137,7 +135,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::GitHubApplication.Properties.Resources.icons8_variable_80;
             this.pictureBox3.Location = new System.Drawing.Point(12, 242);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
@@ -161,7 +158,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GitHubApplication.Properties.Resources.icons8_account_100;
             this.pictureBox1.Location = new System.Drawing.Point(62, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(98, 95);
@@ -170,7 +166,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::GitHubApplication.Properties.Resources.icons8_back_arrow_50;
             this.pictureBox4.Location = new System.Drawing.Point(12, 539);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
