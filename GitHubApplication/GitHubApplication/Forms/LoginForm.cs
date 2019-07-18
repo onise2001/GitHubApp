@@ -2,9 +2,9 @@
 using GitHubApplication.Models;
 using GitHubApplication.Services;
 using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
 using Unity;
 
 
@@ -13,14 +13,18 @@ namespace GitHubApplication.Forms
 {
     public partial class LoginForm : Form
     {
+
+
         TextBoxValidator validator;
         IUserService userService;
         Dictionary<TextBox, Label> TextBoxLabelPairs;
+        IPasswordHasher hasher;
+
 
         public event EventHandler<User> SuccessfulLogin;
 
 
-        public LoginForm(IUserService service)
+        public LoginForm(IUserService service, IPasswordHasher passwordHasher)
         {
             InitializeComponent();
             validator = new TextBoxValidator(loginLabel.ForeColor);
@@ -30,16 +34,15 @@ namespace GitHubApplication.Forms
                 [loginTextBox] = loginLabel,
                 [passwordTextBox] = passwordLabel,
             };
-
+            hasher = passwordHasher;
         }
 
         private void signInButton_Click(object sender, EventArgs e)
         {
             if (validator.ValidateTextBoxes(TextBoxLabelPairs))
             {
-                Login(loginTextBox.Text, passwordTextBox.Text);
+                Login(loginTextBox.Text, hasher.Hash(passwordTextBox.Text));
             }
-
         }
 
 

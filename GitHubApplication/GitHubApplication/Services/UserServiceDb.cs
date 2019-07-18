@@ -12,17 +12,25 @@ namespace GitHubApplication.Services
     {
 
         GitHubAppDbContext dataBase;
+        IPasswordHasher hasher = new PasswordHasherSHA512();
 
         public UserServiceDb(GitHubAppDbContext dataBase)
         {
             this.dataBase = dataBase;
         }
 
-        public User Login(string login , string password)
+        public User Login(string login, string password)
         {
-           return dataBase.Users.FirstOrDefault(u => u.UserName.Equals(login, StringComparison.CurrentCultureIgnoreCase) || u.Email == login && u.Password == password);
+            var user = dataBase.Users.FirstOrDefault(u => u.UserName.Equals(login, StringComparison.CurrentCultureIgnoreCase) || u.Email == login);
 
-            throw new NotImplementedException();
+            if (user == null)
+                return null;
+
+            if (password == hasher.GetPasswordWithoutSalt(user.Password))
+                return user;
+
+            return null;
+
         }
 
 

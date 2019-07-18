@@ -21,9 +21,10 @@ namespace GitHubApplication.Forms
         Dictionary<TextBox, Label> TextBoxLabelPairs;
         TextBoxValidator validator;
         public event EventHandler<User> SuccessfulRegistration;
+        IPasswordHasher hasher;
 
 
-        public RegistrationForm(IUserService service)
+        public RegistrationForm(IUserService service , IPasswordHasher passwordHasher)
         {
             InitializeComponent();
 
@@ -39,6 +40,7 @@ namespace GitHubApplication.Forms
 
             validator = new TextBoxValidator(firstNameLabel.ForeColor);
             userService = service;
+            hasher = passwordHasher;
         }
 
 
@@ -56,7 +58,7 @@ namespace GitHubApplication.Forms
                     Email = emailTextBox.Text,
                     FirstName = firstNameTextBox.Text,
                     LastName = lastNameTextBox.Text,
-                    Password = repeatePasswordTextBox.Text,
+                    Password = hasher.HashWithSalt(repeatePasswordTextBox.Text),
                     UserName = userNameTextBox.Text,
                 };
 

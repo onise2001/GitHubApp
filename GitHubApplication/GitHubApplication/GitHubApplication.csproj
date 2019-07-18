@@ -156,7 +156,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\GitHubAppDbContext.cs" />
-    <Compile Include="Common\PasswordHasher.cs" />
+    <Compile Include="Services\IPasswordHasher.cs" />
+    <Compile Include="Services\PasswordHasher.cs" />
     <Compile Include="Common\ServiceManager.cs" />
     <Compile Include="Common\TextBoxValidator.cs" />
     <Compile Include="Forms\LoginForm.cs">
