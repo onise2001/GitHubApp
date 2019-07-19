@@ -62,6 +62,7 @@ namespace GitHubApplication.Services
         public bool Reset(string mail)
         {
             var user = dataBase.Users.FirstOrDefault(u => u.Email == mail);
+            user
             if (user != null)
             {
                 var guid = Regex.Replace(Guid.NewGuid().ToString("N").Substring(0, 12), "[/+-=]", "");
@@ -86,7 +87,8 @@ namespace GitHubApplication.Services
                     MessageBox.Show(ex.ToString());
                 }
                 user.Password = hasher.HashWithSalt(user.Password);
-                
+
+                dataBase.Users.Update(user);
                 dataBase.SaveChanges();
                 return true;
             }
