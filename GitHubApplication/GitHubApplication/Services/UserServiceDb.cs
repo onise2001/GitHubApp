@@ -21,15 +21,26 @@ namespace GitHubApplication.Services
             this.dataBase = dataBase;
         }
 
-        public User Login(string login, string password)
+        public User Login(string login, string password, bool onLogin)
         {
             var user = dataBase.Users.FirstOrDefault(u => u.UserName.Equals(login, StringComparison.CurrentCultureIgnoreCase) || u.Email == login);
 
             if (user == null)
                 return null;
 
-            if (password == hasher.GetHashedPasswordWithoutSalt(user.Password))
-                return user;
+            if (onLogin)
+            {
+                if (hasher.HashWithSalt(password, hasher.GetSalt(user.Password)) == hasher.GetHashedPasswordWithoutSalt(user.Password))
+                    return user;
+            }
+
+            else
+            {
+                if (password == hasher.GetHashedPasswordWithoutSalt(user.Password))
+                    return user;
+
+            }
+
 
             return null;
 
@@ -60,7 +71,7 @@ namespace GitHubApplication.Services
                     Email.From = new MailAddress("github.reset.servive@gmail.com");
                     Email.To.Add(user.Email);
                     Email.Subject = "Password Reset";
-                    Email.Body = @"This is your GitApp Password:"+user.Password;
+                    Email.Body = @"This is your GitApp Password:" + user.Password;
 
                     SmtpServer.Port = 587;
                     SmtpServer.Credentials = new System.Net.NetworkCredential("github.reset.service@gmail.com", "Itstep2018");

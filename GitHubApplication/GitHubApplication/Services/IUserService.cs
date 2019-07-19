@@ -9,7 +9,7 @@ namespace GitHubApplication.Services
 {
     public interface IUserService
     {
-        User Login(string login, string password);
+        User Login(string login, string password , bool onLogin);
         User Register(User user);
         bool Reset(string mail);
     }

@@ -41,7 +41,7 @@ namespace GitHubApplication.Forms
         {
             if (validator.ValidateTextBoxes(TextBoxLabelPairs))
             {
-                Login(loginTextBox.Text, hasher.Hash(passwordTextBox.Text));
+                Login(loginTextBox.Text, passwordTextBox.Text , true);
             }
         }
 
@@ -63,7 +63,7 @@ namespace GitHubApplication.Forms
 
         private void OnSuccessfullRegistration(object sender, User user)
         {
-            Login(user.Email, hasher.GetHashedPasswordWithoutSalt(user.Password));
+            Login(user.Email, hasher.GetHashedPasswordWithoutSalt(user.Password), false);
 
             if (sender is RegistrationForm registrationForm)
             {
@@ -79,9 +79,9 @@ namespace GitHubApplication.Forms
 
         }
 
-        private void Login(string login, string password)
+        private void Login(string login, string password , bool onLogin)
         {
-            var result = userService.Login(login, password);
+            var result = userService.Login(login, password , onLogin);
             if (result != null)
             {
                 SuccessfulLogin?.Invoke(this, result);
