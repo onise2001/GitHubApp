@@ -62,7 +62,6 @@ namespace GitHubApplication.Services
         public bool Reset(string mail)
         {
             var user = dataBase.Users.FirstOrDefault(u => u.Email == mail);
-            user
             if (user != null)
             {
                 var guid = Regex.Replace(Guid.NewGuid().ToString("N").Substring(0, 12), "[/+-=]", "");
