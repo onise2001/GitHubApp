@@ -11,5 +11,6 @@ namespace GitHubApplication.Services
     {
         User Login(string login, string password);
         User Register(User user);
+        bool Reset(string mail);
     }
 }
