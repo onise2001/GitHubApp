@@ -85,7 +85,7 @@ namespace GitHubApplication.Services
                 {
                     MessageBox.Show(ex.ToString());
                 }
-                hasher.HashWithSalt(user.Password);
+                user.Password = hasher.HashWithSalt(user.Password);
                 
                 dataBase.SaveChanges();
                 return true;
