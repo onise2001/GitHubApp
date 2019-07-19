@@ -35,6 +35,7 @@
             this.signUpButton = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.loginErrorLabel = new System.Windows.Forms.Label();
+            this.PassResetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // loginTextBox
@@ -102,11 +103,22 @@
             this.loginErrorLabel.Text = "Login Or Password Incorrect";
             this.loginErrorLabel.Visible = false;
             // 
+            // PassResetButton
+            // 
+            this.PassResetButton.Location = new System.Drawing.Point(171, 409);
+            this.PassResetButton.Name = "PassResetButton";
+            this.PassResetButton.Size = new System.Drawing.Size(235, 38);
+            this.PassResetButton.TabIndex = 4;
+            this.PassResetButton.Text = "Reset Password";
+            this.PassResetButton.UseVisualStyleBackColor = true;
+            this.PassResetButton.Click += new System.EventHandler(this.PassResetButton_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 492);
+            this.Controls.Add(this.PassResetButton);
             this.Controls.Add(this.loginErrorLabel);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.signUpButton);
@@ -130,5 +142,6 @@
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.Label loginErrorLabel;
+        private System.Windows.Forms.Button PassResetButton;
     }
 }

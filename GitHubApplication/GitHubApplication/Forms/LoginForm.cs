@@ -94,6 +94,10 @@ namespace GitHubApplication.Forms
             }
         }
 
-
+        private void PassResetButton_Click(object sender, EventArgs e)
+        {
+            PasswordReset passwordReset = new PasswordReset(userService);
+            passwordReset.ShowDialog();
+        }
     }
 }

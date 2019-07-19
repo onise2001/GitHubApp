@@ -17,13 +17,11 @@ namespace GitHubApplication
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
             ServiceManager.Instance.Container.RegisterType<IUserService, UserServiceDb>();
             ServiceManager.Instance.Container.RegisterType<IPasswordHasher, PasswordHasherSHA512>();
-
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
 
             var mainForm = ServiceManager.Instance.Container.Resolve<MainPage>();
 

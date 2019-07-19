@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using GitHubApplication.Common;
 using GitHubApplication.Models;
 
@@ -43,6 +45,35 @@ namespace GitHubApplication.Services
             dataBase.SaveChanges();
             return user;
 
+        }
+
+        public bool Reset(string mail)
+        {
+            var user = dataBase.Users.FirstOrDefault(u => u.Email == mail);
+            if (user != null)
+            {
+                try
+                {
+                    MailMessage Email = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                    Email.From = new MailAddress("github.reset.servive@gmail.com");
+                    Email.To.Add(user.Email);
+                    Email.Subject = "Password Reset";
+                    Email.Body = @"This is your GitApp Password:"+user.Password;
+
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("github.reset.service@gmail.com", "Itstep2018");
+                    SmtpServer.EnableSsl = true;
+                    SmtpServer.Send(Email);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                return true;
+            }
+            return false;
         }
     }
 }
