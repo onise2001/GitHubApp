@@ -22,9 +22,18 @@ namespace GitHubApplication.Forms
             userService = service;
         }
 
-        private void ResetButton_Click(object sender, EventArgs e)
+        private async void ResetButton_Click(object sender, EventArgs e)
         {
-            if (userService.Reset(MailUserTextbox.Text))
+            Timer timer = new Timer
+            {
+                Interval = 10000
+            };
+            timer.Tick += new EventHandler(Timer_Tick);
+            timer.Start();
+            ResetButton.Enabled = false;
+
+            var s = await Task.Run(() => userService.Reset(MailUserTextbox.Text));
+            if (s)
             {
                 SentLabel.Visible = true;
             }
@@ -32,7 +41,17 @@ namespace GitHubApplication.Forms
             {
                 ErrorLabel.Visible = true;
             }
-           
+
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            ResetButton.Enabled = true;
+            if (sender is Timer timer)
+            {
+                timer.Stop();
+            }
+            
         }
     }
 }

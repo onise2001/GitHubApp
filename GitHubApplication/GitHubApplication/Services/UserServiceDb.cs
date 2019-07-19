@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GitHubApplication.Common;
@@ -63,6 +64,8 @@ namespace GitHubApplication.Services
             var user = dataBase.Users.FirstOrDefault(u => u.Email == mail);
             if (user != null)
             {
+                var guid = Regex.Replace(Guid.NewGuid().ToString("N").Substring(0, 12), "[/+-=]", "");
+                user.Password = guid;
                 try
                 {
                     MailMessage Email = new MailMessage();
@@ -71,7 +74,7 @@ namespace GitHubApplication.Services
                     Email.From = new MailAddress("github.reset.servive@gmail.com");
                     Email.To.Add(user.Email);
                     Email.Subject = "Password Reset";
-                    Email.Body = @"This is your GitApp Password:" + user.Password;
+                    Email.Body = @"This is your GitApp Password: " + user.Password;
 
                     SmtpServer.Port = 587;
                     SmtpServer.Credentials = new System.Net.NetworkCredential("github.reset.service@gmail.com", "Itstep2018");
@@ -82,6 +85,9 @@ namespace GitHubApplication.Services
                 {
                     MessageBox.Show(ex.ToString());
                 }
+                hasher.HashWithSalt(user.Password);
+                
+                dataBase.SaveChanges();
                 return true;
             }
             return false;
