@@ -155,6 +155,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\GetAPIInformation.cs" />
     <Compile Include="Common\GitHubAppDbContext.cs" />
     <Compile Include="Services\IPasswordHasher.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
