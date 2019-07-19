@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GitHubApplication.Common;
 using GitHubApplication.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace GitHubApplication.Services
 {
@@ -62,10 +63,10 @@ namespace GitHubApplication.Services
         public bool Reset(string mail)
         {
             var user = dataBase.Users.FirstOrDefault(u => u.Email == mail);
-            user
             if (user != null)
             {
-                var guid = Regex.Replace(Guid.NewGuid().ToString("N").Substring(0, 12), "[/+-=]", "");
+                //var guid = Regex.Replace(Guid.NewGuid().ToString("N").Substring(0, 12), "[/+-=]", "");
+                var guid = Regex.Replace(Convert.ToBase64String(Guid.NewGuid().ToByteArray()), "[/+=]", "").Substring(0, 10);
                 user.Password = guid;
                 try
                 {
@@ -88,7 +89,8 @@ namespace GitHubApplication.Services
                 }
                 user.Password = hasher.HashWithSalt(user.Password);
 
-                dataBase.Users.Update(user);
+                dataBase.Users.Attach(user);
+                dataBase.Entry(user).State = EntityState.Modified;
                 dataBase.SaveChanges();
                 return true;
             }
