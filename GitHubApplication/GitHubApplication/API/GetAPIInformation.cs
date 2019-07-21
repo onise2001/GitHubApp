@@ -28,7 +28,7 @@ namespace GitHubApplication
             string JSONGithubInfo = reader.ReadToEnd();
 
 
-            var data = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(JSONGithubInfo);
+            var data = JsonConvert.DeserializeObject<RootObject>(JSONGithubInfo);
 
 
           
@@ -84,7 +84,7 @@ namespace GitHubApplication
 
        
 
-    }
+        }
 
         public class RootObject
         {
