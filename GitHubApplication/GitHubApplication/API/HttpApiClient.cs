@@ -24,10 +24,14 @@ namespace GitHubApplication.API
 
         public async Task SendRequest()
         {
-            var result = await client.GetAsync($"{baseUrl}/users");
+            var result = await client.GetAsync($"{baseUrl}/search");
             var content = await result.Content.ReadAsStringAsync();
 
         }
+
+
+
+        
 
 
     }

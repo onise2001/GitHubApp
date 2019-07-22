@@ -36,19 +36,13 @@ namespace GitHubApplication.Forms
             hasher = passwordHasher;
         }
 
-        private async void signInButton_Click(object sender, EventArgs e)
+        private void signInButton_Click(object sender, EventArgs e)
         {
-            HttpApiClient client = new HttpApiClient();
-            await client.SendRequest();
-
-            //if (validator.ValidateTextBoxes(TextBoxLabelPairs))
-            //{
-            //    Login(loginTextBox.Text, passwordTextBox.Text , true);
-            //}
+            if (validator.ValidateTextBoxes(TextBoxLabelPairs))
+            {
+                Login(loginTextBox.Text, passwordTextBox.Text , true);
+            }
         }
-
-
-    
 
 
         private void TextBox_TextChanged(object sender, EventArgs e)

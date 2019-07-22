@@ -67,7 +67,6 @@ namespace GitHubApplication.Services
             {
                 //var guid = Regex.Replace(Guid.NewGuid().ToString("N").Substring(0, 12), "[/+-=]", "");
                 var guid = Regex.Replace(Convert.ToBase64String(Guid.NewGuid().ToByteArray()), "[/+=]", "").Substring(0, 10);
-                user.Password = guid;
                 try
                 {
                     MailMessage Email = new MailMessage();
@@ -76,7 +75,7 @@ namespace GitHubApplication.Services
                     Email.From = new MailAddress("github.reset.servive@gmail.com");
                     Email.To.Add(user.Email);
                     Email.Subject = "Password Reset";
-                    Email.Body = @"This is your GitApp Password: " + user.Password;
+                    Email.Body = @"This is your GitApp Password: " + guid;
 
                     SmtpServer.Port = 587;
                     SmtpServer.Credentials = new System.Net.NetworkCredential("github.reset.service@gmail.com", "Itstep2018");
@@ -87,7 +86,7 @@ namespace GitHubApplication.Services
                 {
                     MessageBox.Show(ex.ToString());
                 }
-                user.Password = hasher.HashWithSalt(user.Password);
+                user.Password = hasher.HashWithSalt(guid);
 
                 dataBase.Users.Attach(user);
                 dataBase.Entry(user).State = EntityState.Modified;
