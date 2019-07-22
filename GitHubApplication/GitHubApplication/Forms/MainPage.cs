@@ -1,7 +1,6 @@
 ﻿using GitHubApplication.Common;
 using GitHubApplication.Forms;
 using GitHubApplication.Models;
-using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +12,7 @@ using System.Threading.Tasks;
 using MaterialSkin;
 using System.Windows.Forms;
 using Unity;
+using MaterialSkin.Controls;
 
 namespace GitHubApplication
 {
@@ -88,8 +88,7 @@ namespace GitHubApplication
 
         private void Profile_label_Click(object sender, EventArgs e)
         {
-            UserPage userPage = new UserPage(user);
-            userPage.ShowDialog();
+           
         }
     }
 }

@@ -122,10 +122,6 @@ namespace GitHubApplication.Forms
             
         }
 
-        private async void LoginForm_Load(object sender, EventArgs e)
-        {
-           
-
-        }
+      
     }
 }
