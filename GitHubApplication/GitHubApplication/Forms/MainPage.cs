@@ -18,12 +18,9 @@ namespace GitHubApplication
     {
         User user;
 
-
-
         public MainPage()
         {
             InitializeComponent();
-            GetAPIInformation.SendRequest();
         }
 
         private void label1_Click(object sender, EventArgs e)

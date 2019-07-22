@@ -159,7 +159,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\GetAPIInformation.cs" />
     <Compile Include="API\HttpApiClient.cs" />
     <Compile Include="Common\GitHubAppDbContext.cs" />
     <Compile Include="Forms\PasswordReset.cs">
