@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace GitHubApplication.Forms
 {
