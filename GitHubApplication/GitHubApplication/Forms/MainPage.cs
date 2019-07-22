@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using MaterialSkin;
 using System.Windows.Forms;
 using Unity;
+using GitHubApplication.UserControls;
 
 namespace GitHubApplication
 {
@@ -86,8 +87,31 @@ namespace GitHubApplication
 
         private void Profile_label_Click(object sender, EventArgs e)
         {
-            UserPage userPage = new UserPage(user);
-            userPage.ShowDialog();
+           // UserPage userPage = new UserPage(user);
+           // userPage.ShowDialog();
+        }
+
+        private void ResultPanel_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void TradingPanel_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void Trading_label_Click(object sender, EventArgs e)
+        {
+            RepositoriesControl repositoriescontrol = new RepositoriesControl();
+            RepositoriesControl repositoriescontrol2 = new RepositoriesControl();
+            ResultPanel.Controls.Add(repositoriescontrol);
+
+            ResultPanel.Controls.Add(repositoriescontrol2);
+
+            TradingControl tradingcontrol = new TradingControl();
+
+            TradingPanel.Controls.Add(tradingcontrol);
+
         }
     }
 }

@@ -40,9 +40,9 @@
             this.Bookmarks_label = new System.Windows.Forms.Label();
             this.Notification_label = new System.Windows.Forms.Label();
             this.Profile_label = new System.Windows.Forms.Label();
+            this.ResultPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.TradingPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.MenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -103,6 +103,7 @@
             this.Trading_label.Size = new System.Drawing.Size(62, 16);
             this.Trading_label.TabIndex = 12;
             this.Trading_label.Text = "Trading";
+            this.Trading_label.Click += new System.EventHandler(this.Trading_label_Click);
             // 
             // richTextBox1
             // 
@@ -166,6 +167,22 @@
             this.Profile_label.Text = "Profile";
             this.Profile_label.Click += new System.EventHandler(this.Profile_label_Click);
             // 
+            // ResultPanel
+            // 
+            this.ResultPanel.Location = new System.Drawing.Point(218, 198);
+            this.ResultPanel.Name = "ResultPanel";
+            this.ResultPanel.Size = new System.Drawing.Size(934, 489);
+            this.ResultPanel.TabIndex = 15;
+            this.ResultPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ResultPanel_Paint);
+            // 
+            // TradingPanel
+            // 
+            this.TradingPanel.Location = new System.Drawing.Point(218, 68);
+            this.TradingPanel.Name = "TradingPanel";
+            this.TradingPanel.Size = new System.Drawing.Size(934, 124);
+            this.TradingPanel.TabIndex = 16;
+            this.TradingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TradingPanel_Paint);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -177,29 +194,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.MenuBar_click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(546, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(677, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 688);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TradingPanel);
+            this.Controls.Add(this.ResultPanel);
             this.Controls.Add(this.MenuBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPage";
@@ -209,7 +210,6 @@
             this.MenuBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -226,7 +226,7 @@
         private System.Windows.Forms.Label Bookmarks_label;
         private System.Windows.Forms.Label Statistics_label;
         private System.Windows.Forms.FlowLayoutPanel SearchResultPanel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel ResultPanel;
+        private System.Windows.Forms.FlowLayoutPanel TradingPanel;
     }
 }
