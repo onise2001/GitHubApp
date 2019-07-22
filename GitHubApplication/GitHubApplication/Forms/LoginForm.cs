@@ -7,10 +7,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity;
 using GitHubApplication.API;
+using MaterialSkin.Controls;
 
 namespace GitHubApplication.Forms
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : MaterialForm
     {
 
 
@@ -105,16 +106,19 @@ namespace GitHubApplication.Forms
             this.Close();
         }
 
-        private void Show_hide_CheckedChanged(object sender, EventArgs e)
+        private void ShowCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if(Show_hide.Checked)
-            {
-                passwordTextBox.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                passwordTextBox.UseSystemPasswordChar = false;
-            }
+           
+            
+                if (ShowCheckBox.Checked)
+                {
+                    passwordTextBox.UseSystemPasswordChar = true;
+                }
+                else
+                {
+                    passwordTextBox.UseSystemPasswordChar = false;
+                }
+            
         }
     }
 }
