@@ -167,6 +167,7 @@
     <Compile Include="Forms\PasswordReset.Designer.cs">
       <DependentUpon>PasswordReset.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Repository.cs" />
     <Compile Include="Services\IPasswordHasher.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
     <Compile Include="Common\ServiceManager.cs" />

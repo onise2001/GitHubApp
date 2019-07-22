@@ -116,5 +116,11 @@ namespace GitHubApplication.Forms
                 passwordTextBox.UseSystemPasswordChar = false;
             }
         }
+
+        private async void LoginForm_Load(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }

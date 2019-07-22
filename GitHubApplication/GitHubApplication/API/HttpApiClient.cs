@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
-
+using GitHubApplication.Models;
+using Newtonsoft.Json;
 
 namespace GitHubApplication.API
 {
@@ -31,7 +32,18 @@ namespace GitHubApplication.API
 
 
 
-        
+        public async Task GetTrendingRepositories()
+        {
+            using (HttpResponseMessage response = await client.GetAsync($"{baseUrl}/search/repositories?q=language=c#"))
+            {
+                string resposAsString = await response.Content.ReadAsStringAsync();
+                RootObject repos = JsonConvert.DeserializeObject<RootObject>(resposAsString);
+            }
+
+        }
+
+
+
 
 
     }
