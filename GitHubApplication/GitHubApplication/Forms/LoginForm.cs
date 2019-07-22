@@ -7,10 +7,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity;
 using GitHubApplication.API;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace GitHubApplication.Forms
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : MaterialForm
     {
 
 
@@ -47,8 +49,11 @@ namespace GitHubApplication.Forms
 
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
+
+
             var pair = TextBoxLabelPairs.FirstOrDefault(p => p.Key.Equals(sender));
             validator.ValidatePair(pair);
+           
         }
 
         private void RegistrationButton_Click(object sender, EventArgs e)
@@ -100,6 +105,21 @@ namespace GitHubApplication.Forms
         private void CancelLabel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ShowCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+           
+            
+                if (ShowCheckBox.Checked)
+                {
+                    passwordTextBox.UseSystemPasswordChar = true;
+                }
+                else
+                {
+                    passwordTextBox.UseSystemPasswordChar = false;
+                }
+            
         }
     }
 }

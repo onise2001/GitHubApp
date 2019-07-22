@@ -1,4 +1,4 @@
-﻿using GitHubApplication.Models;
+﻿using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,21 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
 
 namespace GitHubApplication.Forms
 {
-    public partial class UserPage : Form
+    public partial class UserPage : MaterialForm
     {
-        User User;
-        public UserPage(User user)
+        public UserPage()
         {
             InitializeComponent();
-            User = user;
-            FNameLabel.Text = user.FirstName;
-            LNameLabel.Text = user.LastName;
-            FNameLabel.Left = MenuPanel.Size.Width / 2 - FNameLabel.Size.Width/2;
-            LNameLabel.Left = MenuPanel.Size.Width / 2 - LNameLabel.Size.Width / 2;
-
         }
 
         private void MenuButton_Click(object sender, EventArgs e)

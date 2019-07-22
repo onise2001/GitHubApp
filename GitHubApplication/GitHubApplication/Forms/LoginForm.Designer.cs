@@ -37,6 +37,7 @@
             this.loginErrorLabel = new System.Windows.Forms.Label();
             this.PassResetButton = new System.Windows.Forms.Button();
             this.CancelLabel = new System.Windows.Forms.Label();
+            this.ShowCheckBox = new MaterialSkin.Controls.MaterialCheckBox();
             this.SuspendLayout();
             // 
             // loginTextBox
@@ -57,7 +58,8 @@
             // 
             // signInButton
             // 
-            this.signInButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.signInButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.signInButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInButton.Location = new System.Drawing.Point(171, 392);
             this.signInButton.Name = "signInButton";
@@ -109,7 +111,8 @@
             // 
             // PassResetButton
             // 
-            this.PassResetButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.PassResetButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PassResetButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.PassResetButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassResetButton.Location = new System.Drawing.Point(171, 440);
             this.PassResetButton.Name = "PassResetButton";
@@ -131,10 +134,28 @@
             this.CancelLabel.Text = "Cancel";
             this.CancelLabel.Click += new System.EventHandler(this.CancelLabel_Click);
             // 
+            // ShowCheckBox
+            // 
+            this.ShowCheckBox.AutoSize = true;
+            this.ShowCheckBox.Depth = 0;
+            this.ShowCheckBox.Font = new System.Drawing.Font("Roboto", 10F);
+            this.ShowCheckBox.Location = new System.Drawing.Point(409, 273);
+            this.ShowCheckBox.Margin = new System.Windows.Forms.Padding(0);
+            this.ShowCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ShowCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ShowCheckBox.Name = "ShowCheckBox";
+            this.ShowCheckBox.Ripple = true;
+            this.ShowCheckBox.Size = new System.Drawing.Size(64, 30);
+            this.ShowCheckBox.TabIndex = 8;
+            this.ShowCheckBox.Text = "Show";
+            this.ShowCheckBox.UseVisualStyleBackColor = true;
+            this.ShowCheckBox.CheckedChanged += new System.EventHandler(this.ShowCheckBox_CheckedChanged);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(587, 530);
+            this.Controls.Add(this.ShowCheckBox);
             this.Controls.Add(this.CancelLabel);
             this.Controls.Add(this.PassResetButton);
             this.Controls.Add(this.loginErrorLabel);
@@ -163,5 +184,6 @@
         private System.Windows.Forms.Label loginErrorLabel;
         private System.Windows.Forms.Button PassResetButton;
         private System.Windows.Forms.Label CancelLabel;
+        private MaterialSkin.Controls.MaterialCheckBox ShowCheckBox;
     }
 }

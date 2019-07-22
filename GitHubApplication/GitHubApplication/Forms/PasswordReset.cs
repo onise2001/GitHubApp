@@ -1,4 +1,5 @@
 ﻿using GitHubApplication.Services;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,10 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
 
 namespace GitHubApplication.Forms
 {
-    public partial class PasswordReset : Form
+    public partial class PasswordReset : MaterialForm
     {
 
         IUserService userService;
