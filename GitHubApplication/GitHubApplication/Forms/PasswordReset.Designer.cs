@@ -38,10 +38,11 @@
             // 
             // ResetButton
             // 
-            this.ResetButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ResetButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ResetButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.Location = new System.Drawing.Point(126, 126);
-            this.ResetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ResetButton.Margin = new System.Windows.Forms.Padding(4);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(190, 28);
             this.ResetButton.TabIndex = 1;
@@ -52,7 +53,7 @@
             // MailUserTextbox
             // 
             this.MailUserTextbox.Location = new System.Drawing.Point(126, 94);
-            this.MailUserTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MailUserTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.MailUserTextbox.Name = "MailUserTextbox";
             this.MailUserTextbox.Size = new System.Drawing.Size(190, 23);
             this.MailUserTextbox.TabIndex = 0;
@@ -103,7 +104,7 @@
             this.Controls.Add(this.ResetButton);
             this.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PasswordReset";
             this.Text = "PasswordResset";
             this.ResumeLayout(false);

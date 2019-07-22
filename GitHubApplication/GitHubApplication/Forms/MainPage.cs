@@ -1,6 +1,7 @@
 ﻿using GitHubApplication.Common;
 using GitHubApplication.Forms;
 using GitHubApplication.Models;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,12 +10,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MaterialSkin;
 using System.Windows.Forms;
 using Unity;
 
 namespace GitHubApplication
 {
-    public partial class MainPage : Form
+    public partial class MainPage : MaterialForm
     {
 
 
@@ -23,6 +25,10 @@ namespace GitHubApplication
         public MainPage()
         {
             InitializeComponent();
+            var skinManager = MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkinManager.Themes.DARK;
+            skinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -73,6 +79,17 @@ namespace GitHubApplication
         private void Bookmarks_label_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Settings_label_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Profile_label_Click(object sender, EventArgs e)
+        {
+            UserPage userPage = new UserPage(user);
+            userPage.ShowDialog();
         }
     }
 }

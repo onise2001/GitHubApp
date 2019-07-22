@@ -11,10 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace GitHubApplication.Forms
 {
-    public partial class RegistrationForm : Form
+    public partial class RegistrationForm : MaterialForm
     {
         IUserService userService;
 
