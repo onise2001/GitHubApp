@@ -36,88 +36,106 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.loginErrorLabel = new System.Windows.Forms.Label();
             this.PassResetButton = new System.Windows.Forms.Button();
+            this.CancelLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // loginTextBox
             // 
-            this.loginTextBox.Location = new System.Drawing.Point(171, 204);
+            this.loginTextBox.Location = new System.Drawing.Point(171, 220);
             this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(235, 20);
-            this.loginTextBox.TabIndex = 0;
+            this.loginTextBox.Size = new System.Drawing.Size(235, 22);
+            this.loginTextBox.TabIndex = 2;
             this.loginTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(171, 258);
+            this.passwordTextBox.Location = new System.Drawing.Point(171, 278);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(235, 20);
-            this.passwordTextBox.TabIndex = 0;
+            this.passwordTextBox.Size = new System.Drawing.Size(235, 22);
+            this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // signInButton
             // 
-            this.signInButton.Location = new System.Drawing.Point(171, 364);
+            this.signInButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.signInButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signInButton.Location = new System.Drawing.Point(171, 392);
             this.signInButton.Name = "signInButton";
-            this.signInButton.Size = new System.Drawing.Size(235, 38);
-            this.signInButton.TabIndex = 1;
+            this.signInButton.Size = new System.Drawing.Size(235, 41);
+            this.signInButton.TabIndex = 5;
             this.signInButton.Text = "Sign In";
-            this.signInButton.UseVisualStyleBackColor = true;
+            this.signInButton.UseVisualStyleBackColor = false;
             this.signInButton.Click += new System.EventHandler(this.signInButton_Click);
             // 
             // loginLabel
             // 
             this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(57, 207);
+            this.loginLabel.Location = new System.Drawing.Point(57, 227);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(108, 13);
-            this.loginLabel.TabIndex = 2;
+            this.loginLabel.Size = new System.Drawing.Size(108, 14);
+            this.loginLabel.TabIndex = 0;
             this.loginLabel.Text = "User Name Or Email :";
             // 
             // signUpButton
             // 
             this.signUpButton.AutoSize = true;
-            this.signUpButton.Location = new System.Drawing.Point(268, 332);
+            this.signUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signUpButton.Location = new System.Drawing.Point(268, 358);
             this.signUpButton.Name = "signUpButton";
-            this.signUpButton.Size = new System.Drawing.Size(45, 13);
-            this.signUpButton.TabIndex = 2;
+            this.signUpButton.Size = new System.Drawing.Size(43, 14);
+            this.signUpButton.TabIndex = 4;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(106, 261);
+            this.passwordLabel.Location = new System.Drawing.Point(106, 285);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(59, 13);
-            this.passwordLabel.TabIndex = 2;
+            this.passwordLabel.Size = new System.Drawing.Size(56, 14);
+            this.passwordLabel.TabIndex = 1;
             this.passwordLabel.Text = "Password :";
             // 
             // loginErrorLabel
             // 
             this.loginErrorLabel.AutoSize = true;
             this.loginErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.loginErrorLabel.Location = new System.Drawing.Point(209, 148);
+            this.loginErrorLabel.Location = new System.Drawing.Point(209, 159);
             this.loginErrorLabel.Name = "loginErrorLabel";
-            this.loginErrorLabel.Size = new System.Drawing.Size(141, 13);
+            this.loginErrorLabel.Size = new System.Drawing.Size(139, 14);
             this.loginErrorLabel.TabIndex = 3;
             this.loginErrorLabel.Text = "Login Or Password Incorrect";
             this.loginErrorLabel.Visible = false;
             // 
             // PassResetButton
             // 
-            this.PassResetButton.Location = new System.Drawing.Point(171, 409);
+            this.PassResetButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.PassResetButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassResetButton.Location = new System.Drawing.Point(171, 440);
             this.PassResetButton.Name = "PassResetButton";
-            this.PassResetButton.Size = new System.Drawing.Size(235, 38);
-            this.PassResetButton.TabIndex = 4;
+            this.PassResetButton.Size = new System.Drawing.Size(235, 41);
+            this.PassResetButton.TabIndex = 6;
             this.PassResetButton.Text = "Reset Password";
-            this.PassResetButton.UseVisualStyleBackColor = true;
+            this.PassResetButton.UseVisualStyleBackColor = false;
             this.PassResetButton.Click += new System.EventHandler(this.PassResetButton_Click);
+            // 
+            // CancelLabel
+            // 
+            this.CancelLabel.AutoSize = true;
+            this.CancelLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CancelLabel.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelLabel.Location = new System.Drawing.Point(259, 493);
+            this.CancelLabel.Name = "CancelLabel";
+            this.CancelLabel.Size = new System.Drawing.Size(41, 16);
+            this.CancelLabel.TabIndex = 7;
+            this.CancelLabel.Text = "Cancel";
+            this.CancelLabel.Click += new System.EventHandler(this.CancelLabel_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 492);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(587, 530);
+            this.Controls.Add(this.CancelLabel);
             this.Controls.Add(this.PassResetButton);
             this.Controls.Add(this.loginErrorLabel);
             this.Controls.Add(this.passwordLabel);
@@ -126,6 +144,7 @@
             this.Controls.Add(this.signInButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.loginTextBox);
+            this.Font = new System.Drawing.Font("Sylfaen", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.Text = "LoginForm";
@@ -143,5 +162,6 @@
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.Label loginErrorLabel;
         private System.Windows.Forms.Button PassResetButton;
+        private System.Windows.Forms.Label CancelLabel;
     }
 }
