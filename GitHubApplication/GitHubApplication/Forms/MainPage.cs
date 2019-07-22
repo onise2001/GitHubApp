@@ -72,5 +72,16 @@ namespace GitHubApplication
         {
 
         }
+
+        private void Settings_label_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Profile_label_Click(object sender, EventArgs e)
+        {
+            UserPage userPage = new UserPage(user);
+            userPage.ShowDialog();
+        }
     }
 }

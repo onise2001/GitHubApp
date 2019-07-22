@@ -65,35 +65,33 @@ namespace GitHubApplication.Services
             var user = dataBase.Users.FirstOrDefault(u => u.Email == mail);
             if (user != null)
             {
-                //var guid = Regex.Replace(Guid.NewGuid().ToString("N").Substring(0, 12), "[/+-=]", "");
-                var guid = Regex.Replace(Convert.ToBase64String(Guid.NewGuid().ToByteArray()), "[/+=]", "").Substring(0, 10);
-                try
-                {
-                    MailMessage Email = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                var guid = Regex.Replace(Convert.ToBase64String(Guid.NewGuid().ToByteArray()), "[/+=]", "").Substring(0, 6);
+                MailSend(user, guid);
 
-                    Email.From = new MailAddress("github.reset.servive@gmail.com");
-                    Email.To.Add(user.Email);
-                    Email.Subject = "Password Reset";
-                    Email.Body = @"This is your GitApp Password: " + guid;
-
-                    SmtpServer.Port = 587;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential("github.reset.service@gmail.com", "Itstep2018");
-                    SmtpServer.EnableSsl = true;
-                    SmtpServer.Send(Email);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
                 user.Password = hasher.HashWithSalt(guid);
-
-                dataBase.Users.Attach(user);
-                dataBase.Entry(user).State = EntityState.Modified;
+                dataBase.Users.Update(user);
+                //dataBase.Users.Attach(user);
+                //dataBase.Entry(user).State = EntityState.Modified;
                 dataBase.SaveChanges();
                 return true;
             }
             return false;
+        }
+
+        private static void MailSend(User user, string text)
+        {
+            MailMessage Email = new MailMessage();
+            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+            Email.From = new MailAddress("github.reset.servive@gmail.com");
+            Email.To.Add(user.Email);
+            Email.Subject = "Password Reset";
+            Email.Body = @"This is your GitApp Password: " + text;
+
+            SmtpServer.Port = 587;
+            SmtpServer.Credentials = new System.Net.NetworkCredential("github.reset.service@gmail.com", "Itstep2018");
+            SmtpServer.EnableSsl = true;
+            SmtpServer.Send(Email);
         }
     }
 }

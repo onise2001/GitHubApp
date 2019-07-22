@@ -29,27 +29,29 @@
         private void InitializeComponent()
         {
             this.MenuPanel = new System.Windows.Forms.Panel();
-            this.FavoriteLanButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.LNameLabel = new System.Windows.Forms.Label();
-            this.FNameLabel = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.MenuButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BackButton = new System.Windows.Forms.Button();
+            this.FavoriteLanButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.LNameLabel = new System.Windows.Forms.Label();
+            this.FNameLabel = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.MenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuPanel
             // 
             this.MenuPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.MenuPanel.Controls.Add(this.flowLayoutPanel1);
             this.MenuPanel.Controls.Add(this.pictureBox4);
             this.MenuPanel.Controls.Add(this.MenuButton);
             this.MenuPanel.Controls.Add(this.pictureBox2);
@@ -66,53 +68,14 @@
             this.MenuPanel.Size = new System.Drawing.Size(210, 591);
             this.MenuPanel.TabIndex = 0;
             // 
-            // FavoriteLanButton
+            // pictureBox4
             // 
-            this.FavoriteLanButton.BackColor = System.Drawing.Color.Transparent;
-            this.FavoriteLanButton.FlatAppearance.BorderSize = 0;
-            this.FavoriteLanButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.FavoriteLanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FavoriteLanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FavoriteLanButton.Location = new System.Drawing.Point(62, 242);
-            this.FavoriteLanButton.Name = "FavoriteLanButton";
-            this.FavoriteLanButton.Size = new System.Drawing.Size(98, 43);
-            this.FavoriteLanButton.TabIndex = 2;
-            this.FavoriteLanButton.Text = "Favorite Languages";
-            this.FavoriteLanButton.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(62, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "User Info";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // LNameLabel
-            // 
-            this.LNameLabel.AutoSize = true;
-            this.LNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LNameLabel.Location = new System.Drawing.Point(76, 195);
-            this.LNameLabel.Name = "LNameLabel";
-            this.LNameLabel.Size = new System.Drawing.Size(72, 17);
-            this.LNameLabel.TabIndex = 0;
-            this.LNameLabel.Text = "LastName";
-            // 
-            // FNameLabel
-            // 
-            this.FNameLabel.AutoSize = true;
-            this.FNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FNameLabel.Location = new System.Drawing.Point(76, 160);
-            this.FNameLabel.Name = "FNameLabel";
-            this.FNameLabel.Size = new System.Drawing.Size(72, 17);
-            this.FNameLabel.TabIndex = 0;
-            this.FNameLabel.Text = "FirstName";
+            this.pictureBox4.Location = new System.Drawing.Point(12, 539);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
             // 
             // MenuButton
             // 
@@ -156,6 +119,34 @@
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = false;
             // 
+            // FavoriteLanButton
+            // 
+            this.FavoriteLanButton.BackColor = System.Drawing.Color.Transparent;
+            this.FavoriteLanButton.FlatAppearance.BorderSize = 0;
+            this.FavoriteLanButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.FavoriteLanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FavoriteLanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FavoriteLanButton.Location = new System.Drawing.Point(62, 242);
+            this.FavoriteLanButton.Name = "FavoriteLanButton";
+            this.FavoriteLanButton.Size = new System.Drawing.Size(98, 43);
+            this.FavoriteLanButton.TabIndex = 2;
+            this.FavoriteLanButton.Text = "Favorite Languages";
+            this.FavoriteLanButton.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(62, 303);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 37);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "User Info";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(62, 62);
@@ -164,14 +155,32 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox4
+            // LNameLabel
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(12, 539);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.LNameLabel.AutoSize = true;
+            this.LNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNameLabel.Location = new System.Drawing.Point(76, 195);
+            this.LNameLabel.Name = "LNameLabel";
+            this.LNameLabel.Size = new System.Drawing.Size(72, 17);
+            this.LNameLabel.TabIndex = 0;
+            this.LNameLabel.Text = "LastName";
+            // 
+            // FNameLabel
+            // 
+            this.FNameLabel.AutoSize = true;
+            this.FNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FNameLabel.Location = new System.Drawing.Point(76, 160);
+            this.FNameLabel.Name = "FNameLabel";
+            this.FNameLabel.Size = new System.Drawing.Size(72, 17);
+            this.FNameLabel.TabIndex = 0;
+            this.FNameLabel.Text = "FirstName";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(213, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(603, 591);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // UserPage
             // 
@@ -179,16 +188,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 591);
             this.Controls.Add(this.MenuPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserPage";
             this.Text = "UserPage";
             this.MenuPanel.ResumeLayout(false);
             this.MenuPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +214,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox MenuButton;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -132,6 +132,7 @@
             this.Settings_label.Size = new System.Drawing.Size(56, 16);
             this.Settings_label.TabIndex = 10;
             this.Settings_label.Text = "Setting";
+            this.Settings_label.Click += new System.EventHandler(this.Settings_label_Click);
             // 
             // Bookmarks_label
             // 
@@ -163,6 +164,7 @@
             this.Profile_label.Size = new System.Drawing.Size(53, 16);
             this.Profile_label.TabIndex = 6;
             this.Profile_label.Text = "Profile";
+            this.Profile_label.Click += new System.EventHandler(this.Profile_label_Click);
             // 
             // pictureBox1
             // 
