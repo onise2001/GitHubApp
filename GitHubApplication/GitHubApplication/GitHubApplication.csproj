@@ -170,7 +170,6 @@
     <Compile Include="Forms\PasswordReset.Designer.cs">
       <DependentUpon>PasswordReset.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Repository.cs" />
     <Compile Include="Services\IPasswordHasher.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
     <Compile Include="Common\ServiceManager.cs" />
@@ -205,17 +204,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\UserServiceDb.cs" />
-    <Compile Include="UserControls\RepositorySearchResult.cs">
+    <Compile Include="UserControls\DevelopersControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\RepositorySearchResult.Designer.cs">
-      <DependentUpon>RepositorySearchResult.cs</DependentUpon>
+    <Compile Include="UserControls\DevelopersControl.Designer.cs">
+      <DependentUpon>DevelopersControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TrendingRepos.cs">
+    <Compile Include="UserControls\RepositoriesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TrendingRepos.Designer.cs">
-      <DependentUpon>TrendingRepos.cs</DependentUpon>
+    <Compile Include="UserControls\RepositoriesControl.Designer.cs">
+      <DependentUpon>RepositoriesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TradingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TradingControl.Designer.cs">
+      <DependentUpon>TradingControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -242,11 +247,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\RepositorySearchResult.resx">
-      <DependentUpon>RepositorySearchResult.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\DevelopersControl.resx">
+      <DependentUpon>DevelopersControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TrendingRepos.resx">
-      <DependentUpon>TrendingRepos.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\RepositoriesControl.resx">
+      <DependentUpon>RepositoriesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TradingControl.resx">
+      <DependentUpon>TradingControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
