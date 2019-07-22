@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using GitHubApplication.Services;
+using System.Text.RegularExpressions;
 
 namespace GitHubApplication.Common
 {
@@ -16,20 +17,20 @@ namespace GitHubApplication.Common
         SHA512 hasher = new SHA512Managed();
 
 
-        
 
-        public string CreateSalt()
+
+        public byte[] CreateSalt()
         {
             byte[] salt = new byte[saltSize];
             RNGProvider.GetBytes(salt);
-            return Encoding.UTF8.GetString(salt);
+            return salt;
         }
 
         public string GetHashedPasswordWithoutSalt(string hashedPassword)
         {
             string withoutSalt = hashedPassword.Substring(saltSize);
             return withoutSalt;
-            
+
         }
 
         public string GetSalt(string hashedPassword)
@@ -38,37 +39,29 @@ namespace GitHubApplication.Common
             return salt;
         }
 
-     
 
-        //public string Hash(string password)
-        //{
-        //    byte[] passwordAsBytes = Encoding.UTF8.GetBytes(password);
-        //    byte[] hashedPasswordByte = hasher.ComputeHash(passwordAsBytes);
-        //    string hashedPassword = Encoding.UTF8.GetString(hashedPasswordByte);
-        //    return hashedPassword;
-        //}
+
 
         public string HashWithSalt(string password)
         {
-            string salt = CreateSalt();
+            string salt = Regex.Replace(Convert.ToBase64String(Guid.NewGuid().ToByteArray()), "[/+=]", "").Substring(0, saltSize);
 
-            return salt + Hash(password , salt);
+            return salt + Hash(password, salt);
         }
 
+        public string Hash(string password, string salt)
+        {
+            Rfc2898DeriveBytes hashedPassword = new Rfc2898DeriveBytes(password, Encoding.UTF8.GetBytes(salt),1000);
 
-        public string HashWithSalt(string password , string salt)
+            return hashedPassword.ToString();
+        }
+
+        public string HashWithSalt(string password, string salt)
         {
             return Hash(password, salt);
 
         }
 
 
-        public string Hash(string password, string salt)
-        {
-            byte[] passwordWithSalt = Encoding.UTF8.GetBytes(salt + password);
-            byte[] hashedPassword = hasher.ComputeHash(passwordWithSalt);
-            string hashedString = Encoding.UTF8.GetString(hashedPassword);
-            return hashedString;
-        }
     }
 }
