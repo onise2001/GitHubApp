@@ -47,8 +47,11 @@ namespace GitHubApplication.Forms
 
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
+
+
             var pair = TextBoxLabelPairs.FirstOrDefault(p => p.Key.Equals(sender));
             validator.ValidatePair(pair);
+           
         }
 
         private void RegistrationButton_Click(object sender, EventArgs e)
@@ -100,6 +103,18 @@ namespace GitHubApplication.Forms
         private void CancelLabel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Show_hide_CheckedChanged(object sender, EventArgs e)
+        {
+            if(Show_hide.Checked)
+            {
+                passwordTextBox.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                passwordTextBox.UseSystemPasswordChar = false;
+            }
         }
     }
 }

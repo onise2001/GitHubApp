@@ -37,6 +37,7 @@
             this.loginErrorLabel = new System.Windows.Forms.Label();
             this.PassResetButton = new System.Windows.Forms.Button();
             this.CancelLabel = new System.Windows.Forms.Label();
+            this.Show_hide = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // loginTextBox
@@ -131,10 +132,22 @@
             this.CancelLabel.Text = "Cancel";
             this.CancelLabel.Click += new System.EventHandler(this.CancelLabel_Click);
             // 
+            // Show_hide
+            // 
+            this.Show_hide.AutoSize = true;
+            this.Show_hide.Location = new System.Drawing.Point(413, 282);
+            this.Show_hide.Name = "Show_hide";
+            this.Show_hide.Size = new System.Drawing.Size(51, 18);
+            this.Show_hide.TabIndex = 8;
+            this.Show_hide.Text = "Show";
+            this.Show_hide.UseVisualStyleBackColor = true;
+            this.Show_hide.CheckedChanged += new System.EventHandler(this.Show_hide_CheckedChanged);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(587, 530);
+            this.Controls.Add(this.Show_hide);
             this.Controls.Add(this.CancelLabel);
             this.Controls.Add(this.PassResetButton);
             this.Controls.Add(this.loginErrorLabel);
@@ -163,5 +176,6 @@
         private System.Windows.Forms.Label loginErrorLabel;
         private System.Windows.Forms.Button PassResetButton;
         private System.Windows.Forms.Label CancelLabel;
+        private System.Windows.Forms.CheckBox Show_hide;
     }
 }
