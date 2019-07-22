@@ -63,5 +63,12 @@ namespace GitHubApplication
         {
             user = e;
         }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+            Control control = new Control();
+         
+
+        }
     }
 }
