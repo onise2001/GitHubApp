@@ -82,7 +82,8 @@
             // 
             // signUpButton
             // 
-            this.signUpButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.signUpButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.signUpButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpButton.Location = new System.Drawing.Point(268, 526);
             this.signUpButton.Name = "signUpButton";

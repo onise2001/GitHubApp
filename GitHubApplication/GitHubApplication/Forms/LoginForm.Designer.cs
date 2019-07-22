@@ -58,7 +58,8 @@
             // 
             // signInButton
             // 
-            this.signInButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.signInButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.signInButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInButton.Location = new System.Drawing.Point(171, 392);
             this.signInButton.Name = "signInButton";
@@ -110,7 +111,8 @@
             // 
             // PassResetButton
             // 
-            this.PassResetButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.PassResetButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PassResetButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.PassResetButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassResetButton.Location = new System.Drawing.Point(171, 440);
             this.PassResetButton.Name = "PassResetButton";
@@ -135,9 +137,10 @@
             // Show_hide
             // 
             this.Show_hide.AutoSize = true;
+            this.Show_hide.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Show_hide.Location = new System.Drawing.Point(413, 282);
             this.Show_hide.Name = "Show_hide";
-            this.Show_hide.Size = new System.Drawing.Size(51, 18);
+            this.Show_hide.Size = new System.Drawing.Size(49, 18);
             this.Show_hide.TabIndex = 8;
             this.Show_hide.Text = "Show";
             this.Show_hide.UseVisualStyleBackColor = true;
