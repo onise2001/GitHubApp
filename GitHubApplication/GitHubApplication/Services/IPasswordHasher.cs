@@ -8,7 +8,7 @@ namespace GitHubApplication.Services
 {
     public interface IPasswordHasher
     {
-        string CreateSalt();
+        byte[] CreateSalt();
         string HashWithSalt(string password);
         string HashWithSalt(string password , string salt);
         string Hash(string password , string salt);
