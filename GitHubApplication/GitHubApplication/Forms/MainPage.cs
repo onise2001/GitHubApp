@@ -14,12 +14,15 @@ using MaterialSkin;
 using System.Windows.Forms;
 using Unity;
 using GitHubApplication.UserControls;
+using GitHubApplication.API;
 
 namespace GitHubApplication
 {
     public partial class MainPage : MaterialForm
     {
         User user;
+
+        public object TrendingReposControl { get; private set; }
 
         public MainPage()
         {
@@ -102,16 +105,10 @@ namespace GitHubApplication
 
         private void Trading_label_Click(object sender, EventArgs e)
         {
-            RepositoriesControl repositoriescontrol = new RepositoriesControl();
-            RepositoriesControl repositoriescontrol2 = new RepositoriesControl();
-            ResultPanel.Controls.Add(repositoriescontrol);
+            TrendingReposControl trendingControl = new TrendingReposControl(new HttpApiClient());
 
-            ResultPanel.Controls.Add(repositoriescontrol2);
-
-            TradingControl tradingcontrol = new TradingControl();
-
-            TradingPanel.Controls.Add(tradingcontrol);
-
+            generalPanel.Controls.Clear();
+            generalPanel.Controls.Add(trendingControl);
         }
     }
 }

@@ -50,7 +50,6 @@
             // MenuPanel
             // 
             this.MenuPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.MenuPanel.Controls.Add(this.flowLayoutPanel1);
             this.MenuPanel.Controls.Add(this.pictureBox4);
             this.MenuPanel.Controls.Add(this.MenuButton);
             this.MenuPanel.Controls.Add(this.pictureBox2);
@@ -204,6 +203,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox MenuButton;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

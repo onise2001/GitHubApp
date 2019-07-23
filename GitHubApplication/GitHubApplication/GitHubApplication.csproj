@@ -219,11 +219,17 @@
     <Compile Include="UserControls\RepositoriesControl.Designer.cs">
       <DependentUpon>RepositoriesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TradingControl.cs">
+    <Compile Include="UserControls\TrendingReposControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TradingControl.Designer.cs">
-      <DependentUpon>TradingControl.cs</DependentUpon>
+    <Compile Include="UserControls\TrendingReposControl.Designer.cs">
+      <DependentUpon>TrendingReposControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewRepoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ViewRepoControl.Designer.cs">
+      <DependentUpon>ViewRepoControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -256,8 +262,11 @@
     <EmbeddedResource Include="UserControls\RepositoriesControl.resx">
       <DependentUpon>RepositoriesControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TradingControl.resx">
-      <DependentUpon>TradingControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\TrendingReposControl.resx">
+      <DependentUpon>TrendingReposControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ViewRepoControl.resx">
+      <DependentUpon>ViewRepoControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -32,14 +32,20 @@ namespace GitHubApplication.API
 
 
 
-        public async Task GetTrendingRepositories()
+        public async Task<RootObject> GetTrendingRepositories(string language, string date)
         {
-            using (HttpResponseMessage response = await client.GetAsync($"{baseUrl}/search/repositories?q=language=c#"))
+            using (HttpResponseMessage response = await client.GetAsync($"{baseUrl}/search/repositories?q=language={language};created = {date}"))
             {
-                string resposAsString = await response.Content.ReadAsStringAsync();
-                RootObject repos = JsonConvert.DeserializeObject<RootObject>(resposAsString);
+                if (response.IsSuccessStatusCode)
+                {
+                    string resposAsString = await response.Content.ReadAsStringAsync();
+                    RootObject repos = JsonConvert.DeserializeObject<RootObject>(resposAsString);
+                    return repos;
+                }
+
             }
 
+            return null;
         }
 
 
