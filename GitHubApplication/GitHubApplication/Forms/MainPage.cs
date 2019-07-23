@@ -101,6 +101,7 @@ namespace GitHubApplication
 
         private void TradingPanel_Paint(object sender, PaintEventArgs e)
         {
+
         }
 
         private void Trading_label_Click(object sender, EventArgs e)
@@ -109,6 +110,12 @@ namespace GitHubApplication
 
             generalPanel.Controls.Clear();
             generalPanel.Controls.Add(trendingControl);
+        }
+
+        private void Statistics_label_Click(object sender, EventArgs e)
+        {
+            Statistic statistic = new Statistic();
+            statistic.Show();
         }
     }
 }
