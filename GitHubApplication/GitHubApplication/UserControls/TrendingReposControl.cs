@@ -20,11 +20,18 @@ namespace GitHubApplication.UserControls
         bool devButtonClicked;
 
 
+        List<string> Languages = new List<string>()
+        {
+            "C#","C++","JavaScript","Python","Java","Ruby","PHP","Html","F#"
+        };
+
+
+
         Dictionary<string, string> timeValuePairs = new Dictionary<string, string>()
         {
-            ["Today"] = DateTime.Now.ToString("YYYY-MM-DD"),
-            ["1 Week"] = DateTime.Now.Subtract(new TimeSpan(7, 0, 0, 0)).ToString("YYYY-MM-DD"),
-            ["1 Month"] = DateTime.Now.Subtract(new TimeSpan(30,0,0,0)).ToString("YYYY-MM-DD"), 
+            ["Today"] = DateTime.Now.Subtract(new TimeSpan(1,0,0,0,0)).ToString("yyyy-MM-dd"),
+            ["1 Week"] = DateTime.Now.Subtract(new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd"),
+            ["1 Month"] = DateTime.Now.Subtract(new TimeSpan(30,0,0,0)).ToString("yyyy-MM-dd"), 
 
         };
 
@@ -48,7 +55,8 @@ namespace GitHubApplication.UserControls
 
         private void TradingControl_Load(object sender, EventArgs e)
         {
-            dateComboBox.DataSource = timeValuePairs.Keys;
+            dateComboBox.DataSource = timeValuePairs.Keys.ToList();
+            languageComboBox.DataSource = Languages;
 
         }
 
@@ -56,12 +64,29 @@ namespace GitHubApplication.UserControls
         {
             if (repoButtonClicked)
             {
-                var response = await client.GetTrendingRepositories(languageComboBox.SelectedItem.ToString(), dateComboBox.SelectedItem.ToString());
+                var date = timeValuePairs[dateComboBox.SelectedItem.ToString()];
+
+                var response = await client.GetTrendingRepositories(languageComboBox.SelectedItem.ToString(), date);
                 if (response != null)
                 {
                     var repos = response.items;
                     ViewRepoControl[] repoControls = repos.Select(r => { return new ViewRepoControl(r); }).ToArray();
+                    searchResultPanel.Controls.Clear();
                     searchResultPanel.Controls.AddRange(repoControls);
+                }
+            }
+
+            else if(devButtonClicked)
+            {
+                var date = timeValuePairs[dateComboBox.SelectedItem.ToString()];
+
+                var response = await client.GetPopularUsers( languageComboBox.SelectedItem.ToString(), date);
+                if (response != null)
+                {
+                    var users = response.items;
+                    DevelopersControl[] devControls = users.Select(u => { return new DevelopersControl(u); }).ToArray();
+                    searchResultPanel.Controls.Clear();
+                    searchResultPanel.Controls.AddRange(devControls);
                 }
             }
 

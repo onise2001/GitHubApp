@@ -182,6 +182,7 @@
     <Compile Include="Models\GitHubUser.cs" />
     <Compile Include="Models\RootObject.cs" />
     <Compile Include="Models\Statistics.cs" />
+    <Compile Include="Models\UsersRootObject.cs" />
     <Compile Include="Services\IPasswordHasher.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
     <Compile Include="Common\ServiceManager.cs" />
@@ -227,12 +228,6 @@
     </Compile>
     <Compile Include="UserControls\LanguageStatistic.Designer.cs">
       <DependentUpon>LanguageStatistic.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\RepositoriesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\RepositoriesControl.Designer.cs">
-      <DependentUpon>RepositoriesControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\TrendingReposControl.cs">
       <SubType>UserControl</SubType>
@@ -285,9 +280,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\LanguageStatistic.resx">
       <DependentUpon>LanguageStatistic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\RepositoriesControl.resx">
-      <DependentUpon>RepositoriesControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TrendingReposControl.resx">
       <DependentUpon>TrendingReposControl.cs</DependentUpon>

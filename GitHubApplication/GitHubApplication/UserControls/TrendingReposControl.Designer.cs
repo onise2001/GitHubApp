@@ -112,12 +112,13 @@
             // 
             // searchResultPanel
             // 
+            this.searchResultPanel.AutoScroll = true;
             this.searchResultPanel.Location = new System.Drawing.Point(0, 173);
             this.searchResultPanel.Name = "searchResultPanel";
             this.searchResultPanel.Size = new System.Drawing.Size(736, 459);
             this.searchResultPanel.TabIndex = 8;
             // 
-            // TradingControl
+            // TrendingReposControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +130,7 @@
             this.Controls.Add(this.developersButton);
             this.Controls.Add(this.ChoiceDateRAnge);
             this.Controls.Add(this.CoiseLanguage);
-            this.Name = "TradingControl";
+            this.Name = "TrendingReposControl";
             this.Size = new System.Drawing.Size(736, 635);
             this.Load += new System.EventHandler(this.TradingControl_Load);
             this.ResumeLayout(false);

@@ -94,11 +94,12 @@ namespace GitHubApplication.Services
             SmtpServer.Send(Email);
         }
 
-        public bool PassChange(User user, string current, string newpass)
+        public bool PassChange(User currentUser, string current, string newpass)
         {
-            var Current = hasher.GetHashedPasswordWithoutSalt(hasher.HashWithSalt(current));
-            var CurrentUserPass = hasher.GetHashedPasswordWithoutSalt(user.Password);
-            if (Current== CurrentUserPass)
+            var user = dataBase.Users.FirstOrDefault(u => u.UserName == currentUser.UserName);
+
+            var CurrentUserPass = user.Password;
+            if (hasher.HashWithSalt(current,hasher.GetSalt(CurrentUserPass)) == hasher.GetHashedPasswordWithoutSalt(CurrentUserPass))
             {
                 user.Password = hasher.HashWithSalt(newpass);
                 dataBase.Users.Update(user);

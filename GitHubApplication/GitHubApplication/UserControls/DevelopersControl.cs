@@ -7,14 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GitHubApplication.Models;
 
 namespace GitHubApplication.UserControls
 {
     public partial class DevelopersControl : UserControl
     {
-        public DevelopersControl()
+
+        GitHubUser user;
+
+
+
+        public DevelopersControl(GitHubUser _user)
         {
             InitializeComponent();
+            user = _user;
+        }
+
+        private void DevelopersControl_Load(object sender, EventArgs e)
+        {
+            developerFullNameLabel.Text = user.login;
+
+
         }
     }
 }

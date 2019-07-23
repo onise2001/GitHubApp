@@ -32,14 +32,14 @@ namespace GitHubApplication.API
 
 
 
-        public async Task<RootObject> GetTrendingRepositories(string language, string date)
+        public async Task<ReposRootObject> GetTrendingRepositories(string language, string date)
         {
-            using (HttpResponseMessage response = await client.GetAsync($"{baseUrl}/search/repositories?q=language={language};created = {date}"))
+            using (HttpResponseMessage response = await client.GetAsync($"{baseUrl}/search/repositories?q=language:{language}+created:>={date}"))
             {
                 if (response.IsSuccessStatusCode)
                 {
                     string resposAsString = await response.Content.ReadAsStringAsync();
-                    RootObject repos = JsonConvert.DeserializeObject<RootObject>(resposAsString);
+                    ReposRootObject repos = JsonConvert.DeserializeObject<ReposRootObject>(resposAsString);
                     return repos;
                 }
 
@@ -48,6 +48,21 @@ namespace GitHubApplication.API
             return null;
         }
 
+
+        public async Task<UsersRootObject> GetPopularUsers(string language, string date)
+        {
+            using (HttpResponseMessage response = await client.GetAsync($"{baseUrl}/user_search_url/q=language:{language}+sort:followers"))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    string usersAsString = await response.Content.ReadAsStringAsync();
+                    UsersRootObject users = JsonConvert.DeserializeObject<UsersRootObject>(usersAsString);
+                    return users;
+                }
+            }
+
+            return null;
+        }
 
 
 
