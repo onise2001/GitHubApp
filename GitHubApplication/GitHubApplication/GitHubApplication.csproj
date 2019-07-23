@@ -170,9 +170,16 @@
     <Compile Include="Forms\PasswordReset.Designer.cs">
       <DependentUpon>PasswordReset.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Statistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Statistic.Designer.cs">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\GitHubRepository.cs" />
     <Compile Include="Models\GitHubUser.cs" />
     <Compile Include="Models\RootObject.cs" />
+    <Compile Include="Models\Statistics.cs" />
     <Compile Include="Services\IPasswordHasher.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
     <Compile Include="Common\ServiceManager.cs" />
@@ -213,6 +220,12 @@
     <Compile Include="UserControls\DevelopersControl.Designer.cs">
       <DependentUpon>DevelopersControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\LanguageStatistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LanguageStatistic.Designer.cs">
+      <DependentUpon>LanguageStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\RepositoriesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,6 +247,9 @@
     <EmbeddedResource Include="Forms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Statistic.resx">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +268,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\DevelopersControl.resx">
       <DependentUpon>DevelopersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LanguageStatistic.resx">
+      <DependentUpon>LanguageStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RepositoriesControl.resx">
       <DependentUpon>RepositoriesControl.cs</DependentUpon>

@@ -40,9 +40,9 @@
             this.Bookmarks_label = new System.Windows.Forms.Label();
             this.Notification_label = new System.Windows.Forms.Label();
             this.Profile_label = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ResultPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TradingPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,17 +77,18 @@
             // 
             this.Statistics_label.AutoSize = true;
             this.Statistics_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Statistics_label.Location = new System.Drawing.Point(24, 382);
+            this.Statistics_label.Location = new System.Drawing.Point(24, 394);
             this.Statistics_label.Name = "Statistics_label";
             this.Statistics_label.Size = new System.Drawing.Size(71, 16);
             this.Statistics_label.TabIndex = 14;
             this.Statistics_label.Text = "Statistics";
+            this.Statistics_label.Click += new System.EventHandler(this.Statistics_label_Click);
             // 
             // StarsCompete_label
             // 
             this.StarsCompete_label.AutoSize = true;
             this.StarsCompete_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StarsCompete_label.Location = new System.Drawing.Point(24, 346);
+            this.StarsCompete_label.Location = new System.Drawing.Point(22, 359);
             this.StarsCompete_label.Name = "StarsCompete_label";
             this.StarsCompete_label.Size = new System.Drawing.Size(106, 16);
             this.StarsCompete_label.TabIndex = 13;
@@ -167,6 +168,17 @@
             this.Profile_label.Text = "Profile";
             this.Profile_label.Click += new System.EventHandler(this.Profile_label_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.MenuBar_click);
+            // 
             // ResultPanel
             // 
             this.ResultPanel.Location = new System.Drawing.Point(218, 198);
@@ -182,17 +194,6 @@
             this.TradingPanel.Size = new System.Drawing.Size(934, 124);
             this.TradingPanel.TabIndex = 16;
             this.TradingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TradingPanel_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.MenuBar_click);
             // 
             // MainPage
             // 
