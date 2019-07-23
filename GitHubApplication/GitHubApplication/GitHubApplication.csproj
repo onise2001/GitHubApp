@@ -225,6 +225,12 @@
     <Compile Include="UserControls\TradingControl.Designer.cs">
       <DependentUpon>TradingControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserInfoControl.Designer.cs">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TradingControl.resx">
       <DependentUpon>TradingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserInfoControl.resx">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
