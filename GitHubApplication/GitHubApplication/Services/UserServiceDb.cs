@@ -93,5 +93,19 @@ namespace GitHubApplication.Services
             SmtpServer.EnableSsl = true;
             SmtpServer.Send(Email);
         }
+
+        public bool PassChange(User user, string current, string newpass)
+        {
+            var Current = hasher.GetHashedPasswordWithoutSalt(hasher.HashWithSalt(current));
+            var CurrentUserPass = hasher.GetHashedPasswordWithoutSalt(user.Password);
+            if (Current== CurrentUserPass)
+            {
+                user.Password = hasher.HashWithSalt(newpass);
+                dataBase.Users.Update(user);
+                dataBase.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }

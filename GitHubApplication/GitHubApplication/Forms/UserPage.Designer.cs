@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.MenuPanel = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.MenuButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -40,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LNameLabel = new System.Windows.Forms.Label();
             this.FNameLabel = new System.Windows.Forms.Label();
+            this.SettingPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
@@ -65,13 +65,6 @@
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(210, 593);
             this.MenuPanel.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(216, 62);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 531);
-            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -126,7 +119,7 @@
             // 
             // FavoriteLanButton
             // 
-            this.FavoriteLanButton.Location = new System.Drawing.Point(0, 0);
+            this.FavoriteLanButton.Location = new System.Drawing.Point(85, 259);
             this.FavoriteLanButton.Name = "FavoriteLanButton";
             this.FavoriteLanButton.Size = new System.Drawing.Size(75, 23);
             this.FavoriteLanButton.TabIndex = 5;
@@ -174,11 +167,19 @@
             this.FNameLabel.TabIndex = 0;
             this.FNameLabel.Text = "FirstName";
             // 
+            // SettingPanel
+            // 
+            this.SettingPanel.Location = new System.Drawing.Point(216, 63);
+            this.SettingPanel.Name = "SettingPanel";
+            this.SettingPanel.Size = new System.Drawing.Size(601, 528);
+            this.SettingPanel.TabIndex = 1;
+            // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 591);
+            this.Controls.Add(this.SettingPanel);
             this.Controls.Add(this.MenuPanel);
             this.Name = "UserPage";
             this.Text = "UserPage";
@@ -206,5 +207,6 @@
         private System.Windows.Forms.Button UserInfoButton;
         private System.Windows.Forms.PictureBox MenuButton;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.FlowLayoutPanel SettingPanel;
     }
 }

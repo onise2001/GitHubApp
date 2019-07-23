@@ -12,5 +12,6 @@ namespace GitHubApplication.Services
         User Login(string login, string password , bool onLogin);
         User Register(User user);
         bool Reset(string mail);
+        bool PassChange(User user, string current, string newpass);
     }
 }

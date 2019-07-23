@@ -13,7 +13,7 @@ namespace GitHubApplication.Models
         public static async Task<int> Getstars()
         {
             HttpApiClient httpclient = new HttpApiClient();
-            var data = await httpclient.GetTrendingRepositories();
+            var data = await httpclient.GetTrendingRepositories("C++", "ASDS");
 
             var stars = data.items.Select(a => a.stargazers_count).ToArray();
 

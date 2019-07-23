@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using GitHubApplication.Models;
 using GitHubApplication.Services;
+using GitHubApplication.UserControls;
 
 namespace GitHubApplication.Forms
 {
@@ -43,7 +44,9 @@ namespace GitHubApplication.Forms
 
         private void UserInfoButton_Click(object sender, EventArgs e)
         {
-
+            SettingPanel.Controls.Clear();
+            var userinfo = new UserInfoControl(userService, User);
+            SettingPanel.Controls.Add(userinfo);
 
         }
     }

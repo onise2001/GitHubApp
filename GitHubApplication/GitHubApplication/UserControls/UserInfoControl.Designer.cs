@@ -49,7 +49,7 @@
             // 
             this.FNameLabel.AutoSize = true;
             this.FNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FNameLabel.Location = new System.Drawing.Point(68, 17);
+            this.FNameLabel.Location = new System.Drawing.Point(68, 20);
             this.FNameLabel.Name = "FNameLabel";
             this.FNameLabel.Size = new System.Drawing.Size(76, 17);
             this.FNameLabel.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             this.LNameLabel.AutoSize = true;
             this.LNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LNameLabel.Location = new System.Drawing.Point(68, 43);
+            this.LNameLabel.Location = new System.Drawing.Point(68, 49);
             this.LNameLabel.Name = "LNameLabel";
             this.LNameLabel.Size = new System.Drawing.Size(76, 17);
             this.LNameLabel.TabIndex = 0;
@@ -69,7 +69,7 @@
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(97, 69);
+            this.EmailLabel.Location = new System.Drawing.Point(97, 78);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(47, 17);
             this.EmailLabel.TabIndex = 0;
@@ -79,7 +79,7 @@
             // 
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.Location = new System.Drawing.Point(65, 95);
+            this.UserNameLabel.Location = new System.Drawing.Point(65, 107);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(79, 17);
             this.UserNameLabel.TabIndex = 0;
@@ -89,7 +89,7 @@
             // 
             this.PassLabel.AutoSize = true;
             this.PassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassLabel.Location = new System.Drawing.Point(75, 121);
+            this.PassLabel.Location = new System.Drawing.Point(75, 136);
             this.PassLabel.Name = "PassLabel";
             this.PassLabel.Size = new System.Drawing.Size(69, 17);
             this.PassLabel.TabIndex = 0;
@@ -99,7 +99,7 @@
             // 
             this.NewPassLabel.AutoSize = true;
             this.NewPassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPassLabel.Location = new System.Drawing.Point(44, 147);
+            this.NewPassLabel.Location = new System.Drawing.Point(44, 165);
             this.NewPassLabel.Name = "NewPassLabel";
             this.NewPassLabel.Size = new System.Drawing.Size(100, 17);
             this.NewPassLabel.TabIndex = 0;
@@ -109,7 +109,7 @@
             // 
             this.RePasswordLabel.AutoSize = true;
             this.RePasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RePasswordLabel.Location = new System.Drawing.Point(25, 173);
+            this.RePasswordLabel.Location = new System.Drawing.Point(25, 194);
             this.RePasswordLabel.Name = "RePasswordLabel";
             this.RePasswordLabel.Size = new System.Drawing.Size(119, 17);
             this.RePasswordLabel.TabIndex = 0;
@@ -117,61 +117,72 @@
             // 
             // FnameTextbox
             // 
+            this.FnameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FnameTextbox.Location = new System.Drawing.Point(150, 14);
             this.FnameTextbox.Name = "FnameTextbox";
-            this.FnameTextbox.Size = new System.Drawing.Size(194, 20);
+            this.FnameTextbox.Size = new System.Drawing.Size(194, 23);
             this.FnameTextbox.TabIndex = 1;
             // 
             // EmailTextbox
             // 
-            this.EmailTextbox.Location = new System.Drawing.Point(150, 66);
+            this.EmailTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTextbox.Location = new System.Drawing.Point(150, 72);
             this.EmailTextbox.Name = "EmailTextbox";
-            this.EmailTextbox.Size = new System.Drawing.Size(194, 20);
+            this.EmailTextbox.Size = new System.Drawing.Size(194, 23);
             this.EmailTextbox.TabIndex = 1;
             // 
             // LNameTextbox
             // 
-            this.LNameTextbox.Location = new System.Drawing.Point(150, 40);
+            this.LNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNameTextbox.Location = new System.Drawing.Point(150, 43);
             this.LNameTextbox.Name = "LNameTextbox";
-            this.LNameTextbox.Size = new System.Drawing.Size(194, 20);
+            this.LNameTextbox.Size = new System.Drawing.Size(194, 23);
             this.LNameTextbox.TabIndex = 1;
             // 
             // UserTextbox
             // 
-            this.UserTextbox.Location = new System.Drawing.Point(150, 92);
+            this.UserTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserTextbox.Location = new System.Drawing.Point(150, 101);
             this.UserTextbox.Name = "UserTextbox";
-            this.UserTextbox.Size = new System.Drawing.Size(194, 20);
+            this.UserTextbox.Size = new System.Drawing.Size(194, 23);
             this.UserTextbox.TabIndex = 1;
             // 
             // NewPassTextbox
             // 
-            this.NewPassTextbox.Location = new System.Drawing.Point(150, 144);
+            this.NewPassTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPassTextbox.Location = new System.Drawing.Point(150, 159);
             this.NewPassTextbox.Name = "NewPassTextbox";
-            this.NewPassTextbox.Size = new System.Drawing.Size(194, 20);
+            this.NewPassTextbox.Size = new System.Drawing.Size(194, 23);
             this.NewPassTextbox.TabIndex = 1;
+            this.NewPassTextbox.UseSystemPasswordChar = true;
             // 
             // PassTextbox
             // 
-            this.PassTextbox.Location = new System.Drawing.Point(150, 118);
+            this.PassTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassTextbox.Location = new System.Drawing.Point(150, 130);
             this.PassTextbox.Name = "PassTextbox";
-            this.PassTextbox.Size = new System.Drawing.Size(194, 20);
+            this.PassTextbox.Size = new System.Drawing.Size(194, 23);
             this.PassTextbox.TabIndex = 1;
+            this.PassTextbox.UseSystemPasswordChar = true;
             // 
             // RePassTextbox
             // 
-            this.RePassTextbox.Location = new System.Drawing.Point(150, 170);
+            this.RePassTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RePassTextbox.Location = new System.Drawing.Point(150, 188);
             this.RePassTextbox.Name = "RePassTextbox";
-            this.RePassTextbox.Size = new System.Drawing.Size(194, 20);
+            this.RePassTextbox.Size = new System.Drawing.Size(194, 23);
             this.RePassTextbox.TabIndex = 1;
+            this.RePassTextbox.UseSystemPasswordChar = true;
             // 
             // ChangeButton
             // 
-            this.ChangeButton.Location = new System.Drawing.Point(150, 197);
+            this.ChangeButton.Location = new System.Drawing.Point(150, 217);
             this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(194, 23);
+            this.ChangeButton.Size = new System.Drawing.Size(194, 31);
             this.ChangeButton.TabIndex = 2;
             this.ChangeButton.Text = "Change Password";
             this.ChangeButton.UseVisualStyleBackColor = true;
+            this.ChangeButton.Click += new System.EventHandler(this.ChangeButton_Click);
             // 
             // UserInfoControl
             // 
@@ -193,7 +204,7 @@
             this.Controls.Add(this.LNameLabel);
             this.Controls.Add(this.FNameLabel);
             this.Name = "UserInfoControl";
-            this.Size = new System.Drawing.Size(662, 279);
+            this.Size = new System.Drawing.Size(620, 279);
             this.ResumeLayout(false);
             this.PerformLayout();
 
