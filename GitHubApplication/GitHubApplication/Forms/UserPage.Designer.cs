@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.MenuButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.FavoriteLanButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.UserInfoButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LNameLabel = new System.Windows.Forms.Label();
             this.FNameLabel = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
@@ -58,7 +58,7 @@
             this.MenuPanel.Controls.Add(this.pictureBox3);
             this.MenuPanel.Controls.Add(this.BackButton);
             this.MenuPanel.Controls.Add(this.FavoriteLanButton);
-            this.MenuPanel.Controls.Add(this.button1);
+            this.MenuPanel.Controls.Add(this.UserInfoButton);
             this.MenuPanel.Controls.Add(this.pictureBox1);
             this.MenuPanel.Controls.Add(this.LNameLabel);
             this.MenuPanel.Controls.Add(this.FNameLabel);
@@ -66,6 +66,13 @@
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(210, 593);
             this.MenuPanel.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(216, 62);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 531);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -125,19 +132,20 @@
             this.FavoriteLanButton.Size = new System.Drawing.Size(75, 23);
             this.FavoriteLanButton.TabIndex = 5;
             // 
-            // button1
+            // UserInfoButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(62, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "User Info";
-            this.button1.UseVisualStyleBackColor = false;
+            this.UserInfoButton.BackColor = System.Drawing.Color.Transparent;
+            this.UserInfoButton.FlatAppearance.BorderSize = 0;
+            this.UserInfoButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.UserInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UserInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserInfoButton.Location = new System.Drawing.Point(62, 303);
+            this.UserInfoButton.Name = "UserInfoButton";
+            this.UserInfoButton.Size = new System.Drawing.Size(98, 37);
+            this.UserInfoButton.TabIndex = 2;
+            this.UserInfoButton.Text = "User Info";
+            this.UserInfoButton.UseVisualStyleBackColor = false;
+            this.UserInfoButton.Click += new System.EventHandler(this.UserInfoButton_Click);
             // 
             // pictureBox1
             // 
@@ -166,13 +174,6 @@
             this.FNameLabel.Size = new System.Drawing.Size(72, 17);
             this.FNameLabel.TabIndex = 0;
             this.FNameLabel.Text = "FirstName";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(216, 62);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 531);
-            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // UserPage
             // 
@@ -203,7 +204,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button FavoriteLanButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button UserInfoButton;
         private System.Windows.Forms.PictureBox MenuButton;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

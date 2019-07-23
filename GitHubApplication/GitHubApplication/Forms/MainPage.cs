@@ -20,6 +20,7 @@ namespace GitHubApplication
     public partial class MainPage : MaterialForm
     {
         User user;
+        public event EventHandler<User> CurrentUser;
 
         public MainPage()
         {
@@ -87,8 +88,12 @@ namespace GitHubApplication
 
         private void Profile_label_Click(object sender, EventArgs e)
         {
-           // UserPage userPage = new UserPage(user);
-           // userPage.ShowDialog();
+            UserPage userPage = ServiceManager.Instance.Container.Resolve<UserPage>();
+            CurrentUser += userPage.GetUser;
+            CurrentUser.Invoke(this, user);
+            
+            userPage.ShowDialog();
+            
         }
 
         private void ResultPanel_Paint(object sender, PaintEventArgs e)
