@@ -63,6 +63,26 @@ namespace GitHubApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_github_six_black_107112 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_github_six_black_107112", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_mark_github_298822 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_mark-github_298822", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_account_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-account-100", resourceCulture);
