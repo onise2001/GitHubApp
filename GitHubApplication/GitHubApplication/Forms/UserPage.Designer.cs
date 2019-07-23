@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.BackButton = new System.Windows.Forms.Button();
             this.FavoriteLanButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.LNameLabel = new System.Windows.Forms.Label();
             this.FNameLabel = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.MenuButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.BackButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
@@ -49,8 +49,7 @@
             // 
             // MenuPanel
             // 
-            this.MenuPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.MenuPanel.Controls.Add(this.flowLayoutPanel1);
+            this.MenuPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.MenuPanel.Controls.Add(this.pictureBox4);
             this.MenuPanel.Controls.Add(this.MenuButton);
             this.MenuPanel.Controls.Add(this.pictureBox2);
@@ -61,19 +60,31 @@
             this.MenuPanel.Controls.Add(this.pictureBox1);
             this.MenuPanel.Controls.Add(this.LNameLabel);
             this.MenuPanel.Controls.Add(this.FNameLabel);
-            this.MenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.MenuPanel.Location = new System.Drawing.Point(-2, 64);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(210, 591);
+            this.MenuPanel.Size = new System.Drawing.Size(224, 526);
             this.MenuPanel.TabIndex = 0;
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Location = new System.Drawing.Point(62, 542);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(98, 37);
+            this.BackButton.TabIndex = 2;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = false;
             // 
             // FavoriteLanButton
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(12, 539);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.FavoriteLanButton.Location = new System.Drawing.Point(3, 22);
+            this.FavoriteLanButton.Name = "FavoriteLanButton";
+            this.FavoriteLanButton.Size = new System.Drawing.Size(75, 23);
+            this.FavoriteLanButton.TabIndex = 5;
             // 
             // button1
             // 
@@ -109,10 +120,18 @@
             this.FNameLabel.TabIndex = 0;
             this.FNameLabel.Text = "FirstName";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(12, 400);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
             // MenuButton
             // 
-            this.MenuButton.Image = global::GitHubApplication.Properties.Resources.icons8_menu_vertical_16__1_;
-            this.MenuButton.Location = new System.Drawing.Point(162, 3);
+            this.MenuButton.Location = new System.Drawing.Point(176, 0);
             this.MenuButton.Name = "MenuButton";
             this.MenuButton.Size = new System.Drawing.Size(45, 42);
             this.MenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +141,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GitHubApplication.Properties.Resources.icons8_customer_26;
             this.pictureBox2.Location = new System.Drawing.Point(12, 303);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
@@ -132,27 +150,12 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::GitHubApplication.Properties.Resources.icons8_sign_language_40;
             this.pictureBox3.Location = new System.Drawing.Point(12, 242);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // BackButton
-            // 
-            this.BackButton.BackColor = System.Drawing.Color.Transparent;
-            this.BackButton.FlatAppearance.BorderSize = 0;
-            this.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(62, 542);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(98, 37);
-            this.BackButton.TabIndex = 2;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -163,21 +166,13 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(12, 539);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 591);
             this.Controls.Add(this.MenuPanel);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "UserPage";
             this.Text = "UserPage";
             this.MenuPanel.ResumeLayout(false);
