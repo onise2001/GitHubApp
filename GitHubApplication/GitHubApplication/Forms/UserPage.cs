@@ -21,7 +21,8 @@ namespace GitHubApplication.Forms
 
         private void MenuButton_Click(object sender, EventArgs e)
         {
-            MenuPanel.Width = MenuPanel.Width == 210 ? 45 : 210;
+            MenuPanel.Width = MenuPanel.Width == 210 ? 55 : 210;
+            MenuButton.Left= MenuPanel.Width == 55 ? 3 : 162;
         }
     }
 }

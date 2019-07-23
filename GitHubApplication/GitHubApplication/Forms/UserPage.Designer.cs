@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LNameLabel = new System.Windows.Forms.Label();
             this.FNameLabel = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
@@ -50,6 +51,7 @@
             // MenuPanel
             // 
             this.MenuPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.MenuPanel.Controls.Add(this.flowLayoutPanel1);
             this.MenuPanel.Controls.Add(this.pictureBox4);
             this.MenuPanel.Controls.Add(this.MenuButton);
             this.MenuPanel.Controls.Add(this.pictureBox2);
@@ -165,6 +167,13 @@
             this.FNameLabel.TabIndex = 0;
             this.FNameLabel.Text = "FirstName";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(216, 62);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 531);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,5 +206,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox MenuButton;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
