@@ -30,7 +30,6 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usernameLabel = new System.Windows.Forms.Label();
-            this.projectFullNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,31 +45,20 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(141, 66);
+            this.usernameLabel.Location = new System.Drawing.Point(158, 20);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(71, 15);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "username";
             // 
-            // projectFullNameLabel
-            // 
-            this.projectFullNameLabel.AutoSize = true;
-            this.projectFullNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectFullNameLabel.Location = new System.Drawing.Point(383, 66);
-            this.projectFullNameLabel.Name = "projectFullNameLabel";
-            this.projectFullNameLabel.Size = new System.Drawing.Size(111, 15);
-            this.projectFullNameLabel.TabIndex = 4;
-            this.projectFullNameLabel.Text = "fullname project";
-            // 
             // DevelopersControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.projectFullNameLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "DevelopersControl";
-            this.Size = new System.Drawing.Size(863, 150);
+            this.Size = new System.Drawing.Size(863, 124);
             this.Load += new System.EventHandler(this.DevelopersControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -82,6 +70,5 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label usernameLabel;
-        private System.Windows.Forms.Label projectFullNameLabel;
     }
 }

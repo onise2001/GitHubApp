@@ -46,7 +46,7 @@
             this.loginTextBox.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginTextBox.Location = new System.Drawing.Point(171, 220);
             this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(235, 25);
+            this.loginTextBox.Size = new System.Drawing.Size(235, 33);
             this.loginTextBox.TabIndex = 2;
             this.loginTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
@@ -56,7 +56,7 @@
             this.passwordTextBox.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.Location = new System.Drawing.Point(171, 278);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(235, 25);
+            this.passwordTextBox.Size = new System.Drawing.Size(235, 33);
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.UseSystemPasswordChar = true;
             this.passwordTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
@@ -81,7 +81,7 @@
             this.loginLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginLabel.Location = new System.Drawing.Point(38, 224);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(127, 18);
+            this.loginLabel.Size = new System.Drawing.Size(202, 26);
             this.loginLabel.TabIndex = 0;
             this.loginLabel.Text = "User Name Or Email :";
             // 
@@ -93,7 +93,7 @@
             this.signUpButton.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpButton.Location = new System.Drawing.Point(259, 357);
             this.signUpButton.Name = "signUpButton";
-            this.signUpButton.Size = new System.Drawing.Size(50, 18);
+            this.signUpButton.Size = new System.Drawing.Size(80, 26);
             this.signUpButton.TabIndex = 4;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
@@ -105,7 +105,7 @@
             this.passwordLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(86, 281);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(65, 18);
+            this.passwordLabel.Size = new System.Drawing.Size(102, 26);
             this.passwordLabel.TabIndex = 1;
             this.passwordLabel.Text = "Password :";
             // 
@@ -115,7 +115,7 @@
             this.loginErrorLabel.ForeColor = System.Drawing.Color.Red;
             this.loginErrorLabel.Location = new System.Drawing.Point(209, 159);
             this.loginErrorLabel.Name = "loginErrorLabel";
-            this.loginErrorLabel.Size = new System.Drawing.Size(139, 14);
+            this.loginErrorLabel.Size = new System.Drawing.Size(219, 22);
             this.loginErrorLabel.TabIndex = 3;
             this.loginErrorLabel.Text = "Login Or Password Incorrect";
             this.loginErrorLabel.Visible = false;
@@ -141,7 +141,7 @@
             this.CancelLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelLabel.Location = new System.Drawing.Point(259, 493);
             this.CancelLabel.Name = "CancelLabel";
-            this.CancelLabel.Size = new System.Drawing.Size(44, 18);
+            this.CancelLabel.Size = new System.Drawing.Size(71, 26);
             this.CancelLabel.TabIndex = 7;
             this.CancelLabel.Text = "Cancel";
             this.CancelLabel.Click += new System.EventHandler(this.CancelLabel_Click);
@@ -153,7 +153,7 @@
             this.ShowCheckBox.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowCheckBox.Location = new System.Drawing.Point(412, 280);
             this.ShowCheckBox.Name = "ShowCheckBox";
-            this.ShowCheckBox.Size = new System.Drawing.Size(57, 22);
+            this.ShowCheckBox.Size = new System.Drawing.Size(85, 30);
             this.ShowCheckBox.TabIndex = 8;
             this.ShowCheckBox.Text = "Show";
             this.ShowCheckBox.UseVisualStyleBackColor = false;
@@ -177,6 +177,7 @@
             this.Font = new System.Drawing.Font("Sylfaen", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "LoginForm";
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
