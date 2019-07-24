@@ -109,19 +109,15 @@ namespace GitHubApplication.Forms
 
         private void ShowCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-           
-            
-                if (ShowCheckBox.Checked)
-                {
-                    passwordTextBox.UseSystemPasswordChar = true;
-                }
-                else
-                {
-                    passwordTextBox.UseSystemPasswordChar = false;
-                }
-            
-        }
 
-      
+            if (ShowCheckBox.Checked)
+            {
+                passwordTextBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwordTextBox.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

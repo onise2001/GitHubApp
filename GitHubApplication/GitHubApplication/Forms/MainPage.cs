@@ -30,8 +30,8 @@ namespace GitHubApplication
             InitializeComponent();
             var skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            skinManager.ColorScheme = new ColorScheme(Primary.Grey800, Primary.Grey800, Primary.Grey800, Accent.LightBlue700, TextShade.WHITE);
         }
 
         private void label1_Click(object sender, EventArgs e)

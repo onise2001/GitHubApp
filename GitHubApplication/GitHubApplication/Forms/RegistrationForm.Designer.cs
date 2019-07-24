@@ -47,37 +47,42 @@
             // 
             // firstNameTextBox
             // 
+            this.firstNameTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameTextBox.Location = new System.Drawing.Point(268, 103);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(277, 23);
+            this.firstNameTextBox.Size = new System.Drawing.Size(277, 27);
             this.firstNameTextBox.TabIndex = 6;
             // 
             // lastNameTextBox
             // 
+            this.lastNameTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameTextBox.Location = new System.Drawing.Point(268, 169);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(277, 23);
+            this.lastNameTextBox.Size = new System.Drawing.Size(277, 27);
             this.lastNameTextBox.TabIndex = 7;
             // 
             // userNameTextBox
             // 
+            this.userNameTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTextBox.Location = new System.Drawing.Point(268, 309);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(277, 23);
+            this.userNameTextBox.Size = new System.Drawing.Size(277, 27);
             this.userNameTextBox.TabIndex = 9;
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.Location = new System.Drawing.Point(268, 381);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(277, 23);
+            this.passwordTextBox.Size = new System.Drawing.Size(277, 27);
             this.passwordTextBox.TabIndex = 10;
             // 
             // emailTextBox
             // 
+            this.emailTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.Location = new System.Drawing.Point(268, 235);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(277, 23);
+            this.emailTextBox.Size = new System.Drawing.Size(277, 27);
             this.emailTextBox.TabIndex = 8;
             // 
             // signUpButton
@@ -96,61 +101,74 @@
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.firstNameLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameLabel.Location = new System.Drawing.Point(184, 107);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(67, 16);
+            this.firstNameLabel.Size = new System.Drawing.Size(73, 18);
             this.firstNameLabel.TabIndex = 0;
             this.firstNameLabel.Text = "First Name :";
             // 
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lastNameLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameLabel.Location = new System.Drawing.Point(183, 173);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(65, 16);
+            this.lastNameLabel.Size = new System.Drawing.Size(71, 18);
             this.lastNameLabel.TabIndex = 1;
             this.lastNameLabel.Text = "Last Name :";
             // 
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.emailLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.Location = new System.Drawing.Point(213, 239);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(41, 16);
+            this.emailLabel.Size = new System.Drawing.Size(45, 18);
             this.emailLabel.TabIndex = 2;
             this.emailLabel.Text = "Email :";
             // 
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
+            this.userNameLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.userNameLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.Location = new System.Drawing.Point(184, 313);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(68, 16);
+            this.userNameLabel.Size = new System.Drawing.Size(75, 18);
             this.userNameLabel.TabIndex = 3;
             this.userNameLabel.Text = "User Name :";
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.passwordLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(189, 384);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(60, 16);
+            this.passwordLabel.Size = new System.Drawing.Size(65, 18);
             this.passwordLabel.TabIndex = 4;
             this.passwordLabel.Text = "Password :";
             // 
             // repeatePasswordTextBox
             // 
+            this.repeatePasswordTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repeatePasswordTextBox.Location = new System.Drawing.Point(268, 454);
             this.repeatePasswordTextBox.Name = "repeatePasswordTextBox";
-            this.repeatePasswordTextBox.Size = new System.Drawing.Size(277, 23);
+            this.repeatePasswordTextBox.Size = new System.Drawing.Size(277, 27);
             this.repeatePasswordTextBox.TabIndex = 11;
             // 
             // repeatPasswordLabel
             // 
             this.repeatPasswordLabel.AutoSize = true;
+            this.repeatPasswordLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.repeatPasswordLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repeatPasswordLabel.Location = new System.Drawing.Point(148, 458);
             this.repeatPasswordLabel.Name = "repeatPasswordLabel";
-            this.repeatPasswordLabel.Size = new System.Drawing.Size(104, 16);
+            this.repeatPasswordLabel.Size = new System.Drawing.Size(113, 18);
             this.repeatPasswordLabel.TabIndex = 5;
             this.repeatPasswordLabel.Text = "Confirm Password :";
             // 
@@ -196,7 +214,6 @@
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.firstNameTextBox);
             this.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrationForm";
             this.Text = "RegistrationForm";
             this.Load += new System.EventHandler(this.RegistrationForm_Load);
