@@ -63,6 +63,16 @@ namespace GitHubApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _134216_48 {
+            get {
+                object obj = ResourceManager.GetObject("134216-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_github_six_black_107112 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_github_six_black_107112", resourceCulture);
@@ -73,9 +83,29 @@ namespace GitHubApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_logo_github_298818 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_logo-github_298818", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_mark_github_298822 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_mark-github_298822", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_mark_github_2988221 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_mark-github_2988221", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +213,16 @@ namespace GitHubApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_menu_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-menu-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_menu_rounded_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-rounded-100", resourceCulture);
@@ -236,6 +276,16 @@ namespace GitHubApplication.Properties {
         internal static System.Drawing.Bitmap icons8_variable_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-variable-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_xbox_menu_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-xbox-menu-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

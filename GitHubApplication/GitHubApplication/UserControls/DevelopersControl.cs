@@ -26,9 +26,9 @@ namespace GitHubApplication.UserControls
 
         private void DevelopersControl_Load(object sender, EventArgs e)
         {
-            developerFullNameLabel.Text = user.login;
+           // developerFullNameLabel.Text = user.login;
 
 
         }
     }
-}
+    }
