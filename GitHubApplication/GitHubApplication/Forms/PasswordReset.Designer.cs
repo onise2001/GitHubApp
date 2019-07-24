@@ -40,8 +40,8 @@
             // 
             this.ResetButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ResetButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton.Location = new System.Drawing.Point(126, 126);
+            this.ResetButton.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Location = new System.Drawing.Point(122, 182);
             this.ResetButton.Margin = new System.Windows.Forms.Padding(4);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(190, 28);
@@ -52,7 +52,7 @@
             // 
             // MailUserTextbox
             // 
-            this.MailUserTextbox.Location = new System.Drawing.Point(126, 94);
+            this.MailUserTextbox.Location = new System.Drawing.Point(122, 150);
             this.MailUserTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.MailUserTextbox.Name = "MailUserTextbox";
             this.MailUserTextbox.Size = new System.Drawing.Size(190, 23);
@@ -62,7 +62,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 71);
+            this.label1.Location = new System.Drawing.Point(137, 131);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 15);
@@ -73,7 +73,7 @@
             // 
             this.SentLabel.AutoSize = true;
             this.SentLabel.ForeColor = System.Drawing.Color.Blue;
-            this.SentLabel.Location = new System.Drawing.Point(126, 16);
+            this.SentLabel.Location = new System.Drawing.Point(122, 72);
             this.SentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SentLabel.Name = "SentLabel";
             this.SentLabel.Size = new System.Drawing.Size(171, 16);
@@ -85,7 +85,7 @@
             // 
             this.ErrorLabel.AutoSize = true;
             this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLabel.Location = new System.Drawing.Point(172, 43);
+            this.ErrorLabel.Location = new System.Drawing.Point(168, 99);
             this.ErrorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ErrorLabel.Name = "ErrorLabel";
             this.ErrorLabel.Size = new System.Drawing.Size(100, 16);

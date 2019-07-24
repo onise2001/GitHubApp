@@ -62,7 +62,7 @@
             this.LNameLabel.Location = new System.Drawing.Point(68, 49);
             this.LNameLabel.Name = "LNameLabel";
             this.LNameLabel.Size = new System.Drawing.Size(76, 17);
-            this.LNameLabel.TabIndex = 0;
+            this.LNameLabel.TabIndex = 1;
             this.LNameLabel.Text = "Last Name";
             // 
             // EmailLabel
@@ -72,7 +72,7 @@
             this.EmailLabel.Location = new System.Drawing.Point(97, 78);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(47, 17);
-            this.EmailLabel.TabIndex = 0;
+            this.EmailLabel.TabIndex = 2;
             this.EmailLabel.Text = "E-Mail";
             // 
             // UserNameLabel
@@ -82,7 +82,7 @@
             this.UserNameLabel.Location = new System.Drawing.Point(65, 107);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(79, 17);
-            this.UserNameLabel.TabIndex = 0;
+            this.UserNameLabel.TabIndex = 3;
             this.UserNameLabel.Text = "User Name";
             // 
             // PassLabel
@@ -92,7 +92,7 @@
             this.PassLabel.Location = new System.Drawing.Point(75, 136);
             this.PassLabel.Name = "PassLabel";
             this.PassLabel.Size = new System.Drawing.Size(69, 17);
-            this.PassLabel.TabIndex = 0;
+            this.PassLabel.TabIndex = 4;
             this.PassLabel.Text = "Password";
             // 
             // NewPassLabel
@@ -102,7 +102,7 @@
             this.NewPassLabel.Location = new System.Drawing.Point(44, 165);
             this.NewPassLabel.Name = "NewPassLabel";
             this.NewPassLabel.Size = new System.Drawing.Size(100, 17);
-            this.NewPassLabel.TabIndex = 0;
+            this.NewPassLabel.TabIndex = 5;
             this.NewPassLabel.Text = "New Password";
             // 
             // RePasswordLabel
@@ -112,7 +112,7 @@
             this.RePasswordLabel.Location = new System.Drawing.Point(25, 194);
             this.RePasswordLabel.Name = "RePasswordLabel";
             this.RePasswordLabel.Size = new System.Drawing.Size(119, 17);
-            this.RePasswordLabel.TabIndex = 0;
+            this.RePasswordLabel.TabIndex = 6;
             this.RePasswordLabel.Text = "Repeat Password";
             // 
             // FnameTextbox
@@ -120,32 +120,36 @@
             this.FnameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FnameTextbox.Location = new System.Drawing.Point(150, 14);
             this.FnameTextbox.Name = "FnameTextbox";
+            this.FnameTextbox.ReadOnly = true;
             this.FnameTextbox.Size = new System.Drawing.Size(194, 23);
-            this.FnameTextbox.TabIndex = 1;
+            this.FnameTextbox.TabIndex = 7;
             // 
             // EmailTextbox
             // 
             this.EmailTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailTextbox.Location = new System.Drawing.Point(150, 72);
             this.EmailTextbox.Name = "EmailTextbox";
+            this.EmailTextbox.ReadOnly = true;
             this.EmailTextbox.Size = new System.Drawing.Size(194, 23);
-            this.EmailTextbox.TabIndex = 1;
+            this.EmailTextbox.TabIndex = 9;
             // 
             // LNameTextbox
             // 
             this.LNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNameTextbox.Location = new System.Drawing.Point(150, 43);
             this.LNameTextbox.Name = "LNameTextbox";
+            this.LNameTextbox.ReadOnly = true;
             this.LNameTextbox.Size = new System.Drawing.Size(194, 23);
-            this.LNameTextbox.TabIndex = 1;
+            this.LNameTextbox.TabIndex = 8;
             // 
             // UserTextbox
             // 
             this.UserTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserTextbox.Location = new System.Drawing.Point(150, 101);
             this.UserTextbox.Name = "UserTextbox";
+            this.UserTextbox.ReadOnly = true;
             this.UserTextbox.Size = new System.Drawing.Size(194, 23);
-            this.UserTextbox.TabIndex = 1;
+            this.UserTextbox.TabIndex = 10;
             // 
             // NewPassTextbox
             // 
@@ -153,7 +157,7 @@
             this.NewPassTextbox.Location = new System.Drawing.Point(150, 159);
             this.NewPassTextbox.Name = "NewPassTextbox";
             this.NewPassTextbox.Size = new System.Drawing.Size(194, 23);
-            this.NewPassTextbox.TabIndex = 1;
+            this.NewPassTextbox.TabIndex = 12;
             this.NewPassTextbox.UseSystemPasswordChar = true;
             // 
             // PassTextbox
@@ -162,7 +166,7 @@
             this.PassTextbox.Location = new System.Drawing.Point(150, 130);
             this.PassTextbox.Name = "PassTextbox";
             this.PassTextbox.Size = new System.Drawing.Size(194, 23);
-            this.PassTextbox.TabIndex = 1;
+            this.PassTextbox.TabIndex = 11;
             this.PassTextbox.UseSystemPasswordChar = true;
             // 
             // RePassTextbox
@@ -171,7 +175,7 @@
             this.RePassTextbox.Location = new System.Drawing.Point(150, 188);
             this.RePassTextbox.Name = "RePassTextbox";
             this.RePassTextbox.Size = new System.Drawing.Size(194, 23);
-            this.RePassTextbox.TabIndex = 1;
+            this.RePassTextbox.TabIndex = 13;
             this.RePassTextbox.UseSystemPasswordChar = true;
             // 
             // ChangeButton
@@ -179,7 +183,7 @@
             this.ChangeButton.Location = new System.Drawing.Point(150, 217);
             this.ChangeButton.Name = "ChangeButton";
             this.ChangeButton.Size = new System.Drawing.Size(194, 31);
-            this.ChangeButton.TabIndex = 2;
+            this.ChangeButton.TabIndex = 14;
             this.ChangeButton.Text = "Change Password";
             this.ChangeButton.UseVisualStyleBackColor = true;
             this.ChangeButton.Click += new System.EventHandler(this.ChangeButton_Click);
