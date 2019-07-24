@@ -4,13 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using MaterialSkin;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace GitHubApplication.Forms
 {
-    public partial class Statistic : Form
+    public partial class Statistic : MaterialForm
     {
         public Statistic()
         {

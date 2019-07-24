@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.MenuPanel = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.FavoriteLanButton = new System.Windows.Forms.Button();
+            this.UserInfoButton = new System.Windows.Forms.Button();
+            this.LNameLabel = new System.Windows.Forms.Label();
+            this.FNameLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.MenuButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.BackButton = new System.Windows.Forms.Button();
-            this.FavoriteLanButton = new System.Windows.Forms.Button();
-            this.UserInfoButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LNameLabel = new System.Windows.Forms.Label();
-            this.FNameLabel = new System.Windows.Forms.Label();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuButton)).BeginInit();
@@ -50,7 +50,8 @@
             // 
             // MenuPanel
             // 
-            this.MenuPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.MenuPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MenuPanel.Controls.Add(this.button1);
             this.MenuPanel.Controls.Add(this.pictureBox4);
             this.MenuPanel.Controls.Add(this.MenuButton);
             this.MenuPanel.Controls.Add(this.pictureBox2);
@@ -61,54 +62,10 @@
             this.MenuPanel.Controls.Add(this.pictureBox1);
             this.MenuPanel.Controls.Add(this.LNameLabel);
             this.MenuPanel.Controls.Add(this.FNameLabel);
-            this.MenuPanel.Location = new System.Drawing.Point(0, -2);
+            this.MenuPanel.Location = new System.Drawing.Point(0, 64);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(210, 593);
+            this.MenuPanel.Size = new System.Drawing.Size(210, 527);
             this.MenuPanel.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(216, 62);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 531);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(12, 539);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
-            // MenuButton
-            // 
-            this.MenuButton.Location = new System.Drawing.Point(162, 3);
-            this.MenuButton.Name = "MenuButton";
-            this.MenuButton.Size = new System.Drawing.Size(45, 42);
-            this.MenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MenuButton.TabIndex = 1;
-            this.MenuButton.TabStop = false;
-            this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(12, 303);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(12, 242);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
             // 
             // BackButton
             // 
@@ -137,7 +94,7 @@
             this.UserInfoButton.FlatAppearance.BorderSize = 0;
             this.UserInfoButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.UserInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UserInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserInfoButton.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserInfoButton.Location = new System.Drawing.Point(62, 303);
             this.UserInfoButton.Name = "UserInfoButton";
             this.UserInfoButton.Size = new System.Drawing.Size(98, 37);
@@ -145,14 +102,6 @@
             this.UserInfoButton.Text = "User Info";
             this.UserInfoButton.UseVisualStyleBackColor = false;
             this.UserInfoButton.Click += new System.EventHandler(this.UserInfoButton_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(62, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 95);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // LNameLabel
             // 
@@ -167,12 +116,76 @@
             // FNameLabel
             // 
             this.FNameLabel.AutoSize = true;
+            this.FNameLabel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FNameLabel.Location = new System.Drawing.Point(76, 160);
             this.FNameLabel.Name = "FNameLabel";
             this.FNameLabel.Size = new System.Drawing.Size(72, 17);
             this.FNameLabel.TabIndex = 0;
             this.FNameLabel.Text = "FirstName";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(79, 253);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 29);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Language";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(12, 539);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // MenuButton
+            // 
+            this.MenuButton.Image = global::GitHubApplication.Properties.Resources.icons8_menu_24;
+            this.MenuButton.Location = new System.Drawing.Point(162, 3);
+            this.MenuButton.Name = "MenuButton";
+            this.MenuButton.Size = new System.Drawing.Size(45, 42);
+            this.MenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MenuButton.TabIndex = 1;
+            this.MenuButton.TabStop = false;
+            this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GitHubApplication.Properties.Resources.icons8_male_user_48;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 303);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox3.Image = global::GitHubApplication.Properties.Resources.icons8_programming_48;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 242);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GitHubApplication.Properties.Resources.icons8_male_user_100;
+            this.pictureBox1.Location = new System.Drawing.Point(62, 62);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // UserPage
             // 
@@ -206,5 +219,6 @@
         private System.Windows.Forms.Button UserInfoButton;
         private System.Windows.Forms.PictureBox MenuButton;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button button1;
     }
 }

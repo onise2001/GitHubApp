@@ -59,9 +59,9 @@
             this.MenuBar.Controls.Add(this.Notification_label);
             this.MenuBar.Controls.Add(this.Profile_label);
             this.MenuBar.Controls.Add(this.pictureBox1);
-            this.MenuBar.Location = new System.Drawing.Point(0, 1);
+            this.MenuBar.Location = new System.Drawing.Point(0, 66);
             this.MenuBar.Name = "MenuBar";
-            this.MenuBar.Size = new System.Drawing.Size(215, 686);
+            this.MenuBar.Size = new System.Drawing.Size(215, 621);
             this.MenuBar.TabIndex = 1;
             // 
             // SearchResultPanel
