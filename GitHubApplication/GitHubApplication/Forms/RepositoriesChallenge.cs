@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GitHubApplication.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,14 @@ namespace GitHubApplication.Forms
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+          //  LanguagesChallengecontrol repcontrol = new LanguagesChallengecontrol();
+            //showstarsresult.Controls.Add(repcontrol);
+
+
+        }
+
+        private void Click_Click(object sender, EventArgs e)
         {
 
         }

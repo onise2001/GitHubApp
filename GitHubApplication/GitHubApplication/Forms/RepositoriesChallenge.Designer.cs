@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.showstarsresult = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // showstarsresult
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(171, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(626, 186);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.showstarsresult.Location = new System.Drawing.Point(0, 2);
+            this.showstarsresult.Name = "showstarsresult";
+            this.showstarsresult.Size = new System.Drawing.Size(797, 447);
+            this.showstarsresult.TabIndex = 0;
+            this.showstarsresult.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // Statistic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.showstarsresult);
             this.Name = "Statistic";
             this.Text = "Statistic";
             this.Load += new System.EventHandler(this.Statistic_Load);
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel showstarsresult;
     }
 }

@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GitHubApplication.Models;
 
 namespace GitHubApplication.UserControls
 {
-    public partial class LanguageStatistic : UserControl
+    public partial class ShowCompareControl : UserControl
     {
-        public LanguageStatistic()
+        public ShowCompareControl(GitHubRepository _repo)
         {
             InitializeComponent();
         }
 
-        private void LanguageStatistic_Load(object sender, EventArgs e)
+        private void ShowCompareControl_Load(object sender, EventArgs e)
         {
 
         }

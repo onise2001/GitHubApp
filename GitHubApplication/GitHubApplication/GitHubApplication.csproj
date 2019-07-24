@@ -172,16 +172,15 @@
     <Compile Include="Forms\PasswordReset.Designer.cs">
       <DependentUpon>PasswordReset.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Statistic.cs">
+    <Compile Include="Forms\RepositoriesChallenge.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Statistic.Designer.cs">
-      <DependentUpon>Statistic.cs</DependentUpon>
+    <Compile Include="Forms\RepositoriesChallenge.Designer.cs">
+      <DependentUpon>RepositoriesChallenge.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\GitHubRepository.cs" />
     <Compile Include="Models\GitHubUser.cs" />
     <Compile Include="Models\RootObject.cs" />
-    <Compile Include="Models\Statistics.cs" />
     <Compile Include="Models\UsersRootObject.cs" />
     <Compile Include="Services\IPasswordHasher.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
@@ -223,11 +222,17 @@
     <Compile Include="UserControls\DevelopersControl.Designer.cs">
       <DependentUpon>DevelopersControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\LanguageStatistic.cs">
+    <Compile Include="UserControls\LanguageChallengecontrol.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\LanguageStatistic.Designer.cs">
-      <DependentUpon>LanguageStatistic.cs</DependentUpon>
+    <Compile Include="UserControls\LanguageChallengecontrol.Designer.cs">
+      <DependentUpon>LanguageChallengecontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ShowCompareControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ShowCompareControl.Designer.cs">
+      <DependentUpon>ShowCompareControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\TrendingReposControl.cs">
       <SubType>UserControl</SubType>
@@ -256,8 +261,8 @@
     <EmbeddedResource Include="Forms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Statistic.resx">
-      <DependentUpon>Statistic.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RepositoriesChallenge.resx">
+      <DependentUpon>RepositoriesChallenge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>
@@ -278,8 +283,11 @@
     <EmbeddedResource Include="UserControls\DevelopersControl.resx">
       <DependentUpon>DevelopersControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\LanguageStatistic.resx">
-      <DependentUpon>LanguageStatistic.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\LanguageChallengecontrol.resx">
+      <DependentUpon>LanguageChallengecontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ShowCompareControl.resx">
+      <DependentUpon>ShowCompareControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TrendingReposControl.resx">
       <DependentUpon>TrendingReposControl.cs</DependentUpon>
