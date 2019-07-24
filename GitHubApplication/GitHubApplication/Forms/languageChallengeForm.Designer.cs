@@ -1,6 +1,6 @@
 ﻿namespace GitHubApplication.Forms
 {
-    partial class Statistic
+    partial class LanguageChallengform
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ChallengPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // ChallengPanel
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(173, 62);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(626, 186);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.ChallengPanel.Location = new System.Drawing.Point(2, 69);
+            this.ChallengPanel.Name = "ChallengPanel";
+            this.ChallengPanel.Size = new System.Drawing.Size(1478, 681);
+            this.ChallengPanel.TabIndex = 0;
+            this.ChallengPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChallengPanel_Paint);
             // 
-            // Statistic
+            // LanguageChallengform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "Statistic";
-            this.Text = "Statistic";
-            this.Load += new System.EventHandler(this.Statistic_Load);
+            this.ClientSize = new System.Drawing.Size(1488, 762);
+            this.Controls.Add(this.ChallengPanel);
+            this.Name = "LanguageChallengform";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel LanguageChallangePanell;
+        private System.Windows.Forms.FlowLayoutPanel LanguageChallangeResult;
+        private System.Windows.Forms.FlowLayoutPanel ChallengPanel;
     }
+
 }

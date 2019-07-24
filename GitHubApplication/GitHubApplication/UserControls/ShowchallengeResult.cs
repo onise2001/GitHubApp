@@ -11,14 +11,16 @@ using GitHubApplication.Models;
 
 namespace GitHubApplication.UserControls
 {
-    public partial class ShowCompareControl : UserControl
+    public partial class ShowchallengeResult : UserControl
     {
-        public ShowCompareControl(GitHubRepository _repo)
+        GitHubRepository gitHubRepository;
+        public ShowchallengeResult(GitHubRepository r)
         {
             InitializeComponent();
+            gitHubRepository = r;
         }
 
-        private void ShowCompareControl_Load(object sender, EventArgs e)
+        private void ShowchallengeResult_Load(object sender, EventArgs e)
         {
 
         }
