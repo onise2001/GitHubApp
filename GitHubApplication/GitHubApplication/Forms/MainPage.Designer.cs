@@ -41,9 +41,13 @@
             this.Notification_label = new System.Windows.Forms.Label();
             this.Profile_label = new System.Windows.Forms.Label();
             this.generalPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.GitHubpictureBox = new System.Windows.Forms.PictureBox();
+            this.CatpictureBox = new System.Windows.Forms.PictureBox();
+            this.MenupictureBox = new System.Windows.Forms.PictureBox();
             this.MenuBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GitHubpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CatpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenupictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuBar
@@ -58,10 +62,10 @@
             this.MenuBar.Controls.Add(this.Bookmarks_label);
             this.MenuBar.Controls.Add(this.Notification_label);
             this.MenuBar.Controls.Add(this.Profile_label);
-            this.MenuBar.Controls.Add(this.pictureBox1);
-            this.MenuBar.Location = new System.Drawing.Point(0, 1);
+            this.MenuBar.Controls.Add(this.MenupictureBox);
+            this.MenuBar.Location = new System.Drawing.Point(0, 66);
             this.MenuBar.Name = "MenuBar";
-            this.MenuBar.Size = new System.Drawing.Size(215, 686);
+            this.MenuBar.Size = new System.Drawing.Size(215, 621);
             this.MenuBar.TabIndex = 1;
             // 
             // SearchResultPanel
@@ -174,22 +178,46 @@
             this.generalPanel.TabIndex = 15;
             this.generalPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ResultPanel_Paint);
             // 
-            // pictureBox1
+            // GitHubpictureBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.MenuBar_click);
+            this.GitHubpictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GitHubpictureBox.Image = global::GitHubApplication.Properties.Resources.iconfinder_logo_github_298818;
+            this.GitHubpictureBox.Location = new System.Drawing.Point(111, 0);
+            this.GitHubpictureBox.Name = "GitHubpictureBox";
+            this.GitHubpictureBox.Size = new System.Drawing.Size(150, 63);
+            this.GitHubpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.GitHubpictureBox.TabIndex = 17;
+            this.GitHubpictureBox.TabStop = false;
+            // 
+            // CatpictureBox
+            // 
+            this.CatpictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CatpictureBox.Image = global::GitHubApplication.Properties.Resources.iconfinder_mark_github_2988221;
+            this.CatpictureBox.Location = new System.Drawing.Point(0, 0);
+            this.CatpictureBox.Name = "CatpictureBox";
+            this.CatpictureBox.Size = new System.Drawing.Size(113, 63);
+            this.CatpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CatpictureBox.TabIndex = 16;
+            this.CatpictureBox.TabStop = false;
+            // 
+            // MenupictureBox
+            // 
+            this.MenupictureBox.Image = global::GitHubApplication.Properties.Resources.icons8_xbox_menu_50;
+            this.MenupictureBox.Location = new System.Drawing.Point(162, 0);
+            this.MenupictureBox.Name = "MenupictureBox";
+            this.MenupictureBox.Size = new System.Drawing.Size(50, 51);
+            this.MenupictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MenupictureBox.TabIndex = 4;
+            this.MenupictureBox.TabStop = false;
+            this.MenupictureBox.Click += new System.EventHandler(this.MenuBar_click);
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 688);
+            this.Controls.Add(this.GitHubpictureBox);
+            this.Controls.Add(this.CatpictureBox);
             this.Controls.Add(this.generalPanel);
             this.Controls.Add(this.MenuBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -198,14 +226,16 @@
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.MenuBar.ResumeLayout(false);
             this.MenuBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GitHubpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CatpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenupictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel MenuBar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox MenupictureBox;
         private System.Windows.Forms.Label Notification_label;
         private System.Windows.Forms.Label Profile_label;
         private System.Windows.Forms.Label StarsCompete_label;
@@ -217,5 +247,7 @@
         private System.Windows.Forms.Label Statistics_label;
         private System.Windows.Forms.FlowLayoutPanel SearchResultPanel;
         private System.Windows.Forms.FlowLayoutPanel generalPanel;
+        private System.Windows.Forms.PictureBox CatpictureBox;
+        private System.Windows.Forms.PictureBox GitHubpictureBox;
     }
 }

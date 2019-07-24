@@ -14,7 +14,7 @@ namespace GitHubApplication.Common
         private int saltSize = 20;
 
         RNGCryptoServiceProvider RNGProvider = new RNGCryptoServiceProvider();
-        SHA512 hasher = new SHA512Managed();
+        RijndaelManaged rj = new RijndaelManaged();
 
 
 
@@ -51,9 +51,10 @@ namespace GitHubApplication.Common
 
         public string Hash(string password, string salt)
         {
-            Rfc2898DeriveBytes hashedPassword = new Rfc2898DeriveBytes(password, Encoding.UTF8.GetBytes(salt),1000);
-
-            return hashedPassword.ToString();
+            Rfc2898DeriveBytes passwordKey = new Rfc2898DeriveBytes(password, Encoding.UTF8.GetBytes(salt),1000);
+            byte[] passwordAsBytes = passwordKey.GetBytes(20);
+            string hashedPassword = Convert.ToBase64String(passwordAsBytes);
+            return hashedPassword;
         }
 
         public string HashWithSalt(string password, string salt)

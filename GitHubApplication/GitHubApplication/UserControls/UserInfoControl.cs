@@ -40,9 +40,8 @@ namespace GitHubApplication.UserControls
             {
                 if(userService.PassChange(User, PassTextbox.Text, NewPassTextbox.Text))
                 {
-                    PassLabel.ForeColor = Color.Red;
+                    PassLabel.ForeColor = Color.Black;
                 }
-                RePasswordLabel.ForeColor = Color.Black;
             }
             else
             {
