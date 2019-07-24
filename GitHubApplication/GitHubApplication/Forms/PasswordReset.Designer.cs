@@ -34,12 +34,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SentLabel = new System.Windows.Forms.Label();
             this.ErrorLabel = new System.Windows.Forms.Label();
+            this.Cancellabel2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ResetButton
             // 
-            this.ResetButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ResetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ResetButton.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.Location = new System.Drawing.Point(122, 182);
             this.ResetButton.Margin = new System.Windows.Forms.Padding(4);
@@ -52,6 +55,8 @@
             // 
             // MailUserTextbox
             // 
+            this.MailUserTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MailUserTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MailUserTextbox.Location = new System.Drawing.Point(122, 150);
             this.MailUserTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.MailUserTextbox.Name = "MailUserTextbox";
@@ -93,20 +98,46 @@
             this.ErrorLabel.Text = "E-Mail is incorrect";
             this.ErrorLabel.Visible = false;
             // 
+            // Cancellabel2
+            // 
+            this.Cancellabel2.AutoSize = true;
+            this.Cancellabel2.Location = new System.Drawing.Point(190, 241);
+            this.Cancellabel2.Name = "Cancellabel2";
+            this.Cancellabel2.Size = new System.Drawing.Size(41, 16);
+            this.Cancellabel2.TabIndex = 5;
+            this.Cancellabel2.Text = "Cancel";
+            this.Cancellabel2.Click += new System.EventHandler(this.Cancellabel2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::GitHubApplication.Properties.Resources.icons8_password_1_48;
+            this.pictureBox1.Location = new System.Drawing.Point(75, 150);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // PasswordReset
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(461, 281);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(461, 326);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Cancellabel2);
             this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.SentLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MailUserTextbox);
             this.Controls.Add(this.ResetButton);
             this.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PasswordReset";
             this.Text = "PasswordResset";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,5 +150,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label SentLabel;
         private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.Label Cancellabel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

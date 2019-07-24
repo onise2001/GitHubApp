@@ -1,4 +1,4 @@
-﻿using MaterialSkin.Controls;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,14 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin;
 using GitHubApplication.Models;
 using GitHubApplication.Services;
 using GitHubApplication.UserControls;
 
 namespace GitHubApplication.Forms
 {
-    public partial class UserPage : MaterialForm
+    public partial class UserPage : Form
     {
         User User;
         IUserService userService;

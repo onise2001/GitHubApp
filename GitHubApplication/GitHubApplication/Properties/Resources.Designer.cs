@@ -243,6 +243,16 @@ namespace GitHubApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_1_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-password-1-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_programming_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-programming-48", resourceCulture);

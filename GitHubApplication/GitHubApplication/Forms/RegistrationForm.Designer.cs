@@ -47,6 +47,8 @@
             // 
             // firstNameTextBox
             // 
+            this.firstNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.firstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.firstNameTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameTextBox.Location = new System.Drawing.Point(268, 103);
             this.firstNameTextBox.Name = "firstNameTextBox";
@@ -55,6 +57,8 @@
             // 
             // lastNameTextBox
             // 
+            this.lastNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lastNameTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameTextBox.Location = new System.Drawing.Point(268, 169);
             this.lastNameTextBox.Name = "lastNameTextBox";
@@ -63,6 +67,8 @@
             // 
             // userNameTextBox
             // 
+            this.userNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.userNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userNameTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTextBox.Location = new System.Drawing.Point(268, 309);
             this.userNameTextBox.Name = "userNameTextBox";
@@ -71,6 +77,8 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.Location = new System.Drawing.Point(268, 381);
             this.passwordTextBox.Name = "passwordTextBox";
@@ -79,6 +87,8 @@
             // 
             // emailTextBox
             // 
+            this.emailTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.Location = new System.Drawing.Point(268, 235);
             this.emailTextBox.Name = "emailTextBox";
@@ -87,9 +97,9 @@
             // 
             // signUpButton
             // 
-            this.signUpButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.signUpButton.Font = new System.Drawing.Font("Sylfaen", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signUpButton.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpButton.Location = new System.Drawing.Point(268, 526);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(278, 57);
@@ -101,7 +111,7 @@
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.firstNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.firstNameLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameLabel.Location = new System.Drawing.Point(184, 107);
             this.firstNameLabel.Name = "firstNameLabel";
@@ -112,7 +122,7 @@
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lastNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lastNameLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameLabel.Location = new System.Drawing.Point(183, 173);
             this.lastNameLabel.Name = "lastNameLabel";
@@ -123,7 +133,7 @@
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.emailLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.emailLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.Location = new System.Drawing.Point(213, 239);
             this.emailLabel.Name = "emailLabel";
@@ -134,7 +144,7 @@
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
-            this.userNameLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.userNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.userNameLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.Location = new System.Drawing.Point(184, 313);
             this.userNameLabel.Name = "userNameLabel";
@@ -145,7 +155,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.passwordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.passwordLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(189, 384);
             this.passwordLabel.Name = "passwordLabel";
@@ -155,6 +165,8 @@
             // 
             // repeatePasswordTextBox
             // 
+            this.repeatePasswordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.repeatePasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.repeatePasswordTextBox.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repeatePasswordTextBox.Location = new System.Drawing.Point(268, 454);
             this.repeatePasswordTextBox.Name = "repeatePasswordTextBox";
@@ -164,7 +176,7 @@
             // repeatPasswordLabel
             // 
             this.repeatPasswordLabel.AutoSize = true;
-            this.repeatPasswordLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.repeatPasswordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.repeatPasswordLabel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repeatPasswordLabel.Location = new System.Drawing.Point(148, 458);
             this.repeatPasswordLabel.Name = "repeatPasswordLabel";
@@ -197,6 +209,7 @@
             // RegistrationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(933, 838);
             this.Controls.Add(this.userNameErrorLabel);
             this.Controls.Add(this.passwordErrorLabel);

@@ -7,12 +7,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity;
 using GitHubApplication.API;
-using MaterialSkin.Controls;
-using MaterialSkin;
+
+
 
 namespace GitHubApplication.Forms
 {
-    public partial class LoginForm : MaterialForm
+    public partial class LoginForm : Form
     {
 
 

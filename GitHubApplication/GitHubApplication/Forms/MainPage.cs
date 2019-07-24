@@ -1,7 +1,6 @@
 ﻿using GitHubApplication.Common;
 using GitHubApplication.Forms;
 using GitHubApplication.Models;
-using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MaterialSkin;
 using System.Windows.Forms;
 using Unity;
 using GitHubApplication.UserControls;
@@ -18,7 +16,7 @@ using GitHubApplication.API;
 
 namespace GitHubApplication
 {
-    public partial class MainPage : MaterialForm
+    public partial class MainPage : Form
     {
         User user;
         public event EventHandler<User> CurrentUser;
@@ -28,10 +26,7 @@ namespace GitHubApplication
         public MainPage()
         {
             InitializeComponent();
-            var skinManager = MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            skinManager.ColorScheme = new ColorScheme(Primary.Grey800, Primary.Grey800, Primary.Grey800, Accent.LightBlue700, TextShade.WHITE);
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
