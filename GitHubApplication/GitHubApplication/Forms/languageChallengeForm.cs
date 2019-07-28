@@ -30,12 +30,10 @@ namespace GitHubApplication.Forms
         {
 
             LanguageChallangeControl languagesChallengecontrol = new LanguageChallangeControl(new HttpApiClient());
+         
+            LanguageChalengPanel.Controls.Add(languagesChallengecontrol);
 
-            LanguageChallangePanell.Controls.Add(languagesChallengecontrol);
 
-
-            //  LanguagesChallengecontrol repcontrol = new LanguagesChallengecontrol();
-            //showstarsresult.Controls.Add(repcontrol);
         }
     }
 }

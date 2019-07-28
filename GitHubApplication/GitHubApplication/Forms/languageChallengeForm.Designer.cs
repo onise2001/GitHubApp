@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ChallengPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.LanguageChalengPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // ChallengPanel
+            // LanguageChalengPanel
             // 
-            this.ChallengPanel.Location = new System.Drawing.Point(2, 69);
-            this.ChallengPanel.Name = "ChallengPanel";
-            this.ChallengPanel.Size = new System.Drawing.Size(1478, 681);
-            this.ChallengPanel.TabIndex = 0;
-            this.ChallengPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChallengPanel_Paint);
+            this.LanguageChalengPanel.Location = new System.Drawing.Point(2, 0);
+            this.LanguageChalengPanel.Name = "LanguageChalengPanel";
+            this.LanguageChalengPanel.Size = new System.Drawing.Size(1083, 458);
+            this.LanguageChalengPanel.TabIndex = 0;
+            this.LanguageChalengPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChallengPanel_Paint);
             // 
             // LanguageChallengform
             // 
-            this.ClientSize = new System.Drawing.Size(1488, 762);
-            this.Controls.Add(this.ChallengPanel);
+            this.ClientSize = new System.Drawing.Size(1087, 462);
+            this.Controls.Add(this.LanguageChalengPanel);
             this.Name = "LanguageChallengform";
             this.ResumeLayout(false);
 
@@ -52,7 +52,7 @@
 
         private System.Windows.Forms.FlowLayoutPanel LanguageChallangePanell;
         private System.Windows.Forms.FlowLayoutPanel LanguageChallangeResult;
-        private System.Windows.Forms.FlowLayoutPanel ChallengPanel;
+        private System.Windows.Forms.FlowLayoutPanel LanguageChalengPanel;
     }
 
 }
