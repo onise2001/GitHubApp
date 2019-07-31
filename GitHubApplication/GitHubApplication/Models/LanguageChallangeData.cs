@@ -8,8 +8,11 @@ namespace GitHubApplication.Models
 {
     public class LanguageChallangeData
     {
-        public int StarsCount { get; set; }
-        public string ChoosedLanguage { get; set; }
+        public int FirstStarsCount { get; set; }
+        public string FirstChoosedLanguage { get; set; }
+
+        public int SecondStarsCount { get; set; }
+        public string SecondChoosedLanguage { get; set; }
 
     }
 }

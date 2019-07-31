@@ -9,34 +9,39 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GitHubApplication.Models;
 
-namespace GitHubApplication.UserControls
+namespace GitHubApplication.UserControls.StarsChalange
 {
-    public partial class ShowchallengeResult : UserControl
-    {
-        GitHubRepository gitHubRepository;
-        LanguageChallangeData _languageChallangeData;
-        public ShowchallengeResult(LanguageChallangeData languageChallangeData)
+      public partial class ShowchallengeResult : UserControl
         {
-            InitializeComponent();
-            _languageChallangeData=languageChallangeData;
-        }
+            LanguageChallangeData _languageChallangeData;
 
-        private void ShowchallengeResult_Load(object sender, EventArgs e)
-        {
-            Stars.Text = _languageChallangeData.StarsCount.ToString();
-            Language.Text = _languageChallangeData.ChoosedLanguage;
-               
+            public ShowchallengeResult(LanguageChallangeData languageChallangeData)
+            {
+                InitializeComponent();
+                _languageChallangeData = languageChallangeData;
+            }
 
-        }
+            private void ShowchallengeResult_Load(object sender, EventArgs e)
+            {
 
-        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
+                FirstStar.Text = _languageChallangeData.FirstStarsCount.ToString();
+                FirstLanguage.Text = _languageChallangeData.FirstChoosedLanguage;
 
-        }
+                SecondStar.Text = _languageChallangeData.SecondStarsCount.ToString();
+                SecondLanguage.Text = _languageChallangeData.SecondChoosedLanguage;
 
-        private void Language_Click(object sender, EventArgs e)
-        {
-            
-        }
+            }
+
+            private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+            {
+
+            }
+
+
+      }
+
+      
+
+      
     }
-}
+

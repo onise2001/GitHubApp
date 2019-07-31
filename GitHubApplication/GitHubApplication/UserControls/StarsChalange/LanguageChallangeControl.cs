@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GitHubApplication.API;
 using GitHubApplication.Models;
+using GitHubApplication.UserControls.StarsChalange;
 
 namespace GitHubApplication.UserControls
 {
     public partial class LanguageChallangeControl : UserControl
     {
+        public bool Indicator { get; set; } = true;
         LanguageChallangeData languageChallangeData=new LanguageChallangeData();
-           HttpApiClient Client;
+        HttpApiClient Client;
 
         public LanguageChallangeControl(HttpApiClient apiClient)
         {
@@ -27,54 +29,78 @@ namespace GitHubApplication.UserControls
         {
 
 
-            var response = await Client.GetTrendingRepositories(languageChallangeData.ChoosedLanguage, DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0, 0)).ToString("yyyy-MM-dd"));
-            if (response != null)
+
+            var Firstresponse = await Client.GetTrendingRepositories(languageChallangeData.FirstChoosedLanguage, DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0, 0)).ToString("yyyy-MM-dd"));
+            var Secondresponse = await Client.GetTrendingRepositories(languageChallangeData.SecondChoosedLanguage, DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0, 0)).ToString("yyyy-MM-dd"));
+
+            if (Firstresponse != null&& Secondresponse != null)
             {
-                var repos = response.items;
-                var result= repos.Select(r => r.stargazers_count);
-               var starscount=result.Aggregate((Result,Item)=>Result+Item);
-                languageChallangeData.StarsCount = starscount;
+                
+                var firstresult = Firstresponse.items.Select(r => r.stargazers_count);
+                languageChallangeData.FirstStarsCount = firstresult.Aggregate((Result,Item)=>Result+Item);
+
+                var secondresult = Secondresponse.items.Select(r => r.stargazers_count);
+                languageChallangeData.SecondStarsCount = secondresult.Aggregate((Result, Item) => Result + Item);
 
                 ShowchallengeResult repoControls = new ShowchallengeResult(languageChallangeData);
                 ChalangeResultPanel.Controls.Add(repoControls);
 
-
-                  
             }
-        }
-
-        private void ChallangeResultControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ChalangeResultPanel_Paint(object sender, PaintEventArgs e)
-        {
         }
 
         private void Java_Click(object sender, EventArgs e)
         {
-            Java.ForeColor = System.Drawing.Color.Red;
-           
-            languageChallangeData.ChoosedLanguage = "Java";
-            FirstLanguage.Text= "Java";
-            Java.Enabled = false;
+            if (!Indicator)
+            {
+                Java.ForeColor = System.Drawing.Color.Red;
+                languageChallangeData.SecondChoosedLanguage = "Java";
+                SecondLanguage.Text = "Java";
+                Java.Enabled = false;
+                Indicator = true;
+                Compare.Enabled = true;
+            }
+            if (Indicator)
+            {
+                Java.ForeColor = System.Drawing.Color.Red;
+                languageChallangeData.FirstChoosedLanguage = "Java";
+                FirstLanguage.Text = "Java";
+                Java.Enabled = false;
+                Indicator = false;
+            }
 
         }
 
         private void Ruby_Click(object sender, EventArgs e)
         {
-            Ruby.ForeColor= System.Drawing.Color.Red;
-            languageChallangeData.ChoosedLanguage = "Ruby";
-            FirstLanguage.Text = "Ruby";
-            Ruby.Enabled = false;
+
+
+            if (!Indicator)
+            {
+                Ruby.ForeColor = System.Drawing.Color.Red;
+                languageChallangeData.SecondChoosedLanguage = "Ruby";
+                SecondLanguage.Text = "Ruby";
+                Ruby.Enabled = false;
+                Indicator = true;
+                Compare.Enabled = true;
+
+
+            }
+            if (Indicator)
+            {
+                Ruby.ForeColor = System.Drawing.Color.Red;
+                languageChallangeData.FirstChoosedLanguage = "Ruby";
+                FirstLanguage.Text = "Ruby";
+                Ruby.Enabled = false;
+                Indicator = false;
+            }
+           
 
             //ChalangeResultPanel.Controls.Clear();
+
+        }
+
+        private void LanguageChallangeControl_Load(object sender, EventArgs e)
+        {
 
         }
     }

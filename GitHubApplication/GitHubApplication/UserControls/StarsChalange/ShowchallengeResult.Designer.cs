@@ -1,4 +1,4 @@
-﻿namespace GitHubApplication.UserControls
+﻿namespace GitHubApplication.UserControls.StarsChalange
 {
     partial class ShowchallengeResult
     {
@@ -28,55 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowchallengeResult));
-            this.Stars = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Language = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.FirstStar = new System.Windows.Forms.Label();
+            this.SecondStar = new System.Windows.Forms.Label();
+            this.SecondLanguage = new System.Windows.Forms.Label();
+            this.FirstLanguage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Stars
+            // FirstStar
             // 
-            this.Stars.AutoSize = true;
-            this.Stars.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stars.Location = new System.Drawing.Point(154, 152);
-            this.Stars.Name = "Stars";
-            this.Stars.Size = new System.Drawing.Size(63, 25);
-            this.Stars.TabIndex = 0;
-            this.Stars.Text = "Stars";
+            this.FirstStar.AutoSize = true;
+            this.FirstStar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstStar.Location = new System.Drawing.Point(18, 93);
+            this.FirstStar.Name = "FirstStar";
+            this.FirstStar.Size = new System.Drawing.Size(16, 16);
+            this.FirstStar.TabIndex = 0;
+            this.FirstStar.Text = "0";
             // 
-            // pictureBox1
+            // SecondStar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(102, 123);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.SecondStar.AutoSize = true;
+            this.SecondStar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecondStar.Location = new System.Drawing.Point(715, 93);
+            this.SecondStar.Name = "SecondStar";
+            this.SecondStar.Size = new System.Drawing.Size(16, 16);
+            this.SecondStar.TabIndex = 1;
+            this.SecondStar.Text = "0";
             // 
-            // Language
+            // SecondLanguage
             // 
-            this.Language.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Language.Location = new System.Drawing.Point(3, 23);
-            this.Language.Name = "Language";
-            this.Language.Size = new System.Drawing.Size(88, 38);
-            this.Language.TabIndex = 5;
-            this.Language.Text = "Java";
-            this.Language.Click += new System.EventHandler(this.Language_Click);
+            this.SecondLanguage.AutoSize = true;
+            this.SecondLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecondLanguage.Location = new System.Drawing.Point(715, 31);
+            this.SecondLanguage.Name = "SecondLanguage";
+            this.SecondLanguage.Size = new System.Drawing.Size(16, 16);
+            this.SecondLanguage.TabIndex = 2;
+            this.SecondLanguage.Text = "0";
+            // 
+            // FirstLanguage
+            // 
+            this.FirstLanguage.AutoSize = true;
+            this.FirstLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstLanguage.Location = new System.Drawing.Point(18, 31);
+            this.FirstLanguage.Name = "FirstLanguage";
+            this.FirstLanguage.Size = new System.Drawing.Size(16, 16);
+            this.FirstLanguage.TabIndex = 3;
+            this.FirstLanguage.Text = "0";
             // 
             // ShowchallengeResult
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Language);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Stars);
+            this.Controls.Add(this.FirstLanguage);
+            this.Controls.Add(this.SecondLanguage);
+            this.Controls.Add(this.SecondStar);
+            this.Controls.Add(this.FirstStar);
             this.Name = "ShowchallengeResult";
-            this.Size = new System.Drawing.Size(1640, 237);
+            this.Size = new System.Drawing.Size(782, 132);
             this.Load += new System.EventHandler(this.ShowchallengeResult_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,8 +92,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Stars;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label Language;
+        private System.Windows.Forms.Label FirstStar;
+        private System.Windows.Forms.Label SecondStar;
+        private System.Windows.Forms.Label SecondLanguage;
+        private System.Windows.Forms.Label FirstLanguage;
     }
 }
