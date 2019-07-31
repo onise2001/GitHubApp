@@ -172,14 +172,9 @@
     <Compile Include="Forms\PasswordReset.Designer.cs">
       <DependentUpon>PasswordReset.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\languageChallengeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\languageChallengeForm.Designer.cs">
-      <DependentUpon>languageChallengeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\GitHubRepository.cs" />
     <Compile Include="Models\GitHubUser.cs" />
+    <Compile Include="Models\LanguageChallangeData.cs" />
     <Compile Include="Models\RootObject.cs" />
     <Compile Include="Models\UsersRootObject.cs" />
     <Compile Include="Services\IPasswordHasher.cs" />
@@ -260,9 +255,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\languageChallengeForm.resx">
-      <DependentUpon>languageChallengeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>

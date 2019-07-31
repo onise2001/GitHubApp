@@ -112,14 +112,15 @@ namespace GitHubApplication
 
         private void Statistics_label_Click(object sender, EventArgs e)
         {
-            LanguageChallengform statistic = new LanguageChallengform();
-            statistic.Show();
+            //LanguageChallengform statistic = new LanguageChallengform();
+            //statistic.Show();
         }
 
         private void StarsCHallange_label_Click(object sender, EventArgs e)
         {
-            LanguageChallengform languageChallengform = new LanguageChallengform();
-            languageChallengform.Show();
+            LanguageChallangeControl languagesChallengecontrol = new LanguageChallangeControl(new HttpApiClient());
+
+            generalPanel.Controls.Add(languagesChallengecontrol);
         }
     }
 }

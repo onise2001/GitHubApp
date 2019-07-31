@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GitHubApplication.API;
+using GitHubApplication.Models;
 
 namespace GitHubApplication.UserControls
 {
     public partial class LanguageChallangeControl : UserControl
     {
-        string ChoisedLanguage;
-        HttpApiClient Client;
+        LanguageChallangeData languageChallangeData=new LanguageChallangeData();
+           HttpApiClient Client;
 
         public LanguageChallangeControl(HttpApiClient apiClient)
         {
@@ -26,14 +27,15 @@ namespace GitHubApplication.UserControls
         {
 
 
-            var response = await Client.GetTrendingRepositories("", DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0, 0)).ToString("yyyy-MM-dd"));
+            var response = await Client.GetTrendingRepositories(languageChallangeData.ChoosedLanguage, DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0, 0)).ToString("yyyy-MM-dd"));
             if (response != null)
             {
                 var repos = response.items;
                 var result= repos.Select(r => r.stargazers_count);
                var starscount=result.Aggregate((Result,Item)=>Result+Item);
+                languageChallangeData.StarsCount = starscount;
 
-                ShowchallengeResult repoControls = new ShowchallengeResult(starscount);
+                ShowchallengeResult repoControls = new ShowchallengeResult(languageChallangeData);
                 ChalangeResultPanel.Controls.Add(repoControls);
 
 
@@ -57,15 +59,22 @@ namespace GitHubApplication.UserControls
 
         private void Java_Click(object sender, EventArgs e)
         {
-            ChoisedLanguage = "Java";
-            ChalangeResultPanel.Controls.Clear();
+            Java.ForeColor = System.Drawing.Color.Red;
+           
+            languageChallangeData.ChoosedLanguage = "Java";
+            FirstLanguage.Text= "Java";
+            Java.Enabled = false;
 
         }
 
         private void Ruby_Click(object sender, EventArgs e)
         {
-            ChoisedLanguage = "Ruby";
-            ChalangeResultPanel.Controls.Clear();
+            Ruby.ForeColor= System.Drawing.Color.Red;
+            languageChallangeData.ChoosedLanguage = "Ruby";
+            FirstLanguage.Text = "Ruby";
+            Ruby.Enabled = false;
+
+            //ChalangeResultPanel.Controls.Clear();
 
         }
     }

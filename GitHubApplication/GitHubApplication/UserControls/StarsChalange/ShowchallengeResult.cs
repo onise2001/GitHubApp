@@ -14,19 +14,18 @@ namespace GitHubApplication.UserControls
     public partial class ShowchallengeResult : UserControl
     {
         GitHubRepository gitHubRepository;
-        int R;
-        public ShowchallengeResult(int r)
+        LanguageChallangeData _languageChallangeData;
+        public ShowchallengeResult(LanguageChallangeData languageChallangeData)
         {
             InitializeComponent();
-            //gitHubRepository = r;
-            R = r;
+            _languageChallangeData=languageChallangeData;
         }
 
         private void ShowchallengeResult_Load(object sender, EventArgs e)
         {
-            Stars.Text = R.ToString();
-                //= gitHubRepository.stargazers_count.ToString();
-            //Forks.Text=gitHubRepository.ToString();
+            Stars.Text = _languageChallangeData.StarsCount.ToString();
+            Language.Text = _languageChallangeData.ChoosedLanguage;
+               
 
         }
 
