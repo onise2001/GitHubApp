@@ -40,15 +40,15 @@
             this.Bookmarks_label = new System.Windows.Forms.Label();
             this.Notification_label = new System.Windows.Forms.Label();
             this.Profile_label = new System.Windows.Forms.Label();
+            this.MenupictureBox = new System.Windows.Forms.PictureBox();
             this.generalPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GitHubpictureBox = new System.Windows.Forms.PictureBox();
             this.CatpictureBox = new System.Windows.Forms.PictureBox();
-            this.MenupictureBox = new System.Windows.Forms.PictureBox();
             this.MenuBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MenupictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GitHubpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CatpictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MenupictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuBar
@@ -174,12 +174,23 @@
             this.Profile_label.Text = "Profile";
             this.Profile_label.Click += new System.EventHandler(this.Profile_label_Click);
             // 
+            // MenupictureBox
+            // 
+            this.MenupictureBox.Image = global::GitHubApplication.Properties.Resources.icons8_xbox_menu_50;
+            this.MenupictureBox.Location = new System.Drawing.Point(162, 0);
+            this.MenupictureBox.Name = "MenupictureBox";
+            this.MenupictureBox.Size = new System.Drawing.Size(50, 51);
+            this.MenupictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MenupictureBox.TabIndex = 4;
+            this.MenupictureBox.TabStop = false;
+            this.MenupictureBox.Click += new System.EventHandler(this.MenuBar_click);
+            // 
             // generalPanel
             // 
             this.generalPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.generalPanel.Location = new System.Drawing.Point(218, 66);
             this.generalPanel.Name = "generalPanel";
-            this.generalPanel.Size = new System.Drawing.Size(856, 507);
+            this.generalPanel.Size = new System.Drawing.Size(935, 507);
             this.generalPanel.TabIndex = 15;
             this.generalPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ResultPanel_Paint);
             // 
@@ -188,7 +199,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Location = new System.Drawing.Point(260, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(814, 63);
+            this.panel1.Size = new System.Drawing.Size(893, 63);
             this.panel1.TabIndex = 18;
             // 
             // GitHubpictureBox
@@ -213,23 +224,12 @@
             this.CatpictureBox.TabIndex = 16;
             this.CatpictureBox.TabStop = false;
             // 
-            // MenupictureBox
-            // 
-            this.MenupictureBox.Image = global::GitHubApplication.Properties.Resources.icons8_xbox_menu_50;
-            this.MenupictureBox.Location = new System.Drawing.Point(162, 0);
-            this.MenupictureBox.Name = "MenupictureBox";
-            this.MenupictureBox.Size = new System.Drawing.Size(50, 51);
-            this.MenupictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MenupictureBox.TabIndex = 4;
-            this.MenupictureBox.TabStop = false;
-            this.MenupictureBox.Click += new System.EventHandler(this.MenuBar_click);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1069, 573);
+            this.ClientSize = new System.Drawing.Size(1150, 573);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GitHubpictureBox);
             this.Controls.Add(this.CatpictureBox);
@@ -241,9 +241,9 @@
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.MenuBar.ResumeLayout(false);
             this.MenuBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MenupictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GitHubpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CatpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MenupictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

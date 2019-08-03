@@ -28,10 +28,10 @@ namespace GitHubApplication.UserControls
         private async void Compare_Click(object sender, EventArgs e)
         {
 
+            
 
-
-            var Firstresponse = await Client.GetTrendingRepositories(languageChallangeData.FirstChoosedLanguage, DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0, 0)).ToString("yyyy-MM-dd"));
-            var Secondresponse = await Client.GetTrendingRepositories(languageChallangeData.SecondChoosedLanguage, DateTime.Now.Subtract(new TimeSpan(1, 0, 0, 0, 0)).ToString("yyyy-MM-dd"));
+            var Firstresponse = await Client.GetTrendingRepositories(languageChallangeData.FirstChoosedLanguage, DateTime.Now.Subtract(new TimeSpan(7, 0, 0, 0)).ToString("yyyy-MM-dd"));
+            var Secondresponse = await Client.GetTrendingRepositories(languageChallangeData.SecondChoosedLanguage, DateTime.Now.Subtract(new TimeSpan(7, 0, 0, 0, 0)).ToString("yyyy-MM-dd"));
 
             if (Firstresponse != null&& Secondresponse != null)
             {
@@ -44,28 +44,24 @@ namespace GitHubApplication.UserControls
 
                 ShowchallengeResult repoControls = new ShowchallengeResult(languageChallangeData);
                 ChalangeResultPanel.Controls.Add(repoControls);
-
+                NewChallange.Enabled = true;
             }
         }
 
         private void Java_Click(object sender, EventArgs e)
         {
-            if (!Indicator)
+            if (languageChallangeData.FirstChoosedLanguage != null)
             {
-                Java.ForeColor = System.Drawing.Color.Red;
                 languageChallangeData.SecondChoosedLanguage = "Java";
                 SecondLanguage.Text = "Java";
                 Java.Enabled = false;
-                Indicator = true;
                 Compare.Enabled = true;
             }
-            if (Indicator)
+            if (languageChallangeData.FirstChoosedLanguage == null)
             {
-                Java.ForeColor = System.Drawing.Color.Red;
                 languageChallangeData.FirstChoosedLanguage = "Java";
                 FirstLanguage.Text = "Java";
                 Java.Enabled = false;
-                Indicator = false;
             }
 
         }
@@ -74,33 +70,105 @@ namespace GitHubApplication.UserControls
         {
 
 
-            if (!Indicator)
+            if (languageChallangeData.FirstChoosedLanguage != null)
             {
-                Ruby.ForeColor = System.Drawing.Color.Red;
-                languageChallangeData.SecondChoosedLanguage = "Ruby";
-                SecondLanguage.Text = "Ruby";
+                languageChallangeData.SecondChoosedLanguage = "ruby";
+                SecondLanguage.Text = "ruby";
                 Ruby.Enabled = false;
-                Indicator = true;
                 Compare.Enabled = true;
 
 
             }
-            if (Indicator)
+            if (languageChallangeData.FirstChoosedLanguage == null)
             {
-                Ruby.ForeColor = System.Drawing.Color.Red;
-                languageChallangeData.FirstChoosedLanguage = "Ruby";
-                FirstLanguage.Text = "Ruby";
+                languageChallangeData.FirstChoosedLanguage = "ruby";
+                FirstLanguage.Text = "ruby";
                 Ruby.Enabled = false;
-                Indicator = false;
             }
            
-
-            //ChalangeResultPanel.Controls.Clear();
-
         }
 
         private void LanguageChallangeControl_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void SecondLanguage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FirstLanguage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+
+            if (languageChallangeData.FirstChoosedLanguage != null)
+            {
+                languageChallangeData.SecondChoosedLanguage = "C";
+                SecondLanguage.Text = "C";
+                C.Enabled = false;
+                Compare.Enabled = true;
+
+
+            }
+            if (languageChallangeData.FirstChoosedLanguage == null)
+            {
+                languageChallangeData.FirstChoosedLanguage = "C";
+                FirstLanguage.Text = "C";
+                C.Enabled = false;
+            }
+        }
+
+        private void C_Sharp_Click(object sender, EventArgs e)
+        {
+            if (languageChallangeData.FirstChoosedLanguage != null)
+            {
+                languageChallangeData.SecondChoosedLanguage = ".NET";
+                SecondLanguage.Text = "C#";
+                C_Sharp.Enabled = false;
+                Compare.Enabled = true;
+
+
+            }
+            if (languageChallangeData.FirstChoosedLanguage == null)
+            {
+                languageChallangeData.FirstChoosedLanguage = ".NET";
+                FirstLanguage.Text = "C#";
+                C_Sharp.Enabled = false;
+            }
+        }
+
+        private void NewChallange_Click(object sender, EventArgs e)
+        {
+            ChalangeResultPanel.Controls.Clear();
+            C_Sharp.Enabled = true;
+            C.Enabled = true;
+            Java.Enabled = true;
+            Ruby.Enabled = true;
+   
+        }
+
+        private void Python_Click(object sender, EventArgs e)
+        {
+            if (languageChallangeData.FirstChoosedLanguage != null)
+            {
+                languageChallangeData.SecondChoosedLanguage = "Python";
+                SecondLanguage.Text = "Python";
+                Python.Enabled = false;
+                Compare.Enabled = true;
+
+
+            }
+            if (languageChallangeData.FirstChoosedLanguage == null)
+            {
+                languageChallangeData.FirstChoosedLanguage = "Python";
+                FirstLanguage.Text = "Python";
+                Python.Enabled = false;
+            }
 
         }
     }
