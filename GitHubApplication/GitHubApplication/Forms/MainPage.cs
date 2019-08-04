@@ -40,18 +40,20 @@ namespace GitHubApplication
             Size size;
 
 
-            if (Indicator)
-                {
-                 size = new Size(200, 675);
+            if (Indicator==false)
+            {
+                size = new Size(190, 675);
 
                 MenuBar.Size = size;
                 Indicator = true;
             }
+            else
+            {
+                size = new Size(20, 675);
 
-             size = new Size(110, 675);
-
-            MenuBar.Size = size;
-            Indicator = false;
+                MenuBar.Size = size;
+                Indicator = false;
+            }
         }
 
         private void Label1_Click_1(object sender, EventArgs e)
@@ -134,6 +136,11 @@ namespace GitHubApplication
             LanguageChallangeControl languagesChallengecontrol = new LanguageChallangeControl(new HttpApiClient());
 
             generalPanel.Controls.Add(languagesChallengecontrol);
+        }
+
+        private void MenuBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

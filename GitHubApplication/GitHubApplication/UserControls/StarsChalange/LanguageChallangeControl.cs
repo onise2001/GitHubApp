@@ -55,14 +55,14 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage != null)
             {
                 languageChallangeData.SecondChoosedLanguage = "Java";
-                SecondLanguage.Text = "Java";
+                //SecondLanguage.Text = "Java";
                 Java.Enabled = false;
                 Compare.Enabled = true;
             }
             if (languageChallangeData.FirstChoosedLanguage == null)
             {
                 languageChallangeData.FirstChoosedLanguage = "Java";
-                FirstLanguage.Text = "Java";
+                //FirstLanguage.Text = "Java";
                 Java.Enabled = false;
             }
 
@@ -75,7 +75,7 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage != null)
             {
                 languageChallangeData.SecondChoosedLanguage = "ruby";
-                SecondLanguage.Text = "ruby";
+                //SecondLanguage.Text = "ruby";
                 Ruby.Enabled = false;
                 Compare.Enabled = true;
 
@@ -84,7 +84,7 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage == null)
             {
                 languageChallangeData.FirstChoosedLanguage = "ruby";
-                FirstLanguage.Text = "ruby";
+                //FirstLanguage.Text = "ruby";
                 Ruby.Enabled = false;
             }
            
@@ -111,7 +111,7 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage != null)
             {
                 languageChallangeData.SecondChoosedLanguage = "C";
-                SecondLanguage.Text = "C";
+                //SecondLanguage.Text = "C";
                 C.Enabled = false;
                 Compare.Enabled = true;
 
@@ -120,7 +120,7 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage == null)
             {
                 languageChallangeData.FirstChoosedLanguage = "C";
-                FirstLanguage.Text = "C";
+                //FirstLanguage.Text = "C";
                 C.Enabled = false;
             }
         }
@@ -130,7 +130,7 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage != null)
             {
                 languageChallangeData.SecondChoosedLanguage = ".NET";
-                SecondLanguage.Text = "C#";
+                //SecondLanguage.Text = "C#";
                 C_Sharp.Enabled = false;
                 Compare.Enabled = true;
 
@@ -139,7 +139,7 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage == null)
             {
                 languageChallangeData.FirstChoosedLanguage = ".NET";
-                FirstLanguage.Text = "C#";
+                //FirstLanguage.Text = "C#";
                 C_Sharp.Enabled = false;
             }
         }
@@ -161,7 +161,7 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage != null)
             {
                 languageChallangeData.SecondChoosedLanguage = "Python";
-                SecondLanguage.Text = "Python";
+                //SecondLanguage.Text = "Python";
                 Python.Enabled = false;
                 Compare.Enabled = true;
 
@@ -170,7 +170,7 @@ namespace GitHubApplication.UserControls
             if (languageChallangeData.FirstChoosedLanguage == null)
             {
                 languageChallangeData.FirstChoosedLanguage = "Python";
-                FirstLanguage.Text = "Python";
+                //FirstLanguage.Text = "Python";
                 Python.Enabled = false;
             }
 

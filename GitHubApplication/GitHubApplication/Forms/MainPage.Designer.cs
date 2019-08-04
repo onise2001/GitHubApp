@@ -70,6 +70,7 @@
             this.MenuBar.Name = "MenuBar";
             this.MenuBar.Size = new System.Drawing.Size(215, 621);
             this.MenuBar.TabIndex = 1;
+            this.MenuBar.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuBar_Paint);
             // 
             // SearchResultPanel
             // 
@@ -177,7 +178,7 @@
             // MenupictureBox
             // 
             this.MenupictureBox.Image = global::GitHubApplication.Properties.Resources.icons8_xbox_menu_50;
-            this.MenupictureBox.Location = new System.Drawing.Point(162, 0);
+            this.MenupictureBox.Location = new System.Drawing.Point(3, -1);
             this.MenupictureBox.Name = "MenupictureBox";
             this.MenupictureBox.Size = new System.Drawing.Size(50, 51);
             this.MenupictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
