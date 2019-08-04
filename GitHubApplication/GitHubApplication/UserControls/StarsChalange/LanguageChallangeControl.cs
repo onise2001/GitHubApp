@@ -25,6 +25,7 @@ namespace GitHubApplication.UserControls
             Client = apiClient;
         }
 
+
         private async void Compare_Click(object sender, EventArgs e)
         {
 
@@ -45,6 +46,7 @@ namespace GitHubApplication.UserControls
                 ShowchallengeResult repoControls = new ShowchallengeResult(languageChallangeData);
                 ChalangeResultPanel.Controls.Add(repoControls);
                 NewChallange.Enabled = true;
+                Compare.Enabled = false;
             }
         }
 
@@ -149,7 +151,9 @@ namespace GitHubApplication.UserControls
             C.Enabled = true;
             Java.Enabled = true;
             Ruby.Enabled = true;
-   
+            Compare.Enabled = false;
+
+
         }
 
         private void Python_Click(object sender, EventArgs e)

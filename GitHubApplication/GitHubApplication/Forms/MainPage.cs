@@ -18,6 +18,7 @@ namespace GitHubApplication
 {
     public partial class MainPage : Form
     {
+        public bool Indicator { get; set; } = true;
         User user;
         public event EventHandler<User> CurrentUser;
 
@@ -36,9 +37,21 @@ namespace GitHubApplication
         
         private void MenuBar_click(object sender, EventArgs e)
         {
-            Size size = new Size(180,675);
-           
+            Size size;
+
+
+            if (Indicator)
+                {
+                 size = new Size(200, 675);
+
+                MenuBar.Size = size;
+                Indicator = true;
+            }
+
+             size = new Size(110, 675);
+
             MenuBar.Size = size;
+            Indicator = false;
         }
 
         private void Label1_Click_1(object sender, EventArgs e)
