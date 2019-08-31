@@ -22,7 +22,7 @@ namespace GitHubApplication.UserControls.StarsChalange
             }
 
             private void ShowchallengeResult_Load(object sender, EventArgs e)
-            {
+            { 
 
                 FirstStar.Text = _languageChallangeData.FirstStarsCount.ToString();
                 FirstLanguage.Text = _languageChallangeData.FirstChoosedLanguage;

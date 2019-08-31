@@ -137,6 +137,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PasswordReset";
             this.Text = "PasswordResset";
+            this.Load += new System.EventHandler(this.PasswordReset_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

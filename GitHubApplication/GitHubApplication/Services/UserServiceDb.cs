@@ -49,15 +49,18 @@ namespace GitHubApplication.Services
         }
 
 
+
         public User Register(User user)
         {
-            if (dataBase.Users.Any(u => u.UserName.Equals(user.UserName, StringComparison.CurrentCultureIgnoreCase)) || dataBase.Users.Any(u => u.Email == user.Email))
+            if (dataBase.Users.Any(u => u.UserName.Equals(user.UserName, StringComparison.CurrentCultureIgnoreCase)) ||
+                dataBase.Users.Any(u => u.Email == user.Email))
                 return null;
 
+            
             dataBase.Users.Add(user);
             dataBase.SaveChanges();
             return user;
-
+            
         }
 
         public bool Reset(string mail)
@@ -70,8 +73,8 @@ namespace GitHubApplication.Services
 
                 user.Password = hasher.HashWithSalt(guid);
                 dataBase.Users.Update(user);
-                //dataBase.Users.Attach(user);
-                //dataBase.Entry(user).State = EntityState.Modified;
+                dataBase.Users.Attach(user);
+                dataBase.Entry(user).State = EntityState.Modified;
                 dataBase.SaveChanges();
                 return true;
             }

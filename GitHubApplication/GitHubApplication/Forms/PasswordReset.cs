@@ -59,5 +59,10 @@ namespace GitHubApplication.Forms
         {
             this.Close();
         }
+
+        private void PasswordReset_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

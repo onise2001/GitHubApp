@@ -175,6 +175,11 @@
     <Compile Include="Models\GitHubRepository.cs" />
     <Compile Include="Models\GitHubUser.cs" />
     <Compile Include="Models\LanguageChallangeData.cs" />
+    <Compile Include="LanguageCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\LanguageColors.cs" />
+    <Compile Include="Models\LanguageStatistics.cs" />
     <Compile Include="Models\RootObject.cs" />
     <Compile Include="Models\UsersRootObject.cs" />
     <Compile Include="Services\IPasswordHasher.cs" />

@@ -24,5 +24,6 @@ namespace GitHubApplication.Common
 
         public DbSet<User> Users { get; set; }
         public DbSet<ProgrammingLanguage> Languages { get; set; }
+        public DbSet<LanguageStatistics> StarsStatistics { get; set; }
     }
 }

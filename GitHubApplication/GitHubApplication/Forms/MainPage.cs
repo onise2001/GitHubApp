@@ -56,6 +56,8 @@ namespace GitHubApplication
             }
         }
 
+
+
         private void Label1_Click_1(object sender, EventArgs e)
         {
 
@@ -89,16 +91,7 @@ namespace GitHubApplication
 
         }
 
-        private void Bookmarks_label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Settings_label_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+       
         private void Profile_label_Click(object sender, EventArgs e)
         {
             UserPage userPage = ServiceManager.Instance.Container.Resolve<UserPage>();
@@ -107,15 +100,7 @@ namespace GitHubApplication
             userPage.ShowDialog();
         }
 
-        private void ResultPanel_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void TradingPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void Trading_label_Click(object sender, EventArgs e)
         {
@@ -123,12 +108,6 @@ namespace GitHubApplication
 
             generalPanel.Controls.Clear();
             generalPanel.Controls.Add(trendingControl);
-        }
-
-        private void Statistics_label_Click(object sender, EventArgs e)
-        {
-            //LanguageChallengform statistic = new LanguageChallengform();
-            //statistic.Show();
         }
 
         private void StarsCHallange_label_Click(object sender, EventArgs e)

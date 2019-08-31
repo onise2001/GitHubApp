@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LanguageChallangeControl));
             this.Compare = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ChalangeResultPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -38,6 +40,12 @@
             this.NewChallange = new System.Windows.Forms.Label();
             this.Python = new System.Windows.Forms.Label();
             this.Assembly = new System.Windows.Forms.Label();
+            this.LanguageColorList = new System.Windows.Forms.ImageList(this.components);
+            this.FirstLanguageCircle = new System.Windows.Forms.Label();
+            this.SecondLanguageCircle = new System.Windows.Forms.Label();
+            this.Winner_Label = new System.Windows.Forms.Label();
+            this.FirstLanguage_label = new System.Windows.Forms.Label();
+            this.ScondLanguage_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Compare
@@ -155,11 +163,82 @@
             this.Assembly.Size = new System.Drawing.Size(76, 16);
             this.Assembly.TabIndex = 13;
             this.Assembly.Text = "Assembly";
+            this.Assembly.Click += new System.EventHandler(this.Assembly_Click);
+            // 
+            // LanguageColorList
+            // 
+            this.LanguageColorList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("LanguageColorList.ImageStream")));
+            this.LanguageColorList.TransparentColor = System.Drawing.Color.Black;
+            this.LanguageColorList.Images.SetKeyName(0, "Default");
+            this.LanguageColorList.Images.SetKeyName(1, "C-Sharp");
+            this.LanguageColorList.Images.SetKeyName(2, "java");
+            this.LanguageColorList.Images.SetKeyName(3, "Assembly");
+            this.LanguageColorList.Images.SetKeyName(4, "Ruby");
+            this.LanguageColorList.Images.SetKeyName(5, "Python");
+            this.LanguageColorList.Images.SetKeyName(6, "C");
+            // 
+            // FirstLanguageCircle
+            // 
+            this.FirstLanguageCircle.ImageIndex = 0;
+            this.FirstLanguageCircle.ImageList = this.LanguageColorList;
+            this.FirstLanguageCircle.Location = new System.Drawing.Point(229, 84);
+            this.FirstLanguageCircle.Name = "FirstLanguageCircle";
+            this.FirstLanguageCircle.Size = new System.Drawing.Size(46, 45);
+            this.FirstLanguageCircle.TabIndex = 14;
+            // 
+            // SecondLanguageCircle
+            // 
+            this.SecondLanguageCircle.ImageIndex = 0;
+            this.SecondLanguageCircle.ImageList = this.LanguageColorList;
+            this.SecondLanguageCircle.Location = new System.Drawing.Point(538, 84);
+            this.SecondLanguageCircle.Name = "SecondLanguageCircle";
+            this.SecondLanguageCircle.Size = new System.Drawing.Size(46, 45);
+            this.SecondLanguageCircle.TabIndex = 15;
+            // 
+            // Winner_Label
+            // 
+            this.Winner_Label.AutoSize = true;
+            this.Winner_Label.Enabled = false;
+            this.Winner_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Winner_Label.Location = new System.Drawing.Point(307, 25);
+            this.Winner_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Winner_Label.Name = "Winner_Label";
+            this.Winner_Label.Size = new System.Drawing.Size(84, 16);
+            this.Winner_Label.TabIndex = 16;
+            this.Winner_Label.Text = "Winner  is  ";
+            this.Winner_Label.Visible = false;
+            // 
+            // FirstLanguage_label
+            // 
+            this.FirstLanguage_label.AutoSize = true;
+            this.FirstLanguage_label.Enabled = false;
+            this.FirstLanguage_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstLanguage_label.Location = new System.Drawing.Point(160, 94);
+            this.FirstLanguage_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FirstLanguage_label.Name = "FirstLanguage_label";
+            this.FirstLanguage_label.Size = new System.Drawing.Size(0, 16);
+            this.FirstLanguage_label.TabIndex = 17;
+            // 
+            // ScondLanguage_label
+            // 
+            this.ScondLanguage_label.AutoSize = true;
+            this.ScondLanguage_label.Enabled = false;
+            this.ScondLanguage_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScondLanguage_label.Location = new System.Drawing.Point(469, 94);
+            this.ScondLanguage_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ScondLanguage_label.Name = "ScondLanguage_label";
+            this.ScondLanguage_label.Size = new System.Drawing.Size(0, 16);
+            this.ScondLanguage_label.TabIndex = 18;
             // 
             // LanguageChallangeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ScondLanguage_label);
+            this.Controls.Add(this.FirstLanguage_label);
+            this.Controls.Add(this.Winner_Label);
+            this.Controls.Add(this.SecondLanguageCircle);
+            this.Controls.Add(this.FirstLanguageCircle);
             this.Controls.Add(this.Assembly);
             this.Controls.Add(this.Python);
             this.Controls.Add(this.NewChallange);
@@ -191,5 +270,11 @@
         private System.Windows.Forms.Label NewChallange;
         private System.Windows.Forms.Label Python;
         private System.Windows.Forms.Label Assembly;
+        private System.Windows.Forms.ImageList LanguageColorList;
+        private System.Windows.Forms.Label FirstLanguageCircle;
+        private System.Windows.Forms.Label SecondLanguageCircle;
+        private System.Windows.Forms.Label Winner_Label;
+        private System.Windows.Forms.Label FirstLanguage_label;
+        private System.Windows.Forms.Label ScondLanguage_label;
     }
 }

@@ -141,7 +141,6 @@
             this.Settings_label.Size = new System.Drawing.Size(56, 16);
             this.Settings_label.TabIndex = 10;
             this.Settings_label.Text = "Setting";
-            this.Settings_label.Click += new System.EventHandler(this.Settings_label_Click);
             // 
             // Bookmarks_label
             // 
@@ -152,7 +151,6 @@
             this.Bookmarks_label.Size = new System.Drawing.Size(86, 16);
             this.Bookmarks_label.TabIndex = 9;
             this.Bookmarks_label.Text = "Bookmarks";
-            this.Bookmarks_label.Click += new System.EventHandler(this.Bookmarks_label_Click);
             // 
             // Notification_label
             // 
@@ -193,7 +191,6 @@
             this.generalPanel.Name = "generalPanel";
             this.generalPanel.Size = new System.Drawing.Size(935, 507);
             this.generalPanel.TabIndex = 15;
-            this.generalPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ResultPanel_Paint);
             // 
             // panel1
             // 
