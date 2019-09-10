@@ -178,7 +178,6 @@
     <Compile Include="LanguageCircle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Models\LanguageColors.cs" />
     <Compile Include="Models\LanguageStatistics.cs" />
     <Compile Include="Models\RootObject.cs" />
     <Compile Include="Models\UsersRootObject.cs" />

@@ -58,10 +58,6 @@ namespace GitHubApplication
 
 
 
-        private void Label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void MainPage_Load(object sender, EventArgs e)
         {
@@ -117,9 +113,5 @@ namespace GitHubApplication
             generalPanel.Controls.Add(languagesChallengecontrol);
         }
 
-        private void MenuBar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

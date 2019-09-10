@@ -34,15 +34,12 @@
             this.StarsCHallange_label = new System.Windows.Forms.Label();
             this.StarsCompete_label = new System.Windows.Forms.Label();
             this.Trading_label = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.Search_label = new System.Windows.Forms.Label();
             this.Settings_label = new System.Windows.Forms.Label();
             this.Bookmarks_label = new System.Windows.Forms.Label();
             this.Notification_label = new System.Windows.Forms.Label();
             this.Profile_label = new System.Windows.Forms.Label();
             this.MenupictureBox = new System.Windows.Forms.PictureBox();
             this.generalPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.GitHubpictureBox = new System.Windows.Forms.PictureBox();
             this.CatpictureBox = new System.Windows.Forms.PictureBox();
             this.MenuBar.SuspendLayout();
@@ -59,24 +56,23 @@
             this.MenuBar.Controls.Add(this.StarsCHallange_label);
             this.MenuBar.Controls.Add(this.StarsCompete_label);
             this.MenuBar.Controls.Add(this.Trading_label);
-            this.MenuBar.Controls.Add(this.richTextBox1);
-            this.MenuBar.Controls.Add(this.Search_label);
             this.MenuBar.Controls.Add(this.Settings_label);
             this.MenuBar.Controls.Add(this.Bookmarks_label);
             this.MenuBar.Controls.Add(this.Notification_label);
             this.MenuBar.Controls.Add(this.Profile_label);
             this.MenuBar.Controls.Add(this.MenupictureBox);
-            this.MenuBar.Location = new System.Drawing.Point(0, 66);
+            this.MenuBar.Location = new System.Drawing.Point(0, 102);
+            this.MenuBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MenuBar.Name = "MenuBar";
-            this.MenuBar.Size = new System.Drawing.Size(215, 621);
+            this.MenuBar.Size = new System.Drawing.Size(322, 954);
             this.MenuBar.TabIndex = 1;
-            this.MenuBar.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuBar_Paint);
             // 
             // SearchResultPanel
             // 
-            this.SearchResultPanel.Location = new System.Drawing.Point(218, 3);
+            this.SearchResultPanel.Location = new System.Drawing.Point(327, 5);
+            this.SearchResultPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchResultPanel.Name = "SearchResultPanel";
-            this.SearchResultPanel.Size = new System.Drawing.Size(934, 683);
+            this.SearchResultPanel.Size = new System.Drawing.Size(1401, 1051);
             this.SearchResultPanel.TabIndex = 4;
             this.SearchResultPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
@@ -84,9 +80,10 @@
             // 
             this.StarsCHallange_label.AutoSize = true;
             this.StarsCHallange_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StarsCHallange_label.Location = new System.Drawing.Point(24, 382);
+            this.StarsCHallange_label.Location = new System.Drawing.Point(79, 514);
+            this.StarsCHallange_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StarsCHallange_label.Name = "StarsCHallange_label";
-            this.StarsCHallange_label.Size = new System.Drawing.Size(117, 16);
+            this.StarsCHallange_label.Size = new System.Drawing.Size(164, 25);
             this.StarsCHallange_label.TabIndex = 14;
             this.StarsCHallange_label.Text = "StarsCHallange";
             this.StarsCHallange_label.Click += new System.EventHandler(this.StarsCHallange_label_Click);
@@ -95,50 +92,33 @@
             // 
             this.StarsCompete_label.AutoSize = true;
             this.StarsCompete_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StarsCompete_label.Location = new System.Drawing.Point(24, 346);
+            this.StarsCompete_label.Location = new System.Drawing.Point(79, 458);
+            this.StarsCompete_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StarsCompete_label.Name = "StarsCompete_label";
-            this.StarsCompete_label.Size = new System.Drawing.Size(106, 16);
+            this.StarsCompete_label.Size = new System.Drawing.Size(150, 25);
             this.StarsCompete_label.TabIndex = 13;
             this.StarsCompete_label.Text = "StarsCompete";
-            this.StarsCompete_label.Click += new System.EventHandler(this.Label1_Click_1);
             // 
             // Trading_label
             // 
             this.Trading_label.AutoSize = true;
             this.Trading_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Trading_label.Location = new System.Drawing.Point(23, 434);
+            this.Trading_label.Location = new System.Drawing.Point(77, 594);
+            this.Trading_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Trading_label.Name = "Trading_label";
-            this.Trading_label.Size = new System.Drawing.Size(70, 16);
+            this.Trading_label.Size = new System.Drawing.Size(98, 25);
             this.Trading_label.TabIndex = 12;
             this.Trading_label.Text = "Trending";
             this.Trading_label.Click += new System.EventHandler(this.Trading_label_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 313);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(200, 33);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.Visible = false;
-            // 
-            // Search_label
-            // 
-            this.Search_label.AutoSize = true;
-            this.Search_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_label.Location = new System.Drawing.Point(22, 330);
-            this.Search_label.Name = "Search_label";
-            this.Search_label.Size = new System.Drawing.Size(57, 16);
-            this.Search_label.TabIndex = 11;
-            this.Search_label.Text = "Serach";
             // 
             // Settings_label
             // 
             this.Settings_label.AutoSize = true;
             this.Settings_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Settings_label.Location = new System.Drawing.Point(23, 464);
+            this.Settings_label.Location = new System.Drawing.Point(77, 640);
+            this.Settings_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Settings_label.Name = "Settings_label";
-            this.Settings_label.Size = new System.Drawing.Size(56, 16);
+            this.Settings_label.Size = new System.Drawing.Size(80, 25);
             this.Settings_label.TabIndex = 10;
             this.Settings_label.Text = "Setting";
             // 
@@ -146,9 +126,10 @@
             // 
             this.Bookmarks_label.AutoSize = true;
             this.Bookmarks_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bookmarks_label.Location = new System.Drawing.Point(22, 175);
+            this.Bookmarks_label.Location = new System.Drawing.Point(79, 401);
+            this.Bookmarks_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Bookmarks_label.Name = "Bookmarks_label";
-            this.Bookmarks_label.Size = new System.Drawing.Size(86, 16);
+            this.Bookmarks_label.Size = new System.Drawing.Size(119, 25);
             this.Bookmarks_label.TabIndex = 9;
             this.Bookmarks_label.Text = "Bookmarks";
             // 
@@ -156,9 +137,10 @@
             // 
             this.Notification_label.AutoSize = true;
             this.Notification_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notification_label.Location = new System.Drawing.Point(22, 132);
+            this.Notification_label.Location = new System.Drawing.Point(79, 335);
+            this.Notification_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Notification_label.Name = "Notification_label";
-            this.Notification_label.Size = new System.Drawing.Size(86, 16);
+            this.Notification_label.Size = new System.Drawing.Size(119, 25);
             this.Notification_label.TabIndex = 7;
             this.Notification_label.Text = "Notification";
             // 
@@ -166,9 +148,10 @@
             // 
             this.Profile_label.AutoSize = true;
             this.Profile_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_label.Location = new System.Drawing.Point(22, 101);
+            this.Profile_label.Location = new System.Drawing.Point(79, 287);
+            this.Profile_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Profile_label.Name = "Profile_label";
-            this.Profile_label.Size = new System.Drawing.Size(53, 16);
+            this.Profile_label.Size = new System.Drawing.Size(73, 25);
             this.Profile_label.TabIndex = 6;
             this.Profile_label.Text = "Profile";
             this.Profile_label.Click += new System.EventHandler(this.Profile_label_Click);
@@ -176,9 +159,10 @@
             // MenupictureBox
             // 
             this.MenupictureBox.Image = global::GitHubApplication.Properties.Resources.icons8_xbox_menu_50;
-            this.MenupictureBox.Location = new System.Drawing.Point(3, -1);
+            this.MenupictureBox.Location = new System.Drawing.Point(4, -2);
+            this.MenupictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MenupictureBox.Name = "MenupictureBox";
-            this.MenupictureBox.Size = new System.Drawing.Size(50, 51);
+            this.MenupictureBox.Size = new System.Drawing.Size(75, 78);
             this.MenupictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MenupictureBox.TabIndex = 4;
             this.MenupictureBox.TabStop = false;
@@ -187,26 +171,20 @@
             // generalPanel
             // 
             this.generalPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.generalPanel.Location = new System.Drawing.Point(218, 66);
+            this.generalPanel.Location = new System.Drawing.Point(327, 102);
+            this.generalPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generalPanel.Name = "generalPanel";
-            this.generalPanel.Size = new System.Drawing.Size(935, 507);
+            this.generalPanel.Size = new System.Drawing.Size(1402, 780);
             this.generalPanel.TabIndex = 15;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(260, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(893, 63);
-            this.panel1.TabIndex = 18;
             // 
             // GitHubpictureBox
             // 
             this.GitHubpictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GitHubpictureBox.Image = global::GitHubApplication.Properties.Resources.iconfinder_logo_github_298818;
-            this.GitHubpictureBox.Location = new System.Drawing.Point(111, 0);
+            this.GitHubpictureBox.Location = new System.Drawing.Point(166, 0);
+            this.GitHubpictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GitHubpictureBox.Name = "GitHubpictureBox";
-            this.GitHubpictureBox.Size = new System.Drawing.Size(150, 63);
+            this.GitHubpictureBox.Size = new System.Drawing.Size(225, 97);
             this.GitHubpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.GitHubpictureBox.TabIndex = 17;
             this.GitHubpictureBox.TabStop = false;
@@ -216,24 +194,25 @@
             this.CatpictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CatpictureBox.Image = global::GitHubApplication.Properties.Resources.iconfinder_mark_github_2988221;
             this.CatpictureBox.Location = new System.Drawing.Point(0, 0);
+            this.CatpictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CatpictureBox.Name = "CatpictureBox";
-            this.CatpictureBox.Size = new System.Drawing.Size(113, 63);
+            this.CatpictureBox.Size = new System.Drawing.Size(170, 97);
             this.CatpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CatpictureBox.TabIndex = 16;
             this.CatpictureBox.TabStop = false;
             // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1150, 573);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1725, 882);
             this.Controls.Add(this.GitHubpictureBox);
             this.Controls.Add(this.CatpictureBox);
             this.Controls.Add(this.generalPanel);
             this.Controls.Add(this.MenuBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainPage";
             this.Text = "MainPage";
             this.Load += new System.EventHandler(this.MainPage_Load);
@@ -253,8 +232,6 @@
         private System.Windows.Forms.Label Profile_label;
         private System.Windows.Forms.Label StarsCompete_label;
         private System.Windows.Forms.Label Trading_label;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label Search_label;
         private System.Windows.Forms.Label Settings_label;
         private System.Windows.Forms.Label Bookmarks_label;
         private System.Windows.Forms.Label StarsCHallange_label;
@@ -262,6 +239,5 @@
         private System.Windows.Forms.FlowLayoutPanel generalPanel;
         private System.Windows.Forms.PictureBox CatpictureBox;
         private System.Windows.Forms.PictureBox GitHubpictureBox;
-        private System.Windows.Forms.Panel panel1;
     }
 }

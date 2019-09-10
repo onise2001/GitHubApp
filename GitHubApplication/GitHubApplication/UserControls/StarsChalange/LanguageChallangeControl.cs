@@ -49,7 +49,7 @@ namespace GitHubApplication.UserControls
 
                 if (Firstresponse != null && Secondresponse != null)
                 {
-                   
+
 
                     var firstresult = Firstresponse.items.Select(r => r.stargazers_count);
 
@@ -60,20 +60,12 @@ namespace GitHubApplication.UserControls
 
                     Winner_Label.Enabled = true;
 
-                    Winner_Label.Text+= languageChallangeData.FirstStarsCount > languageChallangeData.SecondStarsCount ?
+                    Winner_Label.Text += languageChallangeData.FirstStarsCount > languageChallangeData.SecondStarsCount ?
                          languageChallangeData.FirstChoosedLanguage : languageChallangeData.SecondChoosedLanguage;
                     var Winner = languageChallangeData.FirstStarsCount > languageChallangeData.SecondStarsCount ?
                          languageChallangeData.FirstChoosedLanguage : languageChallangeData.SecondChoosedLanguage;
                     var WinnerScore = languageChallangeData.FirstStarsCount > languageChallangeData.SecondStarsCount ?
-                         languageChallangeData.FirstStarsCount: languageChallangeData.FirstStarsCount;
-
-                    languagestatistics.StarsCaunt = WinnerScore;
-                    languagestatistics.Language = Winner;
-
-                    languagestatistics.Date = DateTime.Now;
-                    dataBase.StarsStatistics.Add(languagestatistics);
-                    dataBase.SaveChanges();
-                    
+                         languageChallangeData.FirstStarsCount : languageChallangeData.FirstStarsCount;
 
 
                     ShowchallengeResult repoControls = new ShowchallengeResult(languageChallangeData);
@@ -81,12 +73,22 @@ namespace GitHubApplication.UserControls
                     NewChallange.Enabled = true;
                     Winner_Label.Visible = true;
                 }
+
             }
             catch (Exception)
             {
 
                 
             }
+        }
+
+        private void AddWinnerInfo(string Winner, int WinnerScore)
+        {
+            languagestatistics.StarsCaunt = WinnerScore;
+            languagestatistics.Language = Winner;
+            languagestatistics.Date = DateTime.Now;
+            dataBase.StarsStatistics.Add(languagestatistics);
+            dataBase.SaveChanges();
         }
 
         private void Java_Click(object sender, EventArgs e)
